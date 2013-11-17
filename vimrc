@@ -23,6 +23,10 @@ set nowrap                  " don't wrap text
 set cmdheight=1
 set ttyfast
 
+" PATHOGEN
+
+execute pathogen#infect()
+
 
 " NEOCOMPLCACHE
 
