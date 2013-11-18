@@ -10,7 +10,7 @@ dotfiles=~/dotfiles
 dotfiles_old=~/.dotfiles.old
 
 # List of files/folders to symlink in homedir
-files="bashrc vimrc vim gitconfig gitignore tmux.conf" 
+files="bashrc vimrc vim gitconfig gitignore tmux.conf ghci" 
 
 # Create .dotfiles.old in homedir
 mkdir -p $dotfiles_old
