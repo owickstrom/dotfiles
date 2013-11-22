@@ -110,3 +110,9 @@ if ! shopt -oq posix; then
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+if [[ ! $TERM =~ screen ]]; then
+    if which tmux >/dev/null; then
+        exec tmux
+    fi
+fi
