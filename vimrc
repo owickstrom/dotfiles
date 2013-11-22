@@ -74,10 +74,16 @@ let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
+
 " HASKELL SETUP
 
 " Use GHC functionality for haskell source files
 au Bufenter *.hs compiler ghc
 let g:haddock_browser = "/usr/bin/google-chrome"
 let g:ghc = "/usr/bin/ghc"
+
+
+" JAVASCRIPT SETUP
+
+let javascript_enable_domhtmlcss = 1
 
