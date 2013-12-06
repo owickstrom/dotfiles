@@ -28,6 +28,16 @@ set nowrap                  " don't wrap text
 set cmdheight=1
 set ttyfast
 
+" Disable arrow keys
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+
 " Copy/Paste bindings
 nmap <C-V> "+gP
 imap <C-V> <ESC><C-V>i
