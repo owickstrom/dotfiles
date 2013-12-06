@@ -116,3 +116,6 @@ if [[ ! $TERM =~ screen ]]; then
         exec tmux
     fi
 fi
+
+
+alias vim=gvim

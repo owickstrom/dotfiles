@@ -1,8 +1,8 @@
 [color]
 	ui = auto
 [core]
-	editor = vim
 	excludesfile = ~/.gitignore
+	editor = gvim --nofork
 [user]
 	name = Oskar Wickström
 	email = oskar.wickstrom@live.com
