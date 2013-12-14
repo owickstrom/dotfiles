@@ -2,7 +2,7 @@
 	ui = auto
 [core]
 	excludesfile = ~/.gitignore
-	editor = gvim --nofork
+	editor = vim
 [user]
 	name = Oskar Wickström
 	email = oskar.wickstrom@live.com

@@ -117,5 +117,3 @@ if [[ ! $TERM =~ screen ]]; then
     fi
 fi
 
-
-alias vim=gvim

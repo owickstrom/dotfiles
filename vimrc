@@ -9,7 +9,6 @@ filetype plugin indent on   " filetype detection[ON] plugin[ON] indent[ON]
 let g:solarized_termcolors=256
 syntax enable               " enable syntax highlighting (previously syntax on).
 set background=dark         " use dark background for solarized
-colorscheme solarized       " set colorscheme
 set number                  " show line numbers
 set laststatus=22           " last window always has a statusline
 filetype indent on          " activates indenting for files
@@ -81,6 +80,9 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+" NERDTREE BINDINGS
+nmap <leader>n :NERDTreeToggle<cr>
+
 " HASKELL SETUP
 
 " Use GHC functionality for haskell source files
@@ -93,3 +95,6 @@ let g:ghc = "/usr/bin/ghc"
 
 let javascript_enable_domhtmlcss = 1
 
+" EMMET
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
