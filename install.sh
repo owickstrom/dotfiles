@@ -7,4 +7,6 @@ $DIR/install-apt-dependencies.sh
 
 make --directory="$DIR/vim/bundle/vimproc"
 
+echo "xmodmap \$HOME/.Xmodmap" >> $HOME/.xinitrc
+
 
