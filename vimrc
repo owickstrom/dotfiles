@@ -27,6 +27,8 @@ set nowrap                  " don't wrap text
 set cmdheight=1
 set ttyfast
 
+let mapleader = ','
+
 " Disable arrow keys
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
@@ -90,3 +92,6 @@ let javascript_enable_domhtmlcss = 1
 " EMMET
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+" Command-T
+set wildignore+=**/bower-components/**,**/bower_components/**,**/node_modules/**,*.obj,.git
