@@ -6,8 +6,8 @@ execute pathogen#infect()
 
 set nocompatible            " get rid of Vi compatibility mode. SET FIRST!
 filetype plugin indent on   " filetype detection[ON] plugin[ON] indent[ON]
-let g:solarized_termcolors=256
 syntax enable               " enable syntax highlighting (previously syntax on).
+colorscheme desert
 set background=dark         " use dark background for solarized
 set number                  " show line numbers
 set laststatus=22           " last window always has a statusline
@@ -36,11 +36,6 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
-
-" Copy/Paste bindings
-nmap <C-V> "+gP
-imap <C-V> <ESC><C-V>i
-vmap <C-C> "+y
 
 " NEOCOMPLCACHE
 
@@ -79,9 +74,6 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" NERDTREE BINDINGS
-nmap <leader>n :NERDTreeToggle<cr>
 
 " HASKELL SETUP
 
