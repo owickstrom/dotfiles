@@ -89,6 +89,11 @@ let g:ghc = "/usr/bin/ghc"
 
 let javascript_enable_domhtmlcss = 1
 
+" Syntax checking
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_enable_signs=1
+let g:syntastic_always_populate_loc_list=1
+
 " EMMET
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
