@@ -94,4 +94,4 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
 " Command-T
-set wildignore+=**/bower-components/**,**/bower_components/**,**/node_modules/**,*.obj,.git
+set wildignore+=**/bower-components/**,**/bower_components/**,**/node_modules/**,dist/**,*.obj,.git
