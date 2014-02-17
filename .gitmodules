@@ -16,6 +16,9 @@
 [submodule "vim/bundle/haskellmode"]
 	path = vim/bundle/haskellmode
 	url = https://github.com/lukerandall/haskellmode-vim.git
+[submodule "vim/bundle/vim-javascript"]
+    path = vim/bundle/vim-javascript
+    url = https://github.com/pangloss/vim-javascript.git
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
