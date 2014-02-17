@@ -9,6 +9,7 @@ filetype plugin indent on   " filetype detection[ON] plugin[ON] indent[ON]
 syntax enable               " enable syntax highlighting (previously syntax on).
 colorscheme desert
 set background=dark         " use dark background for solarized
+highlight SignColumn ctermbg=100 " no color for gutter
 set number                  " show line numbers
 set laststatus=22           " last window always has a statusline
 filetype indent on          " activates indenting for files
