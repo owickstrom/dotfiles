@@ -117,3 +117,8 @@ if [[ ! $TERM =~ screen ]]; then
     fi
 fi
 
+
+# Load in the git branch prompt script.
+source ~/.git-prompt.sh
+
+PS1='\[\033[0;31m\]\w\[\033[0;33m\]$(__git_ps1)\[\e[0m\]$ '
