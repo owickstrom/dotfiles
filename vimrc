@@ -101,3 +101,6 @@ autocmd FileType html,css EmmetInstall
 
 " Command-T
 set wildignore+=**/bower-components/**,**/bower_components/**,**/node_modules/**,dist/**,*.obj,.git
+
+" TagBar
+nmap <F8> :TagbarToggle<CR>
