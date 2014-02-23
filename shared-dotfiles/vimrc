@@ -7,7 +7,7 @@ execute pathogen#infect()
 set nocompatible            " get rid of Vi compatibility mode. SET FIRST!
 filetype plugin indent on   " filetype detection[ON] plugin[ON] indent[ON]
 syntax enable               " enable syntax highlighting (previously syntax on).
-colorscheme desert
+colorscheme jellybeans
 set background=dark         " use dark background for solarized
 highlight SignColumn ctermbg=100 " no color for gutter
 set number                  " show line numbers
@@ -100,7 +100,11 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
 " Command-T
-set wildignore+=**/bower-components/**,**/bower_components/**,**/node_modules/**,dist/**,*.obj,.git
+set wildignore+=**/bower-components/**,**/bower_components/**,**/node_modules/**,dist/**,out/**,*.obj,.git
 
 " TagBar
 nmap <F8> :TagbarToggle<CR>
+
+" Spell Checking Commands
+:command EnableSpellCheck :set spell spelllang=en_us
+:command DisableSpellCheck :set nospell
