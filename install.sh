@@ -3,10 +3,10 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 $DIR/make-symlinks.sh
-$DIR/install-apt-dependencies.sh
 
-make --directory="$DIR/vim/bundle/vimproc"
+$DIR/osx-scripts/install-packages.sh
+$DIR/ubuntu-scripts/install-packages.sh
 
-echo "xmodmap \$HOME/.Xmodmap" >> $HOME/.xinitrc
-
-
+$DIR/shared-scripts/post-install.sh
+$DIR/ubuntu-scripts/post-install.sh
+$DIR/osx-scripts/post-install.sh
