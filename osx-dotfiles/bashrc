@@ -12,3 +12,7 @@ alias ls='ls -GFh'
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 $HOME/.nvm/nvm.sh
 
+# Load in the git branch prompt script.
+source ~/.git-prompt.sh
+
+PS1='\[\033[0;31m\]\w\[\033[0;33m\]$(__git_ps1)\[\e[0m\]$ '
