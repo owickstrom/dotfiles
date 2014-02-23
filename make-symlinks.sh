@@ -30,7 +30,8 @@ mkdir -p $dotfiles_old
 # Change to the dotfiles directory
 cd $dotfiles
 
-FILES="$shared/* $os_specific/*"
+# Include the vim directory, shared dotfiles and those specific for the OS.
+FILES="$dotfiles/vim $shared/* $os_specific/*"
 echo $FILES
 
 # Move any existing dotfiles in homedir, then create symlinks

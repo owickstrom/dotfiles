@@ -3,7 +3,6 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 source $DIR/../logging.sh
-
 e_header "Post install for OSX"
 
 osascript $DIR/remap-capslock-to-ctrl.scpt

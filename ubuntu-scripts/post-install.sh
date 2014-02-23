@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# Ubuntu-only stuff. Abort if not Ubuntu.
+[[ "$(cat /etc/issue 2> /dev/null)" =~ Ubuntu ]] || exit 1
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/../logging.sh
 
 e_header "Post install for Ubuntu"
