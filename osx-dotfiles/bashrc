@@ -2,9 +2,8 @@ alias la="ls -a"
 alias ll="ls -l"
 alias lla="ls -la"
 
-export EDITOR="/usr/local/bin/gvim"
+export EDITOR="/usr/local/bin/vim"
 
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
