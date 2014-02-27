@@ -1,2 +1,23 @@
-set guifont=Ubuntu\ Mono:h20
+if has("gui_running")
+    if has("gui_gtk2")
+
+        " GVIM UBUNTU
+        set guifont=Ubuntu\ Mono\ 15
+        vmap <C-c> "+yi
+        vmap <C-x> "+c
+        vmap <C-v> c<ESC>"+p
+        imap <C-v> <C-r><C-o>+
+
+    elseif has("gui_macvim")
+
+        " MACVIM
+        set guifont=Ubuntu\ Mono:h20
+
+    elseif has("gui_win32")
+
+        " GVIM WINDOWS
+        set guifont=Ubuntu\ Mono:h15:cANSI
+
+    endif
+endif
 set guioptions-=r
