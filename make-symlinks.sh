@@ -1,11 +1,12 @@
 #!/bin/bash
 
-############################
-# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
-############################
+###########################################################
+# This script creates symlinks from the home directory to #
+# files in osx-dotfiles and ubuntu-dotfiles.              #
+###########################################################
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-source $DIR/logging.sh
+source $DIR/common.sh
 
 # Dotfiles directory
 dotfiles=$DIR

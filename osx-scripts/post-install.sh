@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source $DIR/../common.sh
 
-source $DIR/../logging.sh
+# OSX-only stuff. Abort if not OSX.
+IS_OSX && exit 1
+
 e_header "Post install for OSX"
 
 osascript $DIR/remap-capslock-to-ctrl.scpt
@@ -33,6 +36,5 @@ if [[ $? -eq 0 ]]; then
 else
     e_warn "Command-T: ruby extconf.rb failed"
 fi
-
 
 e_info "Post install for OSX done!"

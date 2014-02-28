@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+IS_UBUNTU=$([[ "$(cat /etc/issue 2> /dev/null)" =~ Ubuntu ]])
+IS_OSX=$([[ "$OSTYPE" =~ ^darwin ]])
+
 # Text color variables
 txtund=$(tput sgr 0 1)
 txtbld=$(tput bold)
