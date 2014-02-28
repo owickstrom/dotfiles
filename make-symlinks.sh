@@ -9,34 +9,34 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/common.sh
 
 # Dotfiles directory
-dotfiles=$DIR
+DOTFILES=$DIR
 # Old dotfiles backup directory
-dotfiles_old=$HOME/.dotfiles.old
+DOTFILES_OLD=$HOME/.dotfiles.old
 # Shared dotfiles
-shared=$dotfiles/shared-dotfiles
+SHARED=$DOTFILES/shared-dotfiles
 # OS specific dotfiles
-os_specific=""
+OS_SPECIFIC=""
 
 if [[ "$OSTYPE" =~ ^darwin ]]; then
-    os_specific=$dotfiles/osx-dotfiles
+    OS_SPECIFIC=$DOTFILES/osx-dotfiles
 fi
 
 if [[ "$(cat /etc/issue 2> /dev/null)" =~ Ubuntu ]]; then
-    os_specific=$dotfiles/ubuntu-dotfiles
+    OS_SPECIFIC=$DOTFILES/ubuntu-dotfiles
 fi
 
 # Create .dotfiles.old in homedir
-mkdir -p $dotfiles_old
+mkdir -p $DOTFILES_OLD
 
 # Change to the dotfiles directory
-cd $dotfiles
+cd $DOTFILES
 
 # Include the vim directory, shared dotfiles and those specific for the OS.
-FILES="$dotfiles/vim $shared/* $os_specific/*"
+FILES="$DOTFILES/vim $SHARED/* $OS_SPECIFIC/*"
 echo $FILES
 
 # Move any existing dotfiles in homedir, then create symlinks
-echo "Moving any existing dotfiles from ~ to $dotfiles_old"
+echo "Moving any existing dotfiles from ~ to $DOTFILES_OLD"
 for file in $FILES; do
     target=$HOME"/."$(basename $file)
 
@@ -45,8 +45,8 @@ for file in $FILES; do
 
         # First backup the original file any
         if [ -e $target ]; then
-            mv $target $dotfiles_old/
-            e_info "Created backup of $target in $dotfiles_old/"
+            mv $target $DOTFILES_OLD/
+            e_info "Created backup of $target in $DOTFILES_OLD/"
         fi
 
         ln -s $file $target
