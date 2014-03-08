@@ -7,23 +7,30 @@ execute pathogen#infect()
 set nocompatible            " get rid of Vi compatibility mode. SET FIRST!
 filetype plugin indent on   " filetype detection[ON] plugin[ON] indent[ON]
 syntax enable               " enable syntax highlighting (previously syntax on).
-set t_Co=256                " enable 256 colors
-colorscheme jellybeans
+set background=dark
+colorscheme default
 highlight SignColumn ctermbg=none " no color for gutter
-set number                  " show line numbers
+" set number                  " show line numbers
 set laststatus=22           " last window always has a statusline
 filetype indent on          " activates indenting for files
 set nohlsearch              " Don't continue to highlight searched phrases.
+set hlsearch                " Highlight all results
 set incsearch               " But do highlight as you type your search.
 set ignorecase              " Make searches case-insensitive.
 set ruler                   " Always show info along bottom.
+
+" INDENTATION
+set smartindent
 set autoindent              " auto-indent
-set tabstop=4               " tab spacing
-set softtabstop=4           " unify
-set shiftwidth=4            " indent/outdent by 4 columns
+set tabstop=2               " tab spacing
+set softtabstop=2           " unify
+set shiftwidth=2            " indent/outdent by 2 columns
 set shiftround              " always indent/outdent to the nearest tabstop
 set expandtab               " use spaces instead of tabs
 set smarttab                " use tabs at the start of a line, spaces elsewhere
+
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
+
 set nowrap                  " don't wrap text
 set cmdheight=1
 set ttyfast
