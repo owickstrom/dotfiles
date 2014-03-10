@@ -111,14 +111,10 @@ fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-if [[ ! $TERM =~ screen ]]; then
-    if which tmux >/dev/null; then
-        exec tmux
-    fi
-fi
-
-
 # Load in the git branch prompt script.
 source ~/.git-prompt.sh
+
+export TERM=screen-256color
+alias tmux="tmux -2"
 
 PS1='\[\033[0;31m\]\w\[\033[0;33m\]$(__git_ps1)\[\e[0m\]$ '

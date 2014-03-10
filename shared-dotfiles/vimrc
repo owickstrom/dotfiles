@@ -7,9 +7,15 @@ execute pathogen#infect()
 set nocompatible            " get rid of Vi compatibility mode. SET FIRST!
 filetype plugin indent on   " filetype detection[ON] plugin[ON] indent[ON]
 syntax enable               " enable syntax highlighting (previously syntax on).
-set background=dark
+set t_Co=256
 colorscheme default
-highlight SignColumn ctermbg=none " no color for gutter
+
+highlight SignColumn ctermbg=none     " no color for gutter
+
+" When crossing 80 chars, use grey background.
+let &colorcolumn=join(range(81,999),",")
+highlight ColorColumn ctermbg=255
+
 " set number                  " show line numbers
 set laststatus=22           " last window always has a statusline
 filetype indent on          " activates indenting for files
@@ -84,6 +90,12 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Popup color.
+highlight Pmenu ctermbg=7
+highlight PmenuSel ctermbg=3
+highlight PmenuSbar ctermbg=0
+
 
 " HASKELL SETUP
 
