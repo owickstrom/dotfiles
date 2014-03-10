@@ -4,3 +4,4 @@
 *.swp
 *.swo
 vim/.netrwhist
+.vim.custom

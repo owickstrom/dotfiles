@@ -121,3 +121,8 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+"
+" Enable custom .vim.custom in directories
+if filereadable(".vim.custom")
+    so .vim.custom
+endif
