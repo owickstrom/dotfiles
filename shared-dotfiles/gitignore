@@ -5,3 +5,4 @@
 *.swo
 vim/.netrwhist
 .vim.custom
+.DS_Store
