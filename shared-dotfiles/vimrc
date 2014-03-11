@@ -11,6 +11,7 @@ set t_Co=256
 colorscheme Tomorrow
 
 highlight SignColumn ctermbg=none     " no color for gutter
+highlight ColorColumn ctermbg=LightRed
 
 set colorcolumn=80
 
