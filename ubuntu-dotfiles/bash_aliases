@@ -1,1 +1,2 @@
 alias vim="vim -X"
+alias tmux="tmux -2"
