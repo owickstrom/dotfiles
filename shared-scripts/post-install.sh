@@ -5,7 +5,7 @@ source $DIR/../common.sh
 
 e_header "Post install"
 
-make --directory="$DIR/../vim/bundle/vimproc"
+make --directory="$DIR/../vim/bundle/vimproc.vim"
 if [[ $? -eq 0 ]]; then
     e_success "Make vimproc"
 else
