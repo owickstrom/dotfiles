@@ -4,7 +4,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/../common.sh
 
 # OSX-only stuff. Abort if not OSX.
-IS_OSX && exit 1
+$IS_OSX && exit 1
 
 # Some tools look for XCode, even though they don't need it.
 # https://github.com/joyent/node/issues/3681
