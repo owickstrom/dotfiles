@@ -8,10 +8,12 @@ set nocompatible            " get rid of Vi compatibility mode. SET FIRST!
 filetype plugin indent on   " filetype detection[ON] plugin[ON] indent[ON]
 syntax enable               " enable syntax highlighting (previously syntax on).
 set t_Co=256
-colorscheme Tomorrow
+colorscheme default
 
 highlight SignColumn ctermbg=none     " no color for gutter
 highlight ColorColumn ctermbg=LightRed
+highlight CommandTSelection ctermbg=yellow
+highlight Visual ctermbg=254
 
 set colorcolumn=80
 
@@ -91,10 +93,9 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Popup color.
-highlight Pmenu ctermbg=7
-highlight PmenuSel ctermbg=3
+highlight Pmenu ctermbg=yellow
+highlight PmenuSel ctermfg=white ctermbg=black
 highlight PmenuSbar ctermbg=0
-
 
 " HASKELL SETUP
 
