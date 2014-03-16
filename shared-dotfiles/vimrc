@@ -119,7 +119,11 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
 " Command-T
-set wildignore+=**/bower-components/**,**/bower_components/**,**/node_modules/**,dist/**,out/**,*.obj,.git
+
+" General ignores
+set wildignore+=dist/**,out/**,build/**,_build/**,*.obj,.git
+" JS, Bower, Node ignores
+set wildignore+=**/bower-components/**,**/bower_components/**,**/node_modules/**
 
 " TagBar
 nmap <F8> :TagbarToggle<CR>
