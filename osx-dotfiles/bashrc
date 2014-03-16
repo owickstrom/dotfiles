@@ -11,6 +11,12 @@ alias ls='ls -GFh'
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 $HOME/.nvm/nvm.sh
 
+# Bash Completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+      . `brew --prefix`/etc/bash_completion
+    fi
+fi
+
 # Load in the git branch prompt script.
 source ~/.git-prompt.sh
 
