@@ -9,6 +9,7 @@
 [alias]
   co = checkout
   ci = commit
+  cm = commit -m
   st = status
   br = branch
   aa = add --all
