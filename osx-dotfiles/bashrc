@@ -13,8 +13,7 @@ $HOME/.nvm/nvm.sh
 
 # Bash Completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
-      . `brew --prefix`/etc/bash_completion
-    fi
+  . `brew --prefix`/etc/bash_completion
 fi
 
 # Load in the git branch prompt script.
