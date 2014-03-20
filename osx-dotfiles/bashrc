@@ -1,3 +1,5 @@
+function join { local IFS="$1"; shift; echo "$*"; }
+
 alias la="ls -a"
 alias ll="ls -l"
 alias lla="ls -la"
@@ -8,7 +10,6 @@ alias gs="git status"
 alias gd="git diff"
 alias ga="git add"
 alias gaa="git add --all"
-alias gc="git cm"
 alias gps="git push"
 alias gpl="git pull"
 alias gr="git rebase"
@@ -19,6 +20,10 @@ alias gfi="git flow init"
 alias gff="git flow feature"
 alias gfr="git flow release"
 alias gfh="git flow hotfix"
+
+function gc {
+  git commit -m "$(join ' ' $@)"
+}
 
 export EDITOR="/usr/local/bin/vim"
 
