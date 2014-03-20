@@ -127,6 +127,13 @@ set wildignore+=dist/**,out/**,build/**,_build/**,*.obj,.git
 " JS, Bower, Node ignores
 set wildignore+=**/bower-components/**,**/bower_components/**,**/node_modules/**
 
+" Auto-flush Command-T when saving file or switching to Vim.
+augroup CommandTExtension
+  autocmd!
+  autocmd FocusGained * CommandTFlush
+  autocmd BufWritePost * CommandTFlush
+augroup END
+
 " TagBar
 nmap <F8> :TagbarToggle<CR>
 
