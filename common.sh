@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
 
-export IS_UBUNTU=$([[ "$(cat /etc/issue 2> /dev/null)" =~ Ubuntu ]])
-export IS_OSX=$([[ "$OSTYPE" =~ ^darwin ]])
+export IS_UBUNTU=
+export IS_OSX=
+
+if [[ "$OSTYPE" =~ ^linux ]]; then
+    export IS_UBUNTU=1
+fi
+
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+    export IS_OSX=1
+fi
 
 # Text color variables
 txtund=$(tput sgr 0 1)
