@@ -11,4 +11,6 @@ e_header "Post install for Ubuntu"
 echo "xmodmap \$HOME/.Xmodmap" >> $HOME/.xinitrc
 e_success "Remap CapsLock to CTRL"
 
+$DIR/setup-gnome-terminal-theme.sh
+
 e_info "Post install for Ubuntu done!"
