@@ -40,6 +40,7 @@ set smarttab                " use tabs at the start of a line, spaces elsewhere
 
 autocmd FileType make setlocal noexpandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
+au BufNewFile,BufRead *.ejs set filetype=html
 
 set nowrap                  " don't wrap text
 set cmdheight=1
