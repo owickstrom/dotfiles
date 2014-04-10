@@ -146,5 +146,27 @@ if filereadable(".vim.custom")
     so .vim.custom
 endif
 
+<<<<<<< HEAD
 " DELIMIT MATE
 let delimitMate_expand_cr=1
+=======
+" VIM GO
+
+" Import package under cursor.
+au FileType go nmap <Leader>i <Plug>(go-import)
+
+" Open godoc for word under cursor.
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+
+" Run command for current file.
+au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>gb <Plug>(go-build)
+au FileType go nmap <leader>gt <Plug>(go-test)
+
+" Replace gd with go-def.
+au FileType go nmap gd <Plug>(go-def)
+" And for opening in splits.
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+
+>>>>>>> Add vim-go
