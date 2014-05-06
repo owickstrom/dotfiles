@@ -8,7 +8,7 @@ source $DIR/../common.sh
 # Ubuntu-only stuff. Abort if not Ubuntu.
 $IS_UBUNTU && exit 0
 
-DEPS="git tmux curl wget vim-nox"
+DEPS="git tmux curl wget vim-nox irssi"
 sudo apt-get install $DEPS
 
 $DIR/install-rvm.sh
