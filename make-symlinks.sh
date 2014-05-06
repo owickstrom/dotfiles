@@ -5,6 +5,8 @@
 # files in osx-dotfiles and ubuntu-dotfiles.              #
 ###########################################################
 
+set -e
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/common.sh
 
