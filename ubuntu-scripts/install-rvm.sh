@@ -5,8 +5,12 @@ set -e
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/../common.sh
 
+# Ubuntu-only stuff. Abort if not Ubuntu.
+$IS_UBUNTU && exit 0
+
 curl -sSL https://get.rvm.io | bash
 
-rvm install ruby-2.0.0-p195
+source ~/.rvm/scripts/rvm
 
-rvm use ruby-2.0.0-p195
+rvm install 1.8
+rvm use 1.8
