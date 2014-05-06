@@ -88,9 +88,9 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Popup color.
-highlight Pmenu ctermbg=yellow
-highlight PmenuSel ctermfg=white ctermbg=black
-highlight PmenuSbar ctermbg=0
+"highlight Pmenu ctermbg=grey
+"highlight PmenuSel ctermfg=white ctermbg=black
+"highlight PmenuSbar ctermbg=0
 
 " HASKELL SETUP
 
