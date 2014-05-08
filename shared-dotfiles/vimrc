@@ -11,7 +11,7 @@ set t_Co=256
 colorscheme Tomorrow-Night
 
 highlight SignColumn ctermbg=none     " no color for gutter
-highlight CommandTSelection ctermbg=238 guibg=238 ctermfg=green guifg=green
+highlight CommandTSelection ctermbg=238 ctermfg=green
 highlight Visual ctermbg=238
 
 highlight VertSplit ctermfg=253 ctermbg=245
