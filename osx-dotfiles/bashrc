@@ -1,49 +1,3 @@
-function join { local IFS="$1"; shift; echo "$*"; }
-
-alias la="ls -a"
-alias ll="ls -l"
-alias lla="ls -la"
-
-# Git stuff
-alias g="git"
-__git_complete g _git
-
-alias gs="git status"
-
-alias gd="git diff"
-alias gdc="git diff --cached"
-__git_complete gd _git_diff
-__git_complete gdc _git_diff
-
-alias ga="git add"
-alias gaa="git add --all"
-
-alias gps="git push"
-__git_complete gps _git_push
-
-alias gpl="git pull"
-__git_complete gps _git_pull
-
-alias gr="git rebase"
-__git_complete gr _git_rebase
-
-alias gl="git log"
-__git_complete gl _git_log
-
-alias gh="git hist"
-__git_complete gl _git_log
-
-# Git Flow
-alias gfi="git flow init"
-alias gff="git flow feature"
-alias gfr="git flow release"
-alias gfh="git flow hotfix"
-
-
-function gc {
-  git commit -m "$(join ' ' $@)"
-}
-
 export EDITOR="/usr/local/bin/vim"
 
 export CLICOLOR=1
@@ -62,3 +16,6 @@ fi
 source ~/.git-prompt.sh
 
 PS1='\[\033[0;31m\]\w\[\033[0;33m\]$(__git_ps1)\[\e[0m\]$ '
+
+source ~/.git_aliases
+
