@@ -18,5 +18,7 @@
   type = cat-file -t
   dump = cat-file -p
   kopf = reset --hard HEAD
+  remote-tracked = rev-parse --abbrev-ref --symbolic-full-name @{u}
+  fernkopf = "!git reset --hard $(git remote-tracked)"
 [push]
 	default = simple
