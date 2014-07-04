@@ -8,7 +8,7 @@ set nocompatible            " get rid of Vi compatibility mode. SET FIRST!
 filetype plugin indent on   " filetype detection[ON] plugin[ON] indent[ON]
 syntax enable               " enable syntax highlighting (previously syntax on).
 set t_Co=256
-colorscheme Tomorrow-Night
+colorscheme Tomorrow
 
 highlight SignColumn ctermbg=none     " no color for gutter
 highlight CommandTSelection ctermbg=238 ctermfg=green
@@ -86,6 +86,7 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 " Popup color.
 "highlight Pmenu ctermbg=grey
@@ -97,7 +98,8 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " Use GHC functionality for haskell source files
 au Bufenter *.hs compiler ghc
 let g:haddock_browser = "/usr/bin/google-chrome"
-let g:ghc = "/usr/bin/ghc"
+let g:ghc = "/usr/local/bin/ghc"
+g:necoghc_enable_detailed_browse = 1
 
 
 " JAVASCRIPT SETUP

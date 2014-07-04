@@ -18,12 +18,15 @@ if has("gui_running")
     elseif has("gui_macvim")
 
         " MACVIM
-        set guifont=Ubuntu\ Mono:h20
+        set guifont=Monaco:h14
+        colorscheme Tomorrow
 
     elseif has("gui_win32")
 
         " GVIM WINDOWS
-        set guifont=Ubuntu\ Mono:h15:cANSI
+        set guifont=Consolas:h14:cANSI
+        colorscheme Tomorrow
+
 
     endif
 endif
