@@ -18,7 +18,7 @@ if has("gui_running")
     elseif has("gui_macvim")
 
         " MACVIM
-        set guifont=Monaco:h14
+        set guifont=Ubuntu\ Mono\ derivative\ Powerline:h16
         colorscheme Tomorrow
 
     elseif has("gui_win32")

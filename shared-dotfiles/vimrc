@@ -93,13 +93,16 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 "highlight PmenuSel ctermfg=white ctermbg=black
 "highlight PmenuSbar ctermbg=0
 
+" AIRLINE
+set laststatus=2
+let g:airline_powerline_fonts=1
+
 " HASKELL SETUP
 
 " Use GHC functionality for haskell source files
 "au Bufenter *.hs compiler ghc
 "let g:haddock_browser = "/usr/bin/google-chrome"
 "let g:ghc = "/usr/local/bin/ghc"
-g:necoghc_enable_detailed_browse = 1
 
 
 " JAVASCRIPT SETUP
