@@ -171,3 +171,5 @@ au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 
 " Markdown syntax
 au BufRead,BufNewFile *.md set filetype=markdown
+
+command PiggiebackChrome Piggieback (cemerick.austin/exec-env :exec-cmds ["open" "-ga" "/Applications/Google Chrome.app"])
