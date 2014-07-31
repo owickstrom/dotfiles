@@ -91,3 +91,6 @@
 [submodule "vim/bundle/vimerl"]
 	path = vim/bundle/vimerl
 	url = https://github.com/jimenezrick/vimerl.git
+[submodule "vim/bundle/vim-clojure-highlight"]
+	path = vim/bundle/vim-clojure-highlight
+	url = git@github.com:guns/vim-clojure-highlight.git
