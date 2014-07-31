@@ -13,6 +13,8 @@ if has("gui_running")
         :set guioptions-=T  "remove toolbar
         :set guioptions-=m  "remove menu
         :set guioptions-=r  "remove right-hand scroll bar
+        :set guioptions-=R  "remove right-hand scroll bar
+        :set guioptions-=l  "remove left-hand scroll bar
         :set guioptions-=L  "remove left-hand scroll bar
 
     elseif has("gui_macvim")

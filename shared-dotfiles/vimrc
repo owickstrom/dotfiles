@@ -8,13 +8,13 @@ set nocompatible            " get rid of Vi compatibility mode. SET FIRST!
 filetype plugin indent on   " filetype detection[ON] plugin[ON] indent[ON]
 syntax enable               " enable syntax highlighting (previously syntax on).
 set t_Co=256
-colorscheme Tomorrow
+colorscheme Tomorrow-Night
 
 highlight SignColumn ctermbg=none     " no color for gutter
 highlight CommandTSelection ctermbg=238 ctermfg=green
 highlight Visual ctermbg=238
 
-highlight VertSplit ctermfg=253 ctermbg=245
+highlight VertSplit ctermfg=240 ctermbg=238
 
 set colorcolumn=80
 
@@ -121,6 +121,8 @@ let g:syntastic_always_populate_loc_list=1
 set wildignore+=dist/**,out/**,build/**,_build/**,*.obj,.git
 " JS, Bower, Node ignores
 set wildignore+=**/bower-components/**,**/bower_components/**,**/node_modules/**
+" Golang
+set wildignore+=**/Godeps/**
 
 " Auto-flush Command-T when saving file or switching to Vim.
 augroup CommandTExtension
@@ -130,7 +132,8 @@ augroup CommandTExtension
 augroup END
 
 " TagBar
-nmap <F8> :TagbarToggle<CR>
+nmap <F8> :TagbarOpenAutoClose<CR>
+nmap <F9> :TagbarToggle<CR>
 
 " Spell Checking Commands
 :command EnableSpellCheck :set spell spelllang=en_us
@@ -169,7 +172,38 @@ au FileType go nmap gd <Plug>(go-def)
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 
+" TAGBAR + Gotags
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+
 " Markdown syntax
 au BufRead,BufNewFile *.md set filetype=markdown
 
 command PiggiebackChrome Piggieback (cemerick.austin/exec-env :exec-cmds ["open" "-ga" "/Applications/Google Chrome.app"])
+
+au BufNewFile,BufRead *.zap set filetype=clojure
