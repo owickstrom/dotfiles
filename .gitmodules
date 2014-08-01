@@ -94,3 +94,6 @@
 [submodule "vim/bundle/vim-clojure-highlight"]
 	path = vim/bundle/vim-clojure-highlight
 	url = git@github.com:guns/vim-clojure-highlight.git
+[submodule "vim/bundle/vim-qargs"]
+	path = vim/bundle/vim-qargs
+	url = git@github.com:nelstrom/vim-qargs.git
