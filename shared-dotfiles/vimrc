@@ -1,31 +1,44 @@
 " PATHOGEN
-
 execute pathogen#infect()
 
-" GENERAL SETUP
-
+" GENERAL
 set nocompatible            " get rid of Vi compatibility mode. SET FIRST!
 filetype plugin indent on   " filetype detection[ON] plugin[ON] indent[ON]
 syntax enable               " enable syntax highlighting (previously syntax on).
+
+" COLORS
 set t_Co=256
 colorscheme Tomorrow-Night
 
+" SOME SUBTLE COLOR CUSTOMIZATIONS
 highlight SignColumn ctermbg=none     " no color for gutter
 highlight CommandTSelection ctermbg=238 ctermfg=green
 highlight Visual ctermbg=238
-
 highlight VertSplit ctermfg=240 ctermbg=238
 
-set colorcolumn=80
+" NAVIGATION
+set scrolloff=3             " some lines around scroll for context
 
-" set number                  " show line numbers
+" CURSOR/LINE
+set colorcolumn=80          " ruler at 80 chars width
+set cursorline              " highlight the current line
+
+" STATUS/HISTORY
 set laststatus=22           " last window always has a statusline
-filetype indent on          " activates indenting for files
-set nohlsearch              " Don't continue to highlight searched phrases.
-set hlsearch                " Highlight all results
-set incsearch               " But do highlight as you type your search.
-set ignorecase              " Make searches case-insensitive.
+set history=200             " remember a lot of stuff
 set ruler                   " Always show info along bottom.
+" INDENTATION
+
+" FILES
+set autoread                " auto-reload files changed on disk
+set updatecount=0           " disable swap files
+
+" SEARCH
+set hlsearch                " highlight all results
+set incsearch               " but do highlight as you type your search.
+set ignorecase              " make searches case-insensitive...
+set smartcase               " ... unless they contain at least one capital letter
+set gdefault                " have :s///g flag by default on"
 
 " INDENTATION
 set cindent
