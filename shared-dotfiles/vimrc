@@ -12,8 +12,8 @@ colorscheme Tomorrow-Night
 
 " SOME SUBTLE COLOR CUSTOMIZATIONS
 highlight SignColumn ctermbg=none     " no color for gutter
-highlight CommandTSelection ctermbg=238 guibg=238 ctermfg=green guifg=#b5bd68
-highlight Visual ctermbg=238 guibg=238
+highlight CommandTSelection ctermbg=238 ctermfg=green
+highlight Visual ctermbg=238
 highlight VertSplit ctermfg=240 ctermbg=238
 
 " NAVIGATION
