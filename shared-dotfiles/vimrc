@@ -221,3 +221,10 @@ au BufRead,BufNewFile *.md set filetype=markdown
 command PiggiebackChrome Piggieback (cemerick.austin/exec-env :exec-cmds ["open" "-ga" "/Applications/Google Chrome.app"])
 
 au BufNewFile,BufRead *.zap set filetype=clojure
+
+" SEARCH/REPLACE
+function SearchReplace(pattern, replacement, files)
+  exec 'vimgrep /' . a:pattern . '/ ' . a:files
+  Qargs
+  exec 'argdo %s/' . a:pattern . '/' . a:replacement . '/gce | update'
+endfunction
