@@ -24,7 +24,6 @@ set colorcolumn=80          " ruler at 80 chars width
 set cursorline              " highlight the current line
 
 " STATUS/HISTORY
-set laststatus=22           " last window always has a statusline
 set history=200             " remember a lot of stuff
 set ruler                   " Always show info along bottom.
 " INDENTATION
