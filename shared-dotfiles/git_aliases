@@ -13,6 +13,9 @@ alias gs="git status"
 alias gd="git diff"
 __git_complete gd _git_diff
 
+alias gdc="git diff --cached"
+__git_complete gdc _git_diff
+
 alias ga="git add"
 alias gaa="git add --all"
 
