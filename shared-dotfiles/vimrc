@@ -59,6 +59,8 @@ set ttyfast
 
 let mapleader = ','
 
+noremap <Leader>n :noh<CR>
+
 " Disable arrow keys
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
