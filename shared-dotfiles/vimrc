@@ -20,6 +20,7 @@ highlight VertSplit ctermfg=240 ctermbg=238
 set scrolloff=3             " some lines around scroll for context
 
 " CURSOR/LINE
+set number
 set colorcolumn=80          " ruler at 80 chars width
 set cursorline              " highlight the current line
 
