@@ -151,8 +151,8 @@ nmap <F8> :TagbarOpenAutoClose<CR>
 nmap <F9> :TagbarToggle<CR>
 
 " Spell Checking Commands
-:command EnableSpellCheck :set spell spelllang=en_us
-:command DisableSpellCheck :set nospell
+command! EnableSpellCheck :set spell spelllang=en_us
+command! DisableSpellCheck :set nospell
 
 " Rainbow Parens
 au VimEnter * RainbowParenthesesToggle
@@ -219,7 +219,7 @@ let g:tagbar_type_go = {
 " Markdown syntax
 au BufRead,BufNewFile *.md set filetype=markdown
 
-command PiggiebackChrome Piggieback (cemerick.austin/exec-env :exec-cmds ["open" "-ga" "/Applications/Google Chrome.app"])
+command! PiggiebackChrome Piggieback (cemerick.austin/exec-env :exec-cmds ["open" "-ga" "/Applications/Google Chrome.app"])
 
 au BufNewFile,BufRead *.zap set filetype=clojure
 
@@ -244,19 +244,9 @@ endfunction
 function! SearchReplaceInput()
   let pattern = input('Search pattern: ')
 
-  if !pattern
-    echoerr "Pattern cannot be empty"
-    return
-  endif
-
   let replacement = input('Replacement: ')
 
   let files = input('Files to search/replace: ')
-
-  if !files
-    echoerr "Files cannot be empty"
-    return
-  endif
 
   call SearchReplace(pattern, replacement, files)
 endfunction
