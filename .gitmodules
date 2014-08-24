@@ -97,3 +97,6 @@
 [submodule "vim/bundle/vim-qargs"]
 	path = vim/bundle/vim-qargs
 	url = git@github.com:nelstrom/vim-qargs.git
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
