@@ -1,10 +1,10 @@
-highlight CommandTSelection guibg=#b5bd68 guifg=#494e56
+highlight CommandTSelection guibg=#444444 guifg=#b5bd68
 
 if has("gui_running")
     if has("gui_gtk2")
 
         " GVIM UBUNTU
-        set guifont=Ubuntu\ Mono\ 15
+        set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 13
         vmap <C-c> "+yi
         vmap <C-x> "+c
         vmap <C-v> c<ESC>"+p
