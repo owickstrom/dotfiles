@@ -50,6 +50,10 @@ set shiftround              " always indent/outdent to the nearest tabstop
 set expandtab               " use spaces instead of tabs
 set smarttab                " use tabs at the start of a line, spaces elsewhere
 
+" CONCEAL (DISABLED BY DEFAULT)
+set conceallevel=0
+highlight Conceal guibg=#333333 guifg=#b294bb gui=bold
+
 autocmd FileType make setlocal noexpandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 au BufNewFile,BufRead *.ejs set filetype=html
@@ -127,12 +131,14 @@ let g:airline_powerline_fonts=1
 " JAVASCRIPT SETUP
 
 let javascript_enable_domhtmlcss = 1
+let g:javascript_conceal = 1
 
 " Syntax checking
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_enable_signs=1
 let g:syntastic_always_populate_loc_list=1
 
+highlight SpellCap term=reverse ctermfg=yellow ctermbg=9 gui=undercurl guisp=#de935f
 
 " Command-T
 
