@@ -1,4 +1,15 @@
-highlight CommandTSelection guibg=#444444 guifg=#b5bd68
+set guioptions-=T  "remove toolbar
+set guioptions-=m  "remove menu
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=R  "remove right-hand scroll bar
+set guioptions-=l  "remove left-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
+colorscheme gruvbox
+set background=dark
+set linespace=1
+
+highlight CommandTSelection gui=reverse
 
 if has("gui_running")
     if has("gui_gtk2")
@@ -10,26 +21,16 @@ if has("gui_running")
         vmap <C-v> c<ESC>"+p
         imap <C-v> <C-r><C-o>+
 
-        :set guioptions-=T  "remove toolbar
-        :set guioptions-=m  "remove menu
-        :set guioptions-=r  "remove right-hand scroll bar
-        :set guioptions-=R  "remove right-hand scroll bar
-        :set guioptions-=l  "remove left-hand scroll bar
-        :set guioptions-=L  "remove left-hand scroll bar
-
     elseif has("gui_macvim")
 
         " MACVIM
         set guifont=Ubuntu\ Mono\ derivative\ Powerline:h16
-        colorscheme Tomorrow
 
     elseif has("gui_win32")
 
         " GVIM WINDOWS
         set guifont=Consolas:h14:cANSI
-        colorscheme Tomorrow
 
 
     endif
 endif
-set guioptions-=r
