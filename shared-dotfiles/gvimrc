@@ -9,7 +9,7 @@ colorscheme gruvbox
 set background=dark
 set linespace=1
 
-highlight CommandTSelection gui=reverse
+highlight CommandTSelection guibg=#3c3836 guifg=#b8bb26
 
 if has("gui_running")
     if has("gui_gtk2")
