@@ -4,6 +4,7 @@ set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=R  "remove right-hand scroll bar
 set guioptions-=l  "remove left-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
+set guioptions-=e  " use text-mode tab bar
 
 set linespace=1
 
