@@ -51,6 +51,9 @@ set shiftround              " always indent/outdent to the nearest tabstop
 set expandtab               " use spaces instead of tabs
 set smarttab                " use tabs at the start of a line, spaces elsewhere
 
+" VIMDIFF
+set diffopt=filler,vertical
+
 " CONCEAL (DISABLED BY DEFAULT)
 set conceallevel=0
 highlight Conceal guibg=#333333 guifg=#b294bb gui=bold
