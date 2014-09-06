@@ -5,8 +5,6 @@ set guioptions-=R  "remove right-hand scroll bar
 set guioptions-=l  "remove left-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
-colorscheme gruvbox
-set background=dark
 set linespace=1
 
 highlight CommandTSelection guibg=#3c3836 guifg=#b8bb26

@@ -8,7 +8,8 @@ syntax enable               " enable syntax highlighting (previously syntax on).
 
 " COLORS
 set t_Co=256
-colorscheme Tomorrow-Night
+colorscheme gruvbox
+set background=dark
 
 " SOME SUBTLE COLOR CUSTOMIZATIONS
 highlight SignColumn ctermbg=none     " no color for gutter
