@@ -67,9 +67,6 @@ let mapleader = ','
 
 " Reset search with ,n
 noremap <Leader>n :noh<CR>
-" Navigate quickfix errors with ,qp and ,qn
-noremap <Leader>qp :cprevious<CR>
-noremap <Leader>qn :cnext<CR>
 
 " Disable arrow keys
 inoremap  <Up>     <NOP>
