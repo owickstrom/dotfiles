@@ -20,6 +20,8 @@ if has("gui_running")
         vmap <C-v> c<ESC>"+p
         imap <C-v> <C-r><C-o>+
 
+        map <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
+
     elseif has("gui_macvim")
 
         " MACVIM
