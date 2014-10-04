@@ -8,7 +8,9 @@
 (defvar my-packages '(starter-kit-lisp
 		      clojure-mode
 		      cider
+                      typed-clojure-mode
                       undo-tree
+                      markdown-mode+
 		      gruvbox-theme))
 (dolist (p my-packages)
   (unless (package-installed-p p)
@@ -23,6 +25,7 @@
 (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
 (add-hook 'ielm-mode-hook             #'enable-paredit-mode)
 (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
+(add-hook 'lisp-mode-hook             #'rainbow-delimiters-mode)
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
 
@@ -48,6 +51,7 @@
 (add-hook 'clojure-mode-hook 'subword-mode)
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
+(add-hook 'cider-repl-mode-hook 'typed-clojure-mode)
 
 (defun cider-namespace-refresh ()
   (interactive)
