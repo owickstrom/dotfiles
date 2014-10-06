@@ -6,7 +6,7 @@
 	gitproxy = /home/CORPUSERS/23060754/bin/gitproxy
 [user]
 	name = Oskar Wickström
-	email = oskar.wickstrom@live.com
+	email = oskar.wickstrom@sonymobile.com
 [alias]
   co = checkout
   ci = commit
