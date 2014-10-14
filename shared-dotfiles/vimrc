@@ -149,6 +149,7 @@ set wildignore+=dist/**,out/**,build/**,_build/**,*.obj,.git
 set wildignore+=**/bower-components/**,**/bower_components/**,**/node_modules/**
 " Golang
 set wildignore+=**/Godeps/**
+let g:go_disable_autoinstall = 1
 
 " Auto-flush Command-T when saving file or switching to Vim.
 augroup CommandTExtension
