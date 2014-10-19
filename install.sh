@@ -4,6 +4,8 @@ set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+git submodule update --init
+
 $DIR/make-symlinks.sh
 
 $DIR/osx-scripts/install-packages.sh

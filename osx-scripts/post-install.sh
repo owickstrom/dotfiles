@@ -47,4 +47,12 @@ else
     e_warn "Command-T: ruby extconf.rb failed"
 fi
 
+# Symlink powerline fonts
+
+FONTS_DIR=$HOME/Library/Fonts/
+
+ln -s $HOME/.dotfiles/shared-lib/powerline-fonts/UbuntuMono/*.ttf $FONTS_DIR
+ln -s $HOME/.dotfiles/shared-lib/powerline-fonts/SourceCodePro/*.otf $FONTS_DIR
+ln -s $HOME/.dotfiles/shared-lib/powerline-fonts/Meslo/*.otf $FONTS_DIR
+
 e_info "Post install for OSX done!"

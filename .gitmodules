@@ -97,3 +97,6 @@
 [submodule "vim/bundle/rust.vim"]
 	path = vim/bundle/rust.vim
 	url = git@github.com:wting/rust.vim.git
+[submodule "shared-lib/powerline-fonts"]
+	path = shared-lib/powerline-fonts
+	url = git@github.com:Lokaltog/powerline-fonts.git
