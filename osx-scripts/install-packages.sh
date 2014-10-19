@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-#set -e
-
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/../common.sh
 
@@ -25,8 +23,8 @@ fi
 
 if [[ "$(type -P brew)" ]]; then
     e_header "Updating Homebrew"
-    #brew doctor
-    #brew update
+    brew doctor
+    brew update
 
     # Install Homebrew recipes.
     recipes="
