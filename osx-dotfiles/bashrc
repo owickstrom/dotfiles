@@ -5,7 +5,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-$HOME/.nvm/nvm.sh
+source $HOME/.nvm/nvm.sh
 
 # Bash Completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
