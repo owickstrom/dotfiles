@@ -39,6 +39,8 @@ if [[ "$(type -P brew)" ]]; then
         leiningen
         heroku-toolbelt
         ctags-exuberant
+        ghc
+        cabal-install
     "
 
     for recipe in $recipes; do

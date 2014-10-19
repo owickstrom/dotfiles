@@ -36,3 +36,5 @@ function removeFromPath() {
 }
 setjdk 1.8 || echo "ERROR: JDK could not be set!"
 
+
+export PATH="$PATH:$HOME/.cabal/bin"

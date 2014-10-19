@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/../common.sh
 
@@ -33,6 +31,16 @@ fi
 # Make Command-T
 
 make
+if [[ $? -eq 0 ]]; then
+    e_success "Command-T: ruby extconf.rb"
+else
+    e_warn "Command-T: ruby extconf.rb failed"
+fi
+
+# Install ghc-mod
+
+cabal update
+cabal install ghc-mod
 if [[ $? -eq 0 ]]; then
     e_success "Command-T: ruby extconf.rb"
 else
