@@ -34,7 +34,7 @@ function setjdk() {
 function removeFromPath() {
   export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
 }
-setjdk 1.8 || echo "ERROR: JDK could not be set!"
+# setjdk 1.8 || echo "ERROR: JDK could not be set!"
 
 
 export PATH="$PATH:$HOME/.cabal/bin"
