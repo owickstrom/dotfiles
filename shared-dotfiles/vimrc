@@ -8,7 +8,11 @@ syntax enable               " enable syntax highlighting (previously syntax on).
 
 " COLORS
 set t_Co=256
-colorscheme gruvbox
+if has("gui_running")
+  colorscheme gruvbox
+else
+  colorscheme Tomorrow-Night
+endif
 set background=dark
 
 " SOME SUBTLE COLOR CUSTOMIZATIONS
