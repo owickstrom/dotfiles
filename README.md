@@ -1,10 +1,11 @@
-# Dotfiles for Linux
+# Dotfiles
 
-This repository contains my basic setup for bash and vim.
+This repository contains my barebones toolbelt and configuration for OSX and
+Ubuntu.
 
-### Installation
+## Installation
 
 ```bash
-git clone git@bitbucket.org:OskarWickstrom/dotfiles-linux.git ~/dotfiles
-~/dotfiles/install.sh
+git clone git@github.com:owickstrom/dotfiles.git ~/.dotfiles
+~/.dotfiles/install.sh
 ```
