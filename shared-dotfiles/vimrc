@@ -8,12 +8,14 @@ syntax enable               " enable syntax highlighting (previously syntax on).
 
 " COLORS
 set t_Co=256
+
 if has("gui_running")
   colorscheme gruvbox
+  set background=dark
 else
+  set background=dark
   colorscheme Tomorrow-Night
 endif
-set background=dark
 
 " SOME SUBTLE COLOR CUSTOMIZATIONS
 highlight SignColumn ctermbg=none     " no color for gutter
