@@ -12,6 +12,8 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
+source ~/.dotfiles/vim/bundle/gruvbox/gruvbox_256palette_osx.sh
+
 # Load in the git branch prompt script.
 source ~/.git-prompt.sh
 
@@ -32,5 +34,5 @@ function setjdk() {
 function removeFromPath() {
   export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
 }
-setjdk 1.8
+setjdk 1.8 || echo "ERROR: JDK could not be set!"
 

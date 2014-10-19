@@ -23,7 +23,7 @@ cd $DIR/../vim/bundle/Command-T/ruby/command-t
 
 # Configure Command-T
 
-/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby extconf.rb
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby extconf.rb
 if [[ $? -eq 0 ]]; then
     e_success "Command-T: ruby extconf.rb"
 else

@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
-set -e
+#set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $DIR/../common.sh
 
 # OSX-only stuff. Abort if not OSX.
-$IS_OSX && exit 0
+if $IS_OSX; then
+  exit 0
+fi
 
 # Some tools look for XCode, even though they don't need it.
 # https://github.com/joyent/node/issues/3681
@@ -23,8 +25,8 @@ fi
 
 if [[ "$(type -P brew)" ]]; then
     e_header "Updating Homebrew"
-    brew doctor
-    brew update
+    #brew doctor
+    #brew update
 
     # Install Homebrew recipes.
     recipes="
