@@ -38,6 +38,7 @@ if [[ "$(type -P brew)" ]]; then
         nvm
         leiningen
         heroku-toolbelt
+        ctags-exuberant
     "
 
     for recipe in $recipes; do
