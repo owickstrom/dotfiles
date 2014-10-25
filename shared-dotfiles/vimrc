@@ -8,14 +8,8 @@ syntax enable               " enable syntax highlighting (previously syntax on).
 
 " COLORS
 set t_Co=256
-
-if has("gui_running")
-  colorscheme gruvbox
-  set background=dark
-else
-  set background=dark
-  colorscheme Tomorrow-Night
-endif
+set background=dark
+colorscheme Tomorrow-Night
 
 " SOME SUBTLE COLOR CUSTOMIZATIONS
 highlight SignColumn ctermbg=none     " no color for gutter
@@ -103,7 +97,7 @@ inoremap <expr><C-g>     neocomplcache#undo_completion()
 inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
 " <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
@@ -161,10 +155,6 @@ augroup CommandTExtension
   autocmd BufWritePost * CommandTFlush
 augroup END
 
-" TagBar
-nmap <F8> :TagbarOpenAutoClose<CR>
-nmap <F9> :TagbarToggle<CR>
-
 " Spell Checking Commands
 command! EnableSpellCheck :set spell spelllang=en_us
 command! DisableSpellCheck :set nospell
@@ -174,7 +164,7 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-"
+
 " Enable custom .vim.custom in directories
 if filereadable(".vim.custom")
     so .vim.custom
@@ -186,36 +176,4 @@ let delimitMate_expand_cr=1
 " Markdown syntax
 au BufRead,BufNewFile *.md set filetype=markdown
 
-command! PiggiebackChrome Piggieback (cemerick.austin/exec-env :exec-cmds ["open" "-ga" "/Applications/Google Chrome.app"])
-
 au BufNewFile,BufRead *.zap set filetype=clojure
-
-" SEARCH/REPLACE
-function! SearchReplace(pattern, replacement, files)
-  " Store buffer number
-  let bn = bufnr('%')
-
-  " Find the files matching the pattern
-  exec 'vimgrep /' . a:pattern . '/ ' . a:files
-
-  " Put quickfix file list into args. See https://github.com/nelstrom/vim-qargs.
-  Qargs
-
-  " Run %s/pattern/replacement/gce and update on all buffers.
-  exec 'argdo %s/' . a:pattern . '/' . a:replacement . '/gce | update'
-
-  " Go back to the buffer where this function was called.
-  exec ':buffer ' . bn
-endfunction
-
-function! SearchReplaceInput()
-  let pattern = input('Search pattern: ')
-
-  let replacement = input('Replacement: ')
-
-  let files = input('Files to search/replace: ')
-
-  call SearchReplace(pattern, replacement, files)
-endfunction
-
-noremap <Leader>sr :call SearchReplaceInput()<CR>

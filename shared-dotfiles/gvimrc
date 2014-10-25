@@ -8,6 +8,9 @@ set guioptions-=e  " use text-mode tab bar
 
 set linespace=1
 
+colorscheme gruvbox
+set background=dark
+
 highlight CommandTSelection guibg=#3c3836 guifg=#b8bb26
 
 if has("gui_running")
