@@ -61,9 +61,6 @@
 [submodule "vim/bundle/delimitMate"]
 	path = vim/bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
-[submodule "vim/bundle/vim-go"]
-	path = vim/bundle/vim-go
-	url = https://github.com/fatih/vim-go.git
 [submodule "vim/bundle/vim-jsx"]
 	path = vim/bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git

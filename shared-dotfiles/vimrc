@@ -153,9 +153,6 @@ highlight SpellCap term=reverse ctermfg=yellow ctermbg=9 gui=undercurl guisp=#de
 set wildignore+=dist/**,out/**,build/**,_build/**,*.obj,.git
 " JS, Bower, Node ignores
 set wildignore+=**/bower-components/**,**/bower_components/**,**/node_modules/**
-" Golang
-set wildignore+=**/Godeps/**
-let g:go_disable_autoinstall = 1
 
 " Auto-flush Command-T when saving file or switching to Vim.
 augroup CommandTExtension
@@ -185,54 +182,6 @@ endif
 
 " DELIMIT MATE
 let delimitMate_expand_cr=1
-
-" VIM GO
-
-" Import package under cursor.
-au FileType go nmap <Leader>i <Plug>(go-import)
-
-" Open godoc for word under cursor.
-au FileType go nmap <Leader>gd <Plug>(go-doc)
-
-" Run command for current file.
-au FileType go nmap <leader>gr <Plug>(go-run)
-au FileType go nmap <leader>gb <Plug>(go-build)
-au FileType go nmap <leader>gt <Plug>(go-test)
-
-" Replace gd with go-def.
-au FileType go nmap gd <Plug>(go-def)
-" And for opening in splits.
-au FileType go nmap <Leader>ds <Plug>(go-def-split)
-au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
-
-" TAGBAR + Gotags
-let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\ }
 
 " Markdown syntax
 au BufRead,BufNewFile *.md set filetype=markdown
