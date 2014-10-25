@@ -6,14 +6,18 @@ set nocompatible            " get rid of Vi compatibility mode. SET FIRST!
 filetype plugin indent on   " filetype detection[ON] plugin[ON] indent[ON]
 syntax enable               " enable syntax highlighting (previously syntax on).
 
+if !has("gui_running")
+  let g:gruvbox_italic=0
+endif
+
 " COLORS
 set t_Co=256
+colorscheme gruvbox
 set background=dark
-colorscheme Tomorrow-Night
 
 " SOME SUBTLE COLOR CUSTOMIZATIONS
 highlight SignColumn ctermbg=none     " no color for gutter
-highlight CommandTSelection ctermbg=238 ctermfg=green
+highlight CommandTSelection ctermbg=blue ctermfg=white
 highlight Visual ctermbg=238
 highlight VertSplit ctermfg=240 ctermbg=238
 
