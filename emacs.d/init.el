@@ -1,9 +1,11 @@
 ;; Add MELPA archive
 
 (require 'package)
-(package-initialize)
+
 (add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
+(package-initialize)
 
 (defvar my-packages '(starter-kit-lisp
 		      clojure-mode
@@ -11,13 +13,18 @@
                       typed-clojure-mode
                       undo-tree
                       markdown-mode+
-		      gruvbox-theme))
+		      gruvbox-theme
+                      elixir-mode
+                      rainbow-delimiters))
 (dolist (p my-packages)
   (unless (package-installed-p p)
     (package-install p)))
 
 ;; Replace emacs undo system with undo-tree
 (global-undo-tree-mode)
+
+;; Rainbow Delimiters everywhere!
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; Auto load paredit in LISP buffers
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
