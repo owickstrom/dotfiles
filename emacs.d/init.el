@@ -20,8 +20,14 @@
   (unless (package-installed-p p)
     (package-install p)))
 
+;; Color Themes
+(load-theme 'gruvbox t)
+
 ;; Replace emacs undo system with undo-tree
 (global-undo-tree-mode)
+
+;; Don't show weird fringe characters for empty lines.
+(setq-default indicate-empty-lines nil)
 
 ;; Rainbow Delimiters everywhere!
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
@@ -70,9 +76,6 @@
   (define-key clojure-mode-map (kbd "C-c M-f") 'cider-namespace-refresh))
 
 (add-hook 'cider-mode-hook (lambda () (add-cider-namespace-key)))
-
-;; Color Themes
-(load-theme 'gruvbox t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
