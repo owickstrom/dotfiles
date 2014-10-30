@@ -15,7 +15,8 @@
                       markdown-mode+
 		      gruvbox-theme
                       elixir-mode
-                      rainbow-delimiters))
+                      rainbow-delimiters
+                      git-gutter))
 (dolist (p my-packages)
   (unless (package-installed-p p)
     (package-install p)))
