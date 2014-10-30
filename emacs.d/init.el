@@ -16,7 +16,10 @@
 		      gruvbox-theme
                       elixir-mode
                       rainbow-delimiters
-                      git-gutter))
+                      git-gutter
+                      less-css-mode
+                      auto-complete))
+
 (dolist (p my-packages)
   (unless (package-installed-p p)
     (package-install p)))
@@ -42,6 +45,14 @@
 (add-hook 'lisp-mode-hook             #'rainbow-delimiters-mode)
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
+
+(require 'auto-complete)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
+(require 'auto-complete-config)
+(ac-config-default)
+
+;; Buffer based auto-complete for certain languages.
+(add-hook 'javascript-mode (lambda () (auto-complete-mode 1)))
 
 ;; fix the PATH variable
 (defun set-exec-path-from-shell-PATH ()
