@@ -73,7 +73,7 @@
 
 (when window-system
   ;; GUI Customizations
-  (set-face-attribute 'default nil :font "Monaco-16")
+  (set-face-attribute 'default nil :font "Ubuntu Mono-16")
   (tool-bar-mode -1)
 
   (set-exec-path-from-shell-PATH))
