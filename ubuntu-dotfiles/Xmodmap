@@ -2,3 +2,7 @@
 keycode 66 = Control_L
 clear Lock
 add Control = Control_L
+
+! Fix backtick/tilde
+keycode 94 = grave asciitilde Cyrillic_io Cyrillic_IO
+keycode 49 = less greater less greater
