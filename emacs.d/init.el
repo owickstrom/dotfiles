@@ -20,6 +20,7 @@
                       less-css-mode
                       auto-complete
                       flycheck
+                      emmet-mode
                       ))
 
 (dolist (p my-packages)
@@ -55,6 +56,9 @@
 
 ;; Buffer based auto-complete for certain languages.
 (add-hook 'javascript-mode (lambda () (auto-complete-mode 1)))
+
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+(add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
 
 ;; Flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
