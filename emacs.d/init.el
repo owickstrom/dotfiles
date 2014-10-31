@@ -18,7 +18,9 @@
                       rainbow-delimiters
                       git-gutter
                       less-css-mode
-                      auto-complete))
+                      auto-complete
+                      flycheck
+                      ))
 
 (dolist (p my-packages)
   (unless (package-installed-p p)
@@ -53,6 +55,9 @@
 
 ;; Buffer based auto-complete for certain languages.
 (add-hook 'javascript-mode (lambda () (auto-complete-mode 1)))
+
+;; Flycheck
+(add-hook 'after-init-hook #'global-flycheck-hook)
 
 ;; fix the PATH variable
 (defun set-exec-path-from-shell-PATH ()
