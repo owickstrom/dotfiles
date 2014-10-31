@@ -57,7 +57,7 @@
 (add-hook 'javascript-mode (lambda () (auto-complete-mode 1)))
 
 ;; Flycheck
-(add-hook 'after-init-hook #'global-flycheck-hook)
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; fix the PATH variable
 (defun set-exec-path-from-shell-PATH ()
