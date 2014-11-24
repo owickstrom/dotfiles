@@ -23,8 +23,8 @@ if [[ "$OSTYPE" =~ ^darwin ]]; then
     OS_SPECIFIC=$DOTFILES/osx-dotfiles
 fi
 
-if [[ "$(cat /etc/issue 2> /dev/null)" =~ Ubuntu ]]; then
-    OS_SPECIFIC=$DOTFILES/ubuntu-dotfiles
+if [[ "$(uname -s)" =~ Linux ]]; then
+    OS_SPECIFIC=$DOTFILES/linux-dotfiles
 fi
 
 # Create .dotfiles.old in homedir

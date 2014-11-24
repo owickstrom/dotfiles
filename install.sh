@@ -9,8 +9,9 @@ git submodule update --init
 $DIR/make-symlinks.sh
 
 $DIR/osx-scripts/install-packages.sh
-$DIR/ubuntu-scripts/install-packages.sh
+$DIR/linux-scripts/install-packages.sh
+$DIR/linux-scripts/install-fonts.sh
 
 $DIR/shared-scripts/post-install.sh
-$DIR/ubuntu-scripts/post-install.sh
+$DIR/linux-scripts/post-install.sh
 $DIR/osx-scripts/post-install.sh

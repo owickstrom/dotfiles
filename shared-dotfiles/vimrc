@@ -17,7 +17,6 @@ set background=dark
 
 " SOME SUBTLE COLOR CUSTOMIZATIONS
 highlight SignColumn ctermbg=none     " no color for gutter
-highlight CommandTSelection ctermbg=blue ctermfg=white
 highlight Visual ctermbg=238
 highlight VertSplit ctermfg=240 ctermbg=238
 
@@ -144,20 +143,6 @@ let g:syntastic_enable_signs=1
 let g:syntastic_always_populate_loc_list=1
 
 highlight SpellCap term=reverse ctermfg=yellow ctermbg=9 gui=undercurl guisp=#de935f
-
-" Command-T
-
-" General ignores
-set wildignore+=dist/**,out/**,build/**,_build/**,*.obj,.git
-" JS, Bower, Node ignores
-set wildignore+=**/bower-components/**,**/bower_components/**,**/node_modules/**
-
-" Auto-flush Command-T when saving file or switching to Vim.
-augroup CommandTExtension
-  autocmd!
-  autocmd FocusGained * CommandTFlush
-  autocmd BufWritePost * CommandTFlush
-augroup END
 
 " Spell Checking Commands
 command! EnableSpellCheck :set spell spelllang=en_us
