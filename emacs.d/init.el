@@ -21,6 +21,8 @@
                       auto-complete
                       flycheck
                       emmet-mode
+                      jsx-mode
+                      editorconfig
                       ))
 
 (dolist (p my-packages)
@@ -63,20 +65,16 @@
 ;; Flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
-;; fix the PATH variable
-(defun set-exec-path-from-shell-PATH ()
-  (let ((path-from-shell (shell-command-to-string "TERM=vt100 $SHELL -i -c 'echo $PATH'")))
-    (setenv "PATH" path-from-shell)
-    (setq exec-path (split-string path-from-shell path-separator))))
+;; JSX
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
+(autoload 'jsx-mode "jsx-mode" "JSX mode" t)
 
 (setq inhibit-startup-message t)
 
 (when window-system
   ;; GUI Customizations
   (set-face-attribute 'default nil :font "Monaco-16")
-  (tool-bar-mode -1)
-
-  (set-exec-path-from-shell-PATH))
+  (tool-bar-mode -1))
 
 (menu-bar-mode -1)
 
