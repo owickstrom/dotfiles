@@ -1,5 +1,8 @@
 export EDITOR="/usr/local/bin/vim"
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
@@ -37,6 +40,10 @@ function removeFromPath() {
 # setjdk 1.8 || echo "ERROR: JDK could not be set!"
 
 export PATH="$PATH:$HOME/.cabal/bin"
+
+function ios() {
+  xcrun instruments -w "iPhone 5s (8.1 Simulator)"
+}
 
 # Export PATH to GUI apps
 launchctl setenv PATH $PATH
