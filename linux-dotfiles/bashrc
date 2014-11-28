@@ -111,9 +111,14 @@ fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+source /usr/share/bash-completion/completions/git
+
 # Load in the git branch prompt script.
 source ~/.git-prompt.sh
 
 export TERM=screen-256color
 
 PS1='\[\033[0;31m\]\w\[\033[0;32m\]$(__git_ps1)\[\e[0m\]$ '
+
+export NVM_DIR="/home/owi/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

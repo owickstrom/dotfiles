@@ -15,5 +15,7 @@ if [ $(command -v yum) ]; then
   sudo yum install $DEPS
 fi
 
-
-# $DIR/install-rvm.sh
+if [ $(command -v pacman) ]; then
+  DEPS="git tmux curl wget vim irssi ctags base-devel"
+  sudo pacman -S $DEPS
+fi
