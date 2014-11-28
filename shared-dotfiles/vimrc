@@ -31,7 +31,21 @@ set cursorline              " highlight the current line
 " STATUS/HISTORY
 set history=200             " remember a lot of stuff
 set ruler                   " Always show info along bottom.
-" INDENTATION
+
+" STATUS LINE
+
+hi User1 ctermfg=240 ctermbg=236
+hi User2 ctermfg=11 ctermbg=236
+hi User3 ctermfg=245 ctermbg=236
+
+set laststatus=2
+set statusline=
+set statusline +=%1*\ %<%F%*  "full path
+set statusline +=%2*\ %m%*    "modified flag
+set statusline +=%1*%=%*      "separator
+set statusline +=%3*%=%4l%*   "current line
+set statusline +=%1*:%*       "separator
+set statusline +=%3*%2v\ %*    "virtual column number
 
 " FILES
 set autoread                " auto-reload files changed on disk
