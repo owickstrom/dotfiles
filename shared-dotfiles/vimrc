@@ -45,7 +45,7 @@ set statusline +=%2*\ %m%*    "modified flag
 set statusline +=%1*%=%*      "separator
 set statusline +=%3*%=%4l%*   "current line
 set statusline +=%1*:%*       "separator
-set statusline +=%3*%2v\ %*    "virtual column number
+set statusline +=%3*%02v\ %*    "virtual column number
 
 " FILES
 set autoread                " auto-reload files changed on disk
