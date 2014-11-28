@@ -10,7 +10,6 @@ $DIR/make-symlinks.sh
 
 $DIR/osx-scripts/install-packages.sh
 $DIR/linux-scripts/install-packages.sh
-$DIR/linux-scripts/install-fonts.sh
 
 $DIR/shared-scripts/post-install.sh
 $DIR/linux-scripts/post-install.sh

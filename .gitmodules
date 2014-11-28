@@ -64,9 +64,6 @@
 [submodule "vim/bundle/editorconfig-vim"]
 	path = vim/bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule "vim/bundle/vim-airline"]
-	path = vim/bundle/vim-airline
-	url = git@github.com:bling/vim-airline.git
 [submodule "vim/bundle/vim-clojure-highlight"]
 	path = vim/bundle/vim-clojure-highlight
 	url = git@github.com:guns/vim-clojure-highlight.git
@@ -85,9 +82,6 @@
 [submodule "vim/bundle/rust.vim"]
 	path = vim/bundle/rust.vim
 	url = git@github.com:wting/rust.vim.git
-[submodule "shared-lib/powerline-fonts"]
-	path = shared-lib/powerline-fonts
-	url = git@github.com:Lokaltog/powerline-fonts.git
 [submodule "vim/bundle/elixir"]
   path = vim/bundle/vim-elixir
   url = git@github.com:elixir-lang/vim-elixir.git
