@@ -94,3 +94,6 @@
 [submodule "vim/bundle/vim-fireplace"]
 	path = vim/bundle/vim-fireplace
 	url = git://github.com/tpope/vim-fireplace.git
+[submodule "vim/bundle/vim-leiningen"]
+	path = vim/bundle/vim-leiningen
+	url = git@github.com:tpope/vim-leiningen.git
