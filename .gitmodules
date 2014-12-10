@@ -91,3 +91,6 @@
 [submodule "vim/bundle/vimerl"]
 	path = vim/bundle/vimerl
 	url = git@github.com:jimenezrick/vimerl.git
+[submodule "vim/bundle/vim-fireplace"]
+	path = vim/bundle/vim-fireplace
+	url = git://github.com/tpope/vim-fireplace.git
