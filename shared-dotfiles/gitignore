@@ -6,6 +6,7 @@
 vim/.netrwhist
 .vim.custom
 .DS_Store
+.projections.json
 
 # Temporary files
 *~
