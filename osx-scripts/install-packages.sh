@@ -39,6 +39,7 @@ if [[ "$(type -P brew)" ]]; then
         ctags-exuberant
         ghc
         cabal-install
+        pandoc
     "
 
     for recipe in $recipes; do

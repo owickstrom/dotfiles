@@ -17,7 +17,7 @@ if has("gui_running")
     if has("gui_gtk2")
 
         " GVIM UBUNTU
-        set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 13
+        set guifont=Source\ Code\ Pro\ 12
         vmap <C-c> "+yi
         vmap <C-x> "+c
         vmap <C-v> c<ESC>"+p

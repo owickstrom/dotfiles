@@ -171,3 +171,10 @@ let delimitMate_expand_cr=1
 au BufRead,BufNewFile *.md set filetype=markdown
 
 au BufNewFile,BufRead *.zap set filetype=clojure
+
+" ECLIM
+let g:EclimCompletionMethod = 'omnifunc'
+autocmd FileType java nnoremap <buffer> gd :JavaSearch<cr>
+autocmd FileType java set tabstop=4
+autocmd FileType java set softtabstop=4
+autocmd FileType java set shiftwidth=4

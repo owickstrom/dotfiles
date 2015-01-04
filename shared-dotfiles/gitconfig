@@ -22,3 +22,5 @@
   fernkopf = "!git reset --hard $(git remote-tracked)"
 [push]
 	default = simple
+[branch]
+	autosetuprebase = always
