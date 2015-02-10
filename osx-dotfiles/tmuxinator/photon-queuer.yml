@@ -1,0 +1,7 @@
+name: photon-queuer
+root: ~/Projects/Sony/photon-queuer
+windows:
+  - server: lein with-profile dev,jetty run -m photon-queuer.main
+  - test: lein test
+  - git: git status
+

@@ -181,6 +181,8 @@ endfunction
 " Add stuartsierra/component style key binding for reset.
 autocmd FileType clojure nmap <Leader>ur :call ReloadUserSystem()<CR>
 
+let g:slimv_disable_clojure=1
+
 " ECLIM
 let g:EclimCompletionMethod = 'omnifunc'
 autocmd FileType java nnoremap <buffer> gd :JavaSearch<cr>

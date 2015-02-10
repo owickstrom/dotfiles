@@ -1,0 +1,8 @@
+name: photon-api-proxy
+root: ~/Projects/Sony/photon-api-proxy
+windows:
+  - server: STORAGE_PROVIDER=dropbox nodemon bin/www
+  - test: mocha -w
+  - vim: vim
+  - lt: lt --subdomain oskarphoton --port 4000
+

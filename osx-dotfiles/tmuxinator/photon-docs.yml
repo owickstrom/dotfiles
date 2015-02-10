@@ -1,0 +1,6 @@
+name: photon-docs
+root: ~/Projects/Sony/photon-docs
+windows:
+  - vim: vim
+  - build: mvn -f architecture/pom.xml clean com.github.jeluard:plantuml-maven-plugin:generate site
+

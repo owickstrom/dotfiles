@@ -1,0 +1,7 @@
+name: photon-items
+root: ~/Projects/Sony/photon-items
+windows:
+  - server: lein with-profile dev,jetty run -m photon-items.main
+  - test: lein test
+  - vim: vim
+

@@ -15,6 +15,11 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
+# Tmuxinator Completion
+if [ -f ~/.dotfiles/lib/tmuxinator.bash ]; then
+  source ~/.dotfiles/lib/tmuxinator.bash
+fi
+
 source ~/.dotfiles/vim/bundle/gruvbox/gruvbox_256palette_osx.sh
 
 # Load in the git branch prompt script.

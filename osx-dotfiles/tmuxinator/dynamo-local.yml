@@ -1,0 +1,5 @@
+name: dynamo-local
+root: ~/
+windows:
+  - db: dynamo-local -sharedDb
+

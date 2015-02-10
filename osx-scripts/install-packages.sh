@@ -51,3 +51,17 @@ if [[ "$(type -P brew)" ]]; then
         fi
     done
 fi
+
+# Install Gems.
+gems="
+  tmuxinator
+"
+
+for gem in $gems; do
+    gem install $gem
+    if [[ $? -eq 0 ]]; then
+        e_success "$recipe is already installed"
+    else
+        e_warn "$gem failed to install"
+    fi
+done
