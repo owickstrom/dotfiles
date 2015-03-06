@@ -12,7 +12,7 @@ endif
 
 " COLORS
 set t_Co=256
-colorscheme gruvbox
+colorscheme Tomorrow-Night
 set background=dark
 
 " SOME SUBTLE COLOR CUSTOMIZATIONS
@@ -67,6 +67,13 @@ set shiftwidth=2            " indent/outdent by 2 columns
 set shiftround              " always indent/outdent to the nearest tabstop
 set expandtab               " use spaces instead of tabs
 set smarttab                " use tabs at the start of a line, spaces elsewhere
+
+" TABS
+nmap <silent> tt :tabnew<CR>
+nmap <silent> [g :tabprevious<CR>
+nmap <silent> ]g :tabnext<CR>
+nmap <silent> [G :tabrewind<CR>
+nmap <silent> ]G :tablast<CR>
 
 " VIMDIFF
 set diffopt=filler,vertical
@@ -189,3 +196,35 @@ autocmd FileType java nnoremap <buffer> gd :JavaSearch<cr>
 autocmd FileType java set tabstop=4
 autocmd FileType java set softtabstop=4
 autocmd FileType java set shiftwidth=4
+
+" GOLANG
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+
+" TYPE IMPLEMENTS
+au FileType go nmap <Leader>ti <Plug>(go-implements)
+" INFO
+au FileType go nmap <Leader>i <Plug>(go-info)
+
+" GODOC/GODOC VERTICAL
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+" GODOC BROWSER
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+
+" GO RUN
+au FileType go nmap <leader>r <Plug>(go-run)
+" GO BUILD
+au FileType go nmap <leader>b <Plug>(go-build)
+" GO TEST
+au FileType go nmap <leader>t <Plug>(go-test)
+" GO COVERAGE
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+autocmd FileType javascript command! FmtJson %!jq -M .
+
+let g:clang_c_options = '-std=c++1y'
+let g:clang_cpp_options = '-std=c++1y -stdlib=libc++ -Wc++11-extensions'
+
+au BufNewFile,BufRead *.purs set syntax=haskell

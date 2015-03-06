@@ -49,6 +49,3 @@ export PATH="$PATH:$HOME/.cabal/bin"
 function ios() {
   xcrun instruments -w "iPhone 5s (8.1 Simulator)"
 }
-
-# Export PATH to GUI apps
-launchctl setenv PATH $PATH

@@ -1,7 +1,6 @@
 name: photon-web
 root: ~/Projects/Sony/photon-web
 windows:
-  - vim: vim
+  - git:
   - server: make watch
-  - gui: cd lib/photon-web-gui
 

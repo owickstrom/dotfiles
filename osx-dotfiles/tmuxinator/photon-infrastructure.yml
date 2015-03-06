@@ -1,0 +1,5 @@
+name: photon-infra
+root: ~/Projects/Sony/photon-infrastructure
+windows:
+  - git:
+

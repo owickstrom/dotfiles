@@ -109,3 +109,6 @@
 [submodule "vim/bundle/vim-go2"]
 	path = vim/bundle/vim-go2
 	url = https://github.com/fatih/vim-go.git
+[submodule "vim/bundle/vim-clang"]
+	path = vim/bundle/vim-clang
+	url = git@github.com:justmao945/vim-clang.git
