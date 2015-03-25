@@ -8,22 +8,13 @@ set guioptions-=e  " use text-mode tab bar
 
 set linespace=1
 
-colorscheme Tomorrow-Night
-set background=dark
-
-" STATUS LINE
-
-hi User1 ctermfg=240 guifg=#777777 ctermbg=236 guibg=#333333
-hi User2 ctermfg=11 guifg=#FFFF00 ctermbg=236 guibg=#333333
-hi User3 ctermfg=245 guifg=#555555 ctermbg=236 guibg=#333333
-
-hi CommandTSelection guibg=#3c3836 guifg=#b8bb26
+highlight CommandTSelection guibg=#3c3836 guifg=#b8bb26
 
 if has("gui_running")
     if has("gui_gtk2")
 
         " GVIM UBUNTU
-        set guifont=Source\ Code\ Pro\ 12
+        set guifont=Ubuntu\ Mono\ 13
         vmap <C-c> "+yi
         vmap <C-x> "+c
         vmap <C-v> c<ESC>"+p

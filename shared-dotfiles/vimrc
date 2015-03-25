@@ -27,6 +27,7 @@ set scrolloff=3             " some lines around scroll for context
 set number
 set colorcolumn=80          " ruler at 80 chars width
 set cursorline              " highlight the current line
+hi ColorColumn guibg=#3a2a2a
 
 " STATUS/HISTORY
 set history=200             " remember a lot of stuff
@@ -142,8 +143,15 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 " Use GHC functionality for haskell source files
 "au Bufenter *.hs compiler ghc
-"let g:haddock_browser = "/usr/bin/google-chrome"
-"let g:ghc = "/usr/local/bin/ghc"
+let g:haddock_browser = "/usr/bin/google-chrome"
+let g:ghc = "/usr/local/bin/ghc"
+
+hi ghcmodType ctermbg=174 ctermfg=235
+let g:ghcmod_type_highlight = 'ghcmodType'
+
+nmap <Leader>gt :GhcModType<CR>
+nmap <Leader>gc :GhcModTypeClear<CR>
+nmap <Leader>gi :GhcModTypeInsert<CR>
 
 
 " JAVASCRIPT SETUP
