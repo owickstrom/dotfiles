@@ -1,0 +1,5 @@
+name: photon-thumbnailer
+root: ~/Projects/Sony/photon-thumbnailer
+windows:
+  - git: git status
+

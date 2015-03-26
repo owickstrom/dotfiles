@@ -1,0 +1,6 @@
+name: photon-auth
+root: ~/Projects/Sony/photon-auth
+windows:
+  - server: nodemon bin/www
+  - git:
+

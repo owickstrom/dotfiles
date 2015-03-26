@@ -1,0 +1,5 @@
+name: zap
+root: ~/Projects/haskell/zap
+
+windows:
+  - zap:

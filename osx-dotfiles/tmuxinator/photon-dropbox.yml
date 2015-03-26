@@ -1,6 +1,5 @@
 name: photon-dropbox
 root: ~/Projects/Sony/photon-storage-dropbox
 windows:
-  - server: gradle run
   - git: git status
 

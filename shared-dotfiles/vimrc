@@ -49,8 +49,9 @@ set statusline +=%1*:%*       "separator
 set statusline +=%3*%02v\ %*    "virtual column number
 
 " FILES
-set autoread                " auto-reload files changed on disk
-set updatecount=0           " disable swap files
+set autoread                   " auto-reload files changed on disk
+set updatecount=0              " disable swap files
+set wildmode=longest,list,full " :e completion mode
 
 " SEARCH
 set hlsearch                " highlight all results
@@ -232,7 +233,7 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 
 autocmd FileType javascript command! FmtJson %!jq -M .
 
-let g:clang_c_options = '-std=c++1y'
-let g:clang_cpp_options = '-std=c++1y -stdlib=libc++ -Wc++11-extensions'
+let g:clang_c_options = '-std=c++11'
+let g:clang_cpp_options = '-std=c++11 -stdlib=libc++ -Wc++11-extensions'
 
 au BufNewFile,BufRead *.purs set syntax=haskell
