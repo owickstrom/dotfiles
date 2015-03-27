@@ -112,3 +112,6 @@
 [submodule "vim/bundle/vim-clang"]
 	path = vim/bundle/vim-clang
 	url = git@github.com:justmao945/vim-clang.git
+[submodule "vim/bundle/ctrlp.vim"]
+	path = vim/bundle/ctrlp.vim
+	url = git@github.com:kien/ctrlp.vim.git
