@@ -47,6 +47,8 @@ symlinkDotfiles config@(Config os' r _) = do
   let specificDirName = case os' of
                       (Linux _) -> "linux-dotfiles"
                       OSX -> "osx-dotfiles"
+      special = [r </> "vim", r </> "emacs.d"]
+
   specific <- getDotfilesInDirectory (r </> specificDirName)
   shared <- getDotfilesInDirectory (r </> "shared-dotfiles")
-  mapM_ (symlinkDotfile config) (specific ++ shared)
+  mapM_ (symlinkDotfile config) (special ++ specific ++ shared)
