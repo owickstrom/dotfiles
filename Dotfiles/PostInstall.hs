@@ -1,6 +1,8 @@
 module Dotfiles.PostInstall (postInstall) where
 
 import System.FilePath
+import System.Process
+import System.Directory
 import Text.Regex
 import Data.Maybe
 import Control.Monad
@@ -35,9 +37,19 @@ installGhcMod = do
     run_ "cabal" ["install", "ghc-mod"]
     success "ghc-mod installed successfully!"
 
+makeVimProc :: Config -> IO ()
+makeVimProc  (Config _ root' _) =
+  run_ "make" ["--directory=" ++ dir]
+  where dir = root' </> "vim" </> "bundle" </> "vimproc.vim"
+
+installNvm :: Config -> IO ()
+installNvm (Config _ root' _) = run_ (root' </> "lib" </> "install-nvm.sh") []
+
 postInstall :: Config -> IO ()
 postInstall c@(Config OSX _ _) = do
   remapCapsLockToCtrl c
   installGhcMod
+  installNvm c
+  makeVimProc c
 postInstall (Config (Linux _) _ _) =
   warning "TODO: Implemented post install for Linux!"

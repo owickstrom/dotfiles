@@ -47,7 +47,9 @@ symlinkDotfiles config@(Config os' r _) = do
   let specificDirName = case os' of
                       (Linux _) -> "linux-dotfiles"
                       OSX -> "osx-dotfiles"
-      special = [r </> "vim", r </> "emacs.d"]
+      special = [r </> "vim"]
+
+  -- TODO: git clone owickstrom/prelude and symlink to $HOME/.emacs.d
 
   specific <- getDotfilesInDirectory (r </> specificDirName)
   shared <- getDotfilesInDirectory (r </> "shared-dotfiles")
