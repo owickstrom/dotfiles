@@ -7,6 +7,7 @@ import Dotfiles.Process
 
 isAlreadyInstalled :: OS -> PackageID -> IO Bool
 isAlreadyInstalled OSX pkg = catchAssert $ run_ "brew" ["ls", pkg]
+-- TODO!
 isAlreadyInstalled _ _ = undefined
 
 isNotInstalled :: OS -> PackageID -> IO Bool

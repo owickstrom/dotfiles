@@ -39,4 +39,5 @@ postInstall :: Config -> IO ()
 postInstall c@(Config OSX _ _) = do
   remapCapsLockToCtrl c
   installGhcMod
-postInstall (Config (Linux _) _ _) = undefined
+postInstall (Config (Linux _) _ _) =
+  warning "TODO: Implemented post install for Linux!"
