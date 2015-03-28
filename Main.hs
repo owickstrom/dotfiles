@@ -9,6 +9,7 @@ import Dotfiles.Print
 import Dotfiles.Symlink
 import Dotfiles.Git
 import Dotfiles.Packages
+import Dotfiles.PostInstall
 
 createConfig :: IO Config
 createConfig = do
@@ -32,4 +33,5 @@ main = do
   installPackages config
 
   header "Post Install"
+  postInstall config
 

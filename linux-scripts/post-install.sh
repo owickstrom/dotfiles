@@ -16,13 +16,4 @@ e_success "Remap CapsLock to CTRL"
 $DIR/setup-gnome-terminal-theme.sh
 e_success "Gnome Terminal Colors"
 
-$DIR/install-rvm.sh
-e_success "Install RVM"
-
-$DIR/compile-command-t.sh
-e_success "Compile Command-T"
-
-$DIR/install-fonts.sh
-e_success "Install fonts"
-
 e_success "Post install for Ubuntu done!"
