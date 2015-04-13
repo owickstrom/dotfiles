@@ -3,5 +3,5 @@ root: ~/Projects/Sony/photon-api-proxy
 windows:
   - server: STORAGE_PROVIDER=dropbox nodemon server.js
   - git:
-  - lt: lt --subdomain localowiapi --port 4000
+  - lt: localtunnel-api-proxy
 
