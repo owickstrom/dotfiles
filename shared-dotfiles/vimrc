@@ -84,6 +84,8 @@ set diffopt=filler,vertical
 set conceallevel=0
 highlight Conceal guibg=#333333 guifg=#b294bb gui=bold
 
+nmap <Leader>gg :Ggrep <cword> .<CR>
+
 autocmd FileType make setlocal noexpandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 au BufNewFile,BufRead *.ejs set filetype=html
