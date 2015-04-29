@@ -85,9 +85,6 @@
 [submodule "vim/bundle/elixir"]
   path = vim/bundle/vim-elixir
   url = git@github.com:elixir-lang/vim-elixir.git
-[submodule "vim/bundle/vim-colorschemes"]
-  path = vim/bundle/vim-colorschemes
-  url = git@github.com:flazz/vim-colorschemes.git
 [submodule "vim/bundle/vimerl"]
 	path = vim/bundle/vimerl
 	url = git@github.com:jimenezrick/vimerl.git
@@ -115,3 +112,6 @@
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
 	url = git@github.com:kien/ctrlp.vim.git
+[submodule "vim/bundle/vim-github-colorscheme"]
+	path = vim/bundle/vim-github-colorscheme
+	url = git@github.com:endel/vim-github-colorscheme.git

@@ -12,13 +12,25 @@ endif
 
 " COLORS
 set t_Co=256
-colorscheme Tomorrow-Night
-set background=dark
+colorscheme github
+set background=light
 
-" SOME SUBTLE COLOR CUSTOMIZATIONS
-highlight SignColumn ctermbg=none     " no color for gutter
-highlight Visual ctermbg=238
-highlight VertSplit ctermfg=240 ctermbg=238
+" SOME COLOR CUSTOMIZATIONS
+hi Normal ctermbg=none
+hi CursorLine cterm=none
+hi ExtraWhitespace ctermbg=9 guibg=red
+
+" no color for gutter
+hi SignColumn ctermbg=none
+hi Visual ctermbg=153 ctermfg=0 guibg=slategray1
+hi VertSplit ctermfg=251 ctermbg=253
+
+hi SpellCap ctermfg=8 ctermbg=217 gui=undercurl guisp=#de935f
+hi SpellBad ctermfg=8 ctermbg=222
+
+hi Pmenu ctermbg=250 ctermfg=0
+hi PmenuSel ctermbg=11 ctermfg=0
+hi PmenuSbar ctermbg=8
 
 " NAVIGATION
 set scrolloff=3             " some lines around scroll for context
@@ -27,7 +39,6 @@ set scrolloff=3             " some lines around scroll for context
 set number
 set colorcolumn=80          " ruler at 80 chars width
 set cursorline              " highlight the current line
-hi ColorColumn guibg=#3a2a2a
 
 " STATUS/HISTORY
 set history=200             " remember a lot of stuff
@@ -35,9 +46,9 @@ set ruler                   " Always show info along bottom.
 
 " STATUS LINE
 
-hi User1 ctermfg=240 guifg=#777777 ctermbg=236 guibg=#333333
-hi User2 ctermfg=11 guifg=#FFFF00 ctermbg=236 guibg=#333333
-hi User3 ctermfg=245 guifg=#555555 ctermbg=236 guibg=#333333
+hi User1 ctermfg=240 guifg=gray50 ctermbg=253 guibg=gray90
+hi User2 ctermfg=2 guifg=OliveDrab ctermbg=253 guibg=gray90
+hi User3 ctermfg=245 guifg=OliveDrab ctermbg=253 guibg=gray90
 
 set laststatus=2
 set statusline=
@@ -167,8 +178,6 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_enable_signs=1
 let g:syntastic_always_populate_loc_list=1
 
-highlight SpellCap term=reverse ctermfg=yellow ctermbg=9 gui=undercurl guisp=#de935f
-
 " Spell Checking Commands
 command! EnableSpellCheck :set spell spelllang=en_us
 command! DisableSpellCheck :set nospell
@@ -191,6 +200,7 @@ let delimitMate_expand_cr=1
 au BufRead,BufNewFile *.md set filetype=markdown
 
 au BufNewFile,BufRead *.zap set filetype=clojure
+au BufNewFile,BufRead *.ls set filetype=clojure
 
 function! ReloadUserSystem()
   :Eval (if-let [v (resolve 'user/reset)] (@v) (.println *err* "Not a \"Reloaded\" workflow project. The function user/reset must be specified!"))

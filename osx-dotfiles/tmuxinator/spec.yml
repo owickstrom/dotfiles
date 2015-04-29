@@ -1,0 +1,9 @@
+name: spec
+root: ~/Projects/purescript/purescript-spec
+
+windows:
+  - editor:
+      layout: 0b85,158x46,0,0{78x46,0,0,54,79x46,79,0,55}
+      panes:
+        - vim
+        - make watch-tests
