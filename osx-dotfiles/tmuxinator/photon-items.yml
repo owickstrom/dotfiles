@@ -1,7 +1,7 @@
 name: photon-items
 root: ~/Projects/Sony/photon-items
 windows:
-  - server: USERS_STREAM=local-owi-UsersStream-2OST2HFREYP5 lein with-profile dev,jetty run -m photon-items.main
+  - server: USERS_STREAM=local-owi-UsersStream-1V6FGTXGACR72 lein with-profile dev,jetty run -m photon-items.main
   - test: lein test
   - vim: vim
 

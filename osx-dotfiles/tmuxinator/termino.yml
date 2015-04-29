@@ -1,0 +1,9 @@
+name: termino
+root: ~/Projects/purescript/termino
+
+windows:
+  - editor:
+      layout: 0b85,158x46,0,0{78x46,0,0,54,79x46,79,0,55}
+      panes:
+        - vim
+        - nodemon --watch src --watch tests -e purs --exec make test

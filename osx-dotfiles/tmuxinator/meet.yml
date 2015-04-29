@@ -2,7 +2,4 @@ name: meet
 root: ~/Projects/meet
 
 windows:
-  - postgres: postgres -D /usr/local/var/postgres
-  - iex: iex -S mix
-  - gulp: cd client; gulp
   - vim:
