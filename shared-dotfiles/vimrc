@@ -19,11 +19,13 @@ set background=light
 hi Normal ctermbg=none
 hi CursorLine cterm=none
 hi ExtraWhitespace ctermbg=9 guibg=red
+hi StatusLine ctermbg=cyan ctermfg=0 guibg=#36b7b4
+hi StatusLineNC cterm=none ctermbg=253 ctermfg=250 guibg=#dddddd guifg=#aaaaaa
 
 " no color for gutter
 hi SignColumn ctermbg=none
 hi Visual ctermbg=153 ctermfg=0 guibg=slategray1
-hi VertSplit ctermfg=251 ctermbg=253
+hi VertSplit ctermfg=250 ctermbg=253 guibg=#dddddd guifg=#aaaaaa
 
 hi SpellCap ctermfg=8 ctermbg=217 gui=undercurl guisp=#de935f
 hi SpellBad ctermfg=8 ctermbg=222
@@ -43,21 +45,6 @@ set cursorline              " highlight the current line
 " STATUS/HISTORY
 set history=200             " remember a lot of stuff
 set ruler                   " Always show info along bottom.
-
-" STATUS LINE
-
-hi User1 ctermfg=240 guifg=gray50 ctermbg=253 guibg=gray90
-hi User2 ctermfg=2 guifg=OliveDrab ctermbg=253 guibg=gray90
-hi User3 ctermfg=245 guifg=OliveDrab ctermbg=253 guibg=gray90
-
-set laststatus=2
-set statusline=
-set statusline +=%1*\ %<%F%*  "full path
-set statusline +=%2*\ %m%*    "modified flag
-set statusline +=%1*%=%*      "separator
-set statusline +=%3*%=%4l%*   "current line
-set statusline +=%1*:%*       "separator
-set statusline +=%3*%02v\ %*    "virtual column number
 
 " FILES
 set autoread                   " auto-reload files changed on disk
