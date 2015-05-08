@@ -17,10 +17,13 @@ set background=light
 
 " SOME COLOR CUSTOMIZATIONS
 hi Normal ctermbg=none
-hi CursorLine cterm=none
+hi CursorLine cterm=none ctermbg=255 guibg=#eeeeee
 hi ExtraWhitespace ctermbg=9 guibg=red
 hi StatusLine ctermbg=cyan ctermfg=0 guibg=#36b7b4
 hi StatusLineNC cterm=none ctermbg=253 ctermfg=250 guibg=#dddddd guifg=#aaaaaa
+hi markdownItalic ctermbg=none ctermfg=4
+hi markdownBold cterm=bold
+hi markdownBoldItalic cterm=bold
 
 " no color for gutter
 hi SignColumn ctermbg=none
