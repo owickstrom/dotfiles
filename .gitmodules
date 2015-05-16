@@ -121,3 +121,6 @@
 [submodule "vim/bundle/purescript-vim"]
 	path = vim/bundle/purescript-vim
 	url = https://github.com/raichoo/purescript-vim.git
+[submodule "vim/bundle/racer"]
+	path = vim/bundle/racer
+	url = git@github.com:phildawes/racer.git
