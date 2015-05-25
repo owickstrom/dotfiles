@@ -6,36 +6,10 @@ set nocompatible            " get rid of Vi compatibility mode. SET FIRST!
 filetype plugin indent on   " filetype detection[ON] plugin[ON] indent[ON]
 syntax enable               " enable syntax highlighting (previously syntax on).
 
-if !has("gui_running")
-  let g:gruvbox_italic=0
-endif
-
 " COLORS
 set t_Co=256
-colorscheme github
+colorscheme PaperColor
 set background=light
-
-" SOME COLOR CUSTOMIZATIONS
-hi Normal ctermbg=none
-hi CursorLine cterm=none ctermbg=255 guibg=#eeeeee
-hi ExtraWhitespace ctermbg=9 guibg=red
-hi StatusLine ctermbg=cyan ctermfg=0 guibg=#36b7b4
-hi StatusLineNC cterm=none ctermbg=253 ctermfg=250 guibg=#dddddd guifg=#aaaaaa
-hi markdownItalic ctermbg=none ctermfg=4
-hi markdownBold cterm=bold
-hi markdownBoldItalic cterm=bold
-
-" no color for gutter
-hi SignColumn ctermbg=none
-hi Visual ctermbg=153 ctermfg=0 guibg=slategray1
-hi VertSplit ctermfg=250 ctermbg=253 guibg=#dddddd guifg=#aaaaaa
-
-hi SpellCap ctermfg=8 ctermbg=217 gui=undercurl guisp=#de935f
-hi SpellBad ctermfg=8 ctermbg=222
-
-hi Pmenu ctermbg=250 ctermfg=0
-hi PmenuSel ctermbg=11 ctermfg=0
-hi PmenuSbar ctermbg=8
 
 " NAVIGATION
 set scrolloff=3             " some lines around scroll for context
@@ -83,7 +57,7 @@ set diffopt=filler,vertical
 
 " CONCEAL (DISABLED BY DEFAULT)
 set conceallevel=0
-highlight Conceal guibg=#333333 guifg=#b294bb gui=bold
+"highlight Conceal guibg=#333333 guifg=#b294bb gui=bold
 
 nmap <Leader>gg :Ggrep <cword> .<CR>
 
@@ -156,7 +130,6 @@ let g:ghcmod_type_highlight = 'ghcmodType'
 nmap <Leader>gt :GhcModType<CR>
 nmap <Leader>gc :GhcModTypeClear<CR>
 nmap <Leader>gi :GhcModTypeInsert<CR>
-
 
 " JAVASCRIPT SETUP
 

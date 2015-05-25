@@ -124,3 +124,6 @@
 [submodule "vim/bundle/racer"]
 	path = vim/bundle/racer
 	url = git@github.com:phildawes/racer.git
+[submodule "vim/bundle/papercolor-theme"]
+	path = vim/bundle/papercolor-theme
+	url = git@github.com:NLKNguyen/papercolor-theme.git
