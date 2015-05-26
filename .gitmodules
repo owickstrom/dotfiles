@@ -127,3 +127,6 @@
 [submodule "vim/bundle/papercolor-theme"]
 	path = vim/bundle/papercolor-theme
 	url = git@github.com:NLKNguyen/papercolor-theme.git
+[submodule "vim/bundle/vim-json"]
+	path = vim/bundle/vim-json
+	url = git@github.com:elzr/vim-json.git
