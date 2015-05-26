@@ -221,3 +221,6 @@ function BuildCargo()
 endfunction
 nmap <Leader>rb :call BuildCargo()<CR>
 let g:racer_cmd = "~/.dotfiles/vim/bundle/racer/target/release/racer"
+
+" JSON
+let g:indentLine_noConcealCursor=""
