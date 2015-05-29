@@ -20,6 +20,11 @@ if [ -f ~/.dotfiles/lib/tmuxinator.bash ]; then
   source ~/.dotfiles/lib/tmuxinator.bash
 fi
 
+# Docker Completion
+if [ -f ~/.dotfiles/lib/docker-bash-completion.bash ]; then
+  source ~/.dotfiles/lib/docker-bash-completion.bash
+fi
+
 source ~/.dotfiles/vim/bundle/gruvbox/gruvbox_256palette_osx.sh
 
 # Load in the git branch prompt script.
