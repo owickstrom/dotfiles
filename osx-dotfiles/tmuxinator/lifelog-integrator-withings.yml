@@ -1,0 +1,5 @@
+name: ll-withings
+root: ~/Projects/Sony/lifelog/lifelog-integrator-withings
+windows:
+  - git:
+

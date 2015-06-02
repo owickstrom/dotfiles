@@ -1,0 +1,6 @@
+name: ll-docs
+root: ~/Projects/Sony/lifelog/lifelog-docs
+windows:
+  - git:
+  - watch: make watch-locally
+

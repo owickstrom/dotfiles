@@ -1,0 +1,5 @@
+name: ll-auth
+root: ~/Projects/Sony/lifelog/lifelog-auth
+windows:
+  - git:
+
