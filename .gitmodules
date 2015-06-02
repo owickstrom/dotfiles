@@ -130,3 +130,6 @@
 [submodule "vim/bundle/vim-json"]
 	path = vim/bundle/vim-json
 	url = git@github.com:elzr/vim-json.git
+[submodule "vim/bundle/vim-node"]
+	path = vim/bundle/vim-node
+	url = git@github.com:moll/vim-node.git
