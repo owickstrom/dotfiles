@@ -19,7 +19,7 @@ packages :: OS -> [PackageID]
 packages (Linux APT) = ["git", "tmux", "curl", "wget", "vim-nox", "irssi", "exuberant-ctags", "pandoc", "golang", "mercurial"]
 packages (Linux Yum) = ["git", "tmux", "curl", "wget", "vim-enhanced", "irssi", "ctags", "pandoc"]
 packages (Linux Pacman) = ["git", "tmux", "curl", "wget", "vim", "irssi", "ctags", "base-devel", "pandoc"]
-packages OSX = ["bash", "bash-completion", "git", "macvim", "tmux", "nvm", "leiningen", "heroku-toolbelt", "ctags-exuberant", "ghc", "cabal-install", "pandoc" ]
+packages OSX = ["bash", "bash-completion", "git", "tmux", "ctags-exuberant"]
 
 toInstallFor :: OS -> IO [PackageID]
 toInstallFor os' = filterM (isNotInstalled os') (packages os')
