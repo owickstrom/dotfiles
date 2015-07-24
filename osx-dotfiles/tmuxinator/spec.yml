@@ -1,9 +1,19 @@
 name: spec
-root: ~/Projects/purescript/purescript-spec
+root: ~/Projects/purescript
 
 windows:
-  - editor:
-      layout: 0b85,158x46,0,0{78x46,0,0,54,79x46,79,0,55}
+  - spec:
+      root: ~/Projects/purescript/purescript-spec
       panes:
         - vim
-        - make watch-tests
+        - pulp -w test
+  - xunit:
+      root: ~/Projects/purescript/purescript-spec-reporter-xunit
+      panes:
+        - vim
+        - pulp -w test
+  - quickcheck:
+      root: ~/Projects/purescript/purescript-spec-quickcheck
+      panes:
+        - vim
+        - pulp -w test

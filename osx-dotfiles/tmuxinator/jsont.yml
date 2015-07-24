@@ -1,0 +1,5 @@
+name: zap
+root: ~/Projects/go/src/bitbucket.org/owickstrom/jsont
+
+windows:
+  - git:
