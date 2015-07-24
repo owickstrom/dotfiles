@@ -34,3 +34,5 @@ function GoToggleAlternate()
 endfunction
 
 au FileType go nnoremap <leader>a :call GoToggleAlternate()<CR>
+
+let $GOPATH = $HOME . "/Projects/go:" . fnamemodify('.', ':p') . ':' . fnamemodify('./vendor', ':p')
