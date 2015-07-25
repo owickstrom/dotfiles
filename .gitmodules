@@ -133,3 +133,6 @@
 [submodule "vim/bundle/vim-node"]
 	path = vim/bundle/vim-node
 	url = git@github.com:moll/vim-node.git
+[submodule "vim/bundle/tabular"]
+	path = vim/bundle/tabular
+	url = git@github.com:godlygeek/tabular.git
