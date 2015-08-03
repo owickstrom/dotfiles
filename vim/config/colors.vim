@@ -1,5 +1,6 @@
 " COLORS
 
 set t_Co=256
-colorscheme PaperColor
-set background=light
+colorscheme gruvbox
+let g:gruvbox_italic=0
+set background=dark
