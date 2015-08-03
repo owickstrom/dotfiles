@@ -136,3 +136,6 @@
 [submodule "vim/bundle/tabular"]
 	path = vim/bundle/tabular
 	url = git@github.com:godlygeek/tabular.git
+[submodule "vim/bundle/vim-dataflow"]
+	path = vim/bundle/vim-dataflow
+	url = git@bitbucket.org:owickstrom/vim-dataflow.git
