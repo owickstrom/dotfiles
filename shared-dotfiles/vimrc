@@ -1,5 +1,5 @@
 " PATHOGEN
-execute pathogen#infect()
+execute pathogen#infect('bundle/{}', '~/Projects/vim/bundle/{}')
 
 for fpath in split(globpath('~/.vim/config', '*.vim'), '\n')
   exe 'source' fpath
