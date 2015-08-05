@@ -139,3 +139,6 @@
 [submodule "vim/bundle/vim-dataflow"]
 	path = vim/bundle/vim-dataflow
 	url = git@bitbucket.org:owickstrom/vim-dataflow.git
+[submodule "vim/bundle/mustache.vim"]
+	path = vim/bundle/mustache.vim
+	url = git@github.com:juvenn/mustache.vim.git
