@@ -145,3 +145,6 @@
 [submodule "vim/bundle/vim-hoogle"]
 	path = vim/bundle/vim-hoogle
 	url = git@github.com:Twinside/vim-hoogle.git
+[submodule "vim/bundle/stylish-haskell"]
+	path = vim/bundle/stylish-haskell
+	url = git@github.com:jaspervdj/stylish-haskell.git
