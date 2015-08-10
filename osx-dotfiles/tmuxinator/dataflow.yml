@@ -7,3 +7,7 @@ windows:
       panes:
         - vim
         - nodemon --watch src --watch test -e hs --exec ./run-tests.sh
+  - vimplugin:
+      root: ~/Projects/vim/bundle/vim-dataflow
+      panes:
+        - vim
