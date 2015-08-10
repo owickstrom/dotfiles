@@ -142,3 +142,6 @@
 [submodule "vim/bundle/mustache.vim"]
 	path = vim/bundle/mustache.vim
 	url = git@github.com:juvenn/mustache.vim.git
+[submodule "vim/bundle/vim-hoogle"]
+	path = vim/bundle/vim-hoogle
+	url = git@github.com:Twinside/vim-hoogle.git
