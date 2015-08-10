@@ -1,5 +1,7 @@
 " HASKELL
 
+let g:necoghc_enable_detailed_browse = 1
+
 " Use GHC functionality for haskell source files
 "au Bufenter *.hs compiler ghc
 let g:haddock_browser = "/usr/bin/google-chrome"
