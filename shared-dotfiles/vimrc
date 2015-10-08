@@ -1,5 +1,63 @@
 " PATHOGEN
-execute pathogen#infect('bundle/{}', '~/Projects/vim/bundle/{}')
+"
+call plug#begin('~/.vim/plugged')
+
+" General/Editing
+Plug 'scrooloose/syntastic'
+Plug 'Shougo/vimproc'
+Plug 'Shougo/neocomplcache'
+Plug 'scrooloose/nerdcommenter'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'vim-scripts/paredit.vim'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'tpope/vim-endwise'
+Plug 'Raimondi/delimitMate'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'nelstrom/vim-qargs'
+Plug 'tpope/vim-unimpaired'
+Plug 'kien/ctrlp.vim'
+Plug 'godlygeek/tabular'
+
+" Git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+
+" Misc Languages/Syntax
+Plug 'vim-ruby/vim-ruby'
+Plug 'fatih/vim-go'
+Plug 'wting/rust.vim'
+Plug 'raichoo/purescript-vim'
+Plug 'owickstrom/vim-dataflow'
+Plug 'lambdatoast/elm.vim'
+Plug 'ekalinin/Dockerfile.vim'
+
+" HTML, CSS etc
+Plug 'groenewege/vim-less'
+Plug 'digitaltoad/vim-jade'
+Plug 'juvenn/mustache'
+Plug 'mattn/emmet-vim'
+
+" Haskell
+Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
+Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
+Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }
+Plug 'jaspervdj/stylish-haskell', { 'for': 'haskell' }
+Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }
+
+" Javascript
+Plug 'elzr/vim-json'
+Plug 'moll/vim-node', { 'for': 'javascript' }
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+Plug 'guns/vim-clojure-highlight', { 'for': 'javascript' }
+
+" Colors
+Plug 'morhetz/gruvbox'
+Plug 'altercation/vim-colors-solarized'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'chriskempson/vim-tomorrow-theme'
+
+call plug#end()
 
 for fpath in split(globpath('~/.vim/config', '*.vim'), '\n')
   exe 'source' fpath
