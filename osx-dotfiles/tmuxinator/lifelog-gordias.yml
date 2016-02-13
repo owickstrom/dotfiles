@@ -1,0 +1,5 @@
+name: gordias
+root: ~/Projects/Sony/lifelog/lifelog-gordias
+windows:
+  - git:
+

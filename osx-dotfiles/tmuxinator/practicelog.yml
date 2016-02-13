@@ -1,0 +1,12 @@
+name: practicelog
+root: ~/Projects/go/src/github.com/owickstrom/practicelog
+
+windows:
+  - vim:
+      panes:
+        - go build && ./practicelog
+        - git status
+  - pg: postgres -D /usr/local/var/postgres
+  - psql: sleep 5; psql -d practicelog
+  - redis-srv: redis-server
+  - godoc: godoc -http :9000

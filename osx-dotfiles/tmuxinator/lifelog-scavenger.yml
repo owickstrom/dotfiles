@@ -1,0 +1,16 @@
+name: ll-scavenger
+root: ~/Projects/Sony/lifelog/lifelog-scavenger
+windows:
+  - git:
+      root: ~/Projects/Sony/lifelog/lifelog-scavenger
+      panes:
+        - . ENV/bin/activate
+  - notebook:
+      root: ~/Projects/Sony/lifelog/lifelog-scavenger/notebook
+      panes:
+        - . ENV/bin/activate && ipython notebook
+  - repl:
+      root: ~/Projects/Sony/lifelog/lifelog-scavenger/notebook
+      panes:
+        - . ENV/bin/activate && sleep 5 && ipython
+

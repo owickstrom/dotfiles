@@ -1,0 +1,5 @@
+name: midas
+root: ~/Projects/Sony/lifelog/lifelog-midas
+windows:
+  - git:
+

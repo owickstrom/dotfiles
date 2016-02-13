@@ -1,0 +1,5 @@
+name: xxl
+root: ~/Projects/xxl
+windows:
+  - git:
+

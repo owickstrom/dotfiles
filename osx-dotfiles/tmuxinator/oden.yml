@@ -1,0 +1,10 @@
+name: oden
+root: ~/Projects/oden-lang
+
+windows:
+  - oden: cd ~/Projects/oden-lang/oden
+  - wiki: cd ~/Projects/oden-lang/oden.wiki
+  - playground: cd ~/Projects/go/src/github.com/oden-lang/playground
+  - server: cd ~/Projects/go/src/github.com/oden-lang/playground ; ODENC=$HOME/Projects/oden-lang/oden/dist/oden/bin/odenc bin/playground
+  - postgres:  postgres -D /usr/local/var/postgres
+  - psql: psql playground
