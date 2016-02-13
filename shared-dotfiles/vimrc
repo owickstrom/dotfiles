@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
 
 " General/Editing
 Plug 'scrooloose/syntastic'
-Plug 'Shougo/vimproc'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Shougo/neocomplcache'
 Plug 'scrooloose/nerdcommenter'
 Plug 'bronson/vim-trailing-whitespace'
@@ -30,6 +30,7 @@ Plug 'raichoo/purescript-vim'
 Plug 'owickstrom/vim-dataflow'
 Plug 'lambdatoast/elm.vim'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'klen/python-mode'
 
 " HTML, CSS etc
 Plug 'groenewege/vim-less'
@@ -38,10 +39,9 @@ Plug 'juvenn/mustache'
 Plug 'mattn/emmet-vim'
 
 " Haskell
-Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
+Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }
-Plug 'jaspervdj/stylish-haskell', { 'for': 'haskell' }
 Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }
 
 " Javascript
@@ -56,6 +56,10 @@ Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'chriskempson/vim-tomorrow-theme'
+
+for fpath in split(globpath('~/Projects/vim', '*'), '\n')
+  Plug fpath
+endfor
 
 call plug#end()
 
