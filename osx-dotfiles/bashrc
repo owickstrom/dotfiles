@@ -7,6 +7,8 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
 
+PATH=$PATH:$HOME/bin
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 if [ -f $HOME/.nvm/nvm.sh ]; then
@@ -27,8 +29,6 @@ fi
 if [ -f ~/.dotfiles/lib/docker-bash-completion.bash ]; then
   source ~/.dotfiles/lib/docker-bash-completion.bash
 fi
-
-source ~/.dotfiles/vim/bundle/gruvbox/gruvbox_256palette_osx.sh
 
 # Load in the git branch prompt script.
 source ~/.git-prompt.sh
@@ -57,3 +57,8 @@ export PATH="$PATH:$HOME/.cabal/bin"
 function ios() {
   xcrun instruments -w "iPhone 5s (8.1 Simulator)"
 }
+
+# added by travis gem
+[ -f /Users/owi/.travis/travis.sh ] && source /Users/owi/.travis/travis.sh
+
+export PATH="/Users/owi/Projects/oden-lang/oden/dist/oden/bin:$PATH"
