@@ -1,9 +1,11 @@
+{-# LANGUAGE QuasiQuotes, FlexibleContexts #-}
 module Dotfiles.PostInstall (postInstall) where
 
 import System.FilePath
 import System.Process
 import System.Directory
-import Text.Regex
+import Text.Regex.PCRE.Heavy
+
 import Data.Maybe
 import Control.Monad
 import Dotfiles.Core
@@ -15,16 +17,14 @@ remapCapsLockToCtrl (Config _ root' _) = do
   run_ "osascript" [root' </> "lib" </> "remap-capslock-to-ctrl.scpt"]
   success "Caps Lock mapped to CTRL!"
 
-installedVersion :: Regex
-installedVersion = mkRegex "Versions installed\\: [a-zA-Z0-9.]+"
 
-test :: Regex -> String -> Bool
-test r s = isJust $ matchRegex r s
+isInstalled :: String -> Bool
+isInstalled s = not $ null $ scan [re|Versions installed\\: [a-zA-Z0-9.]+|] s
 
 isCabalPackageInstalled :: String -> IO Bool
 isCabalPackageInstalled pkg = do
   output <- lines `fmap` run "cabal" ["info", pkg]
-  return $ any (test installedVersion) output
+  return $ any isInstalled output
 
 installGhcMod :: IO ()
 installGhcMod = do
@@ -37,11 +37,6 @@ installGhcMod = do
     run_ "cabal" ["install", "ghc-mod"]
     success "ghc-mod installed successfully!"
 
-makeVimProc :: Config -> IO ()
-makeVimProc  (Config _ root' _) =
-  run_ "make" ["--directory=" ++ dir]
-  where dir = root' </> "vim" </> "bundle" </> "vimproc.vim"
-
 installNvm :: Config -> IO ()
 installNvm (Config _ root' _) = run_ (root' </> "lib" </> "install-nvm.sh") []
 
@@ -50,6 +45,5 @@ postInstall c@(Config OSX _ _) = do
   remapCapsLockToCtrl c
   installGhcMod
   installNvm c
-  makeVimProc c
 postInstall (Config (Linux _) _ _) =
   warning "TODO: Implemented post install for Linux!"

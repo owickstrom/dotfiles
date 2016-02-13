@@ -4,5 +4,9 @@ set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-cabal install ansi-terminal
+brew install pcre pkg-config
+
+cabal update
+cabal install ansi-terminal pcre-heavy
+
 cd $DIR/src && runhaskell Main.hs
