@@ -8,6 +8,7 @@ vim/.netrwhist
 .DS_Store
 .projections.json
 .env
+.ropeproject
 
 # Temporary files
 *~
