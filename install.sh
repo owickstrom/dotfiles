@@ -4,7 +4,11 @@ set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-brew install pcre pkg-config
+if which brew; then
+  brew install pcre pkg-config
+else
+  sudo apt-get install libpcre3-dev pkg-config
+fi
 
 cabal update
 cabal install ansi-terminal pcre-heavy

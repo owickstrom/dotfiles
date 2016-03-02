@@ -8,7 +8,7 @@ import Dotfiles.Process
 isAlreadyInstalled :: OS -> PackageID -> IO Bool
 isAlreadyInstalled OSX pkg = catchAssert $ run_ "brew" ["ls", pkg]
 -- TODO!
-isAlreadyInstalled _ _ = undefined
+isAlreadyInstalled _ _ = return False
 
 isNotInstalled :: OS -> PackageID -> IO Bool
 isNotInstalled os' pkg = do
@@ -16,7 +16,7 @@ isNotInstalled os' pkg = do
   return $ not isInstalled
 
 packages :: OS -> [PackageID]
-packages (Linux APT) = ["git", "tmux", "curl", "wget", "vim-nox", "irssi", "exuberant-ctags", "pandoc", "golang", "mercurial"]
+packages (Linux APT) = ["git", "tmux", "curl", "wget", "vim"]
 packages (Linux Yum) = ["git", "tmux", "curl", "wget", "vim-enhanced", "irssi", "ctags", "pandoc"]
 packages (Linux Pacman) = ["git", "tmux", "curl", "wget", "vim", "irssi", "ctags", "base-devel", "pandoc"]
 packages OSX = ["bash", "bash-completion", "git", "tmux", "ctags-exuberant"]
