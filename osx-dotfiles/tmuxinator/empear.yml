@@ -1,0 +1,33 @@
+name: empear
+root: ~/Projects/empear
+
+windows:
+  - home:
+      root: ~/Projects/empear
+      panes:
+        - ls -l
+  - db:
+      panes:
+        - mongod --config /usr/local/etc/mongod.conf
+  - maat:
+      root: ~/Projects/empear/closedmaat
+      panes:
+        - vim
+  - web:
+      root: ~/Projects/empear/cacsremoteservice
+      layout: even-vertical
+      panes:
+        - vim
+        - lein repl
+  - licenser:
+      root: ~/Projects/empear/empearlicenser
+      layout: even-vertical
+      panes:
+        - vim
+        - lein repl
+  - site:
+      root: ~/Projects/empear/empear.com
+      layout: even-vertical
+      panes:
+        - vim
+        - hugo server
