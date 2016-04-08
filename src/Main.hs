@@ -20,7 +20,7 @@ getPackageManager =
   let byProgram = [("apt-get", APT), ("yum", Yum), ("pacman", Pacman)]
       tryFindProgram [] = fail "No package manager found!"
       tryFindProgram ((program, pm) : ps) = do
-        exists <- catchAssert $ run_ "command" ["-v", program]
+        exists <- catchAssert $ run_ "which" [program]
         if exists then return pm else tryFindProgram ps
   in tryFindProgram byProgram
 

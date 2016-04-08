@@ -1,6 +1,6 @@
 " HASKELL
 
-let g:syntastic_haskell_checkers = ['ghc_mod', 'hlint']
+let g:syntastic_haskell_checkers = ['hdevtools', 'hlint']
 
 let g:necoghc_enable_detailed_browse = 1
 

@@ -26,9 +26,11 @@ symlinkDotfile (Config _ _ br) source = do
     warning $ printf "%s already symlinked to dotfiles." target
   else
     do exists <- fileExist target
-       info $ "Renaming " ++ target ++ " to " ++ backupTarget
-       when exists $ do rename target backupTarget
-                        info $ printf "Created backup of %s in %s" target backupTarget
+       when exists $ do
+	 info $ "Renaming " ++ target ++ " to " ++ backupTarget
+	 createDirectoryIfMissing True br
+         rename target backupTarget
+         info $ printf "Created backup of %s in %s" target backupTarget
        createSymbolicLink source target
        success $ printf "Created symlink to %s" source
 

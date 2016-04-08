@@ -60,5 +60,3 @@ function ios() {
 
 # added by travis gem
 [ -f /Users/owi/.travis/travis.sh ] && source /Users/owi/.travis/travis.sh
-
-export PATH="/Users/owi/Projects/oden-lang/oden/dist/oden/bin:$PATH"

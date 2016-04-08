@@ -17,6 +17,7 @@ Plug 'nelstrom/vim-qargs'
 Plug 'tpope/vim-unimpaired'
 Plug 'kien/ctrlp.vim'
 Plug 'godlygeek/tabular'
+Plug 'zerowidth/vim-copy-as-rtf'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -56,6 +57,8 @@ Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'pbrisbin/vim-colors-off'
+Plug 'endel/vim-github-colorscheme'
 
 for fpath in split(globpath('~/Projects/vim', '*'), '\n')
   Plug fpath
