@@ -5,7 +5,7 @@
 	editor = vim
 [user]
 	name = Oskar Wickström
-	email = oskar.wickstrom@live.com
+	email = oskar.wickstrom@gmail.com
 [alias]
   co = checkout
   ci = commit
