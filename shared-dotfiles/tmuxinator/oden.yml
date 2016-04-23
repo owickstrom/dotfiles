@@ -2,9 +2,39 @@ name: oden
 root: ~/Projects/oden-lang
 
 windows:
-  - oden: cd ~/Projects/oden-lang/oden
-  - wiki: cd ~/Projects/oden-lang/oden.wiki
-  - playground: cd ~/Projects/go/src/github.com/oden-lang/playground
-  - server: cd ~/Projects/go/src/github.com/oden-lang/playground ; ODENC=$HOME/Projects/oden-lang/oden/dist/oden/bin/odenc bin/playground
+  - oden:
+      root: ~/Projects/oden-lang/oden
+      panes:
+        - vim
+        - cabal exec ghci -- -isrc -itest Main
+  - test-watch:
+      root: ~/Projects/oden-lang/oden
+      panes:
+        - >
+            nodemon \
+              --watch src \
+              --watch test \
+              -e hs \
+              --exec 'tmux send-keys -t "oden:0.1" :r Enter main Enter'
+  - playground:
+      root: ~/Projects/oden-lang/playground
+      panes:
+        - vim
+  - server:
+      root: ~/Projects/oden-lang/playground
+      panes:
+        - gb build && ODENC=$HOME/Projects/oden-lang/oden/dist/oden/bin/odenc bin/playground
+  - site:
+      root: ~/Projects/oden-lang/oden-lang.github.io
+      panes:
+        - vim
+  - wiki:
+      root: ~/Projects/oden-lang/oden.wiki
+      panes:
+        - vim
+  - workspace:
+      root: ~/Projects/oden-path/
+      panes:
+        - vim
   - postgres:  postgres -D /usr/local/var/postgres
   - psql: psql playground
