@@ -1,5 +1,0 @@
-name: ll-api
-root: ~/Projects/Sony/lifelog/lifelog-integrator-api
-windows:
-  - git:
-

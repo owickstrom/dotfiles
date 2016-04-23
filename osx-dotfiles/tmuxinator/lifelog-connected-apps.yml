@@ -1,5 +1,0 @@
-name: ll-conn
-root: ~/Projects/Sony/lifelog/lifelog-connected-apps
-windows:
-  - git:
-

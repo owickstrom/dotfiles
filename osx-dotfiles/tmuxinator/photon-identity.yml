@@ -1,6 +1,0 @@
-name: photon-identity
-root: ~/Projects/Sony/photon-identity
-windows:
-  - server: gradle run
-  - git: git status
-

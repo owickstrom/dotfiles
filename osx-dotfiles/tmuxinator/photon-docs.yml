@@ -1,7 +1,0 @@
-name: photon-docs
-root: ~/Projects/Sony/photon-docs
-windows:
-  - git: git status
-  - site: cd site
-  - server: cd site; http-server target/site
-

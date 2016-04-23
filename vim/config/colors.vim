@@ -1,7 +1,7 @@
 " COLORS
 
 set t_Co=256
-colorscheme solarized
-set background=light
+colorscheme gruvbox
+set background=dark
 hi Comment gui=italic
 hi Todo gui=italic,bold

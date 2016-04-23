@@ -1,7 +1,0 @@
-name: photon-storage
-root: ~/Projects/Sony/photon-storage
-windows:
-  - server: nodemon bin/www
-  - test: mocha -w
-  - vim: vim
-

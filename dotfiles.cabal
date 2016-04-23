@@ -1,0 +1,40 @@
+name:                dotfiles
+version:             0.1.0.0
+synopsis:            Oskar Wickström's dotfiles.
+description:         Please see README.md
+homepage:            https://github.com/owickstrom/dotfiles#readme
+license:             MIT
+license-file:        LICENSE
+author:              Oskar Wickström
+maintainer:          oskar.wickstrom@gmail.com
+copyright:           2016 Oskar Wickström
+category:            Other
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable dotfiles
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  other-modules:
+    Dotfiles.Core
+    Dotfiles.Packages
+    Dotfiles.PostInstall
+    Dotfiles.Print
+    Dotfiles.Process
+    Dotfiles.Symlink
+  build-depends:
+    base >= 4.7 && < 5,
+    process,
+    filepath,
+    directory,
+    unix,
+    ansi-terminal,
+    pcre-heavy
+  default-language:    Haskell2010
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/owickstrom/dotfiles

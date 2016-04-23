@@ -1,7 +1,0 @@
-name: photon-metadata
-root: ~/Projects/Sony/photon-metadata
-windows:
-  - server: lein with-profile dev,jetty run -m photon-metadata.main
-  - test: lein test
-  - vim: vim
-

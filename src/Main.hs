@@ -10,7 +10,6 @@ import System.Directory
 import Dotfiles.Core
 import Dotfiles.Print
 import Dotfiles.Symlink
-import Dotfiles.Git
 import Dotfiles.Packages
 import Dotfiles.PostInstall
 import Dotfiles.Process
@@ -52,9 +51,6 @@ main = do
   header "Configuration"
   config <- createConfig
   printConfig config
-
-  header "Git Submodules"
-  initSubmodules
 
   header "Symlinks"
   symlinkDotfiles config

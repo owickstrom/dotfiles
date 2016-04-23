@@ -1,5 +1,0 @@
-name: ll-jenkins
-root: ~/Projects/Sony/lifelog/lifelog-jenkins
-windows:
-  - git:
-

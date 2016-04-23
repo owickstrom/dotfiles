@@ -1,5 +1,0 @@
-name: photon-test
-root: ~/Projects/Sony/photon-test
-windows:
-  - git:
-

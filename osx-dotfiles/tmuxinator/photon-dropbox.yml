@@ -1,5 +1,0 @@
-name: photon-dropbox
-root: ~/Projects/Sony/photon-storage-dropbox
-windows:
-  - git: git status
-

@@ -1,5 +1,0 @@
-name: ll-cardtmpl
-root: ~/Projects/Sony/lifelog/lifelog-card-templates
-windows:
-  - git:
-

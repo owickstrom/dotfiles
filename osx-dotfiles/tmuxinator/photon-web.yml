@@ -1,6 +1,0 @@
-name: photon-web
-root: ~/Projects/Sony/photon-web
-windows:
-  - git:
-  - server: make watch
-

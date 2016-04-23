@@ -17,7 +17,10 @@ Plug 'nelstrom/vim-qargs'
 Plug 'tpope/vim-unimpaired'
 Plug 'kien/ctrlp.vim'
 Plug 'godlygeek/tabular'
-Plug 'zerowidth/vim-copy-as-rtf'
+
+if has("gui_macvim")
+  Plug 'zerowidth/vim-copy-as-rtf'
+endif
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -41,7 +44,6 @@ Plug 'juvenn/mustache'
 Plug 'mattn/emmet-vim'
 
 " Haskell
-Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }
 Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }

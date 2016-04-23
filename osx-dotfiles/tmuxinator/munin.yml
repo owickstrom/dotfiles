@@ -1,6 +1,0 @@
-name: munin
-root: ~/Projects/go/src/github.com/owickstrom/munin
-
-windows:
-  - vim: vim
-  - git: git status

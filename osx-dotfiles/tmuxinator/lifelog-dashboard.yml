@@ -1,6 +1,0 @@
-name: ll-dashboard
-root: ~/Projects/Sony/lifelog/lifelog-dashboard
-windows:
-  - git:
-  - server: npm run watch
-
