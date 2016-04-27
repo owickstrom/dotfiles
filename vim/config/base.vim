@@ -37,3 +37,7 @@ set nowrap                  " don't wrap text
 
 " Leader
 let mapleader = ','
+
+" Make F1 work like Escape.
+map <F1> <Esc>
+imap <F1> <Esc>
