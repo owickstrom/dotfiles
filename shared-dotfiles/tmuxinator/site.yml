@@ -1,0 +1,6 @@
+name: system
+root: ~/Projects/owickstrom.github.io
+
+windows:
+  - jekyll: jekyll serve
+  - edit: vim
