@@ -5,9 +5,9 @@ set -e
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 if which brew; then
-  brew install pcre pkg-config haskell-stack
+  brew install pkg-config haskell-stack
 else
-  sudo apt-get install libpcre3-dev pkg-config haskell-stack
+  sudo apt-get install pkg-config haskell-stack
 fi
 
 stack setup
