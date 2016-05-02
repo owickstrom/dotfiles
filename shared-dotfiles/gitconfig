@@ -3,6 +3,7 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
+	pager = less -+F
 [user]
 	name = Oskar Wickström
 	email = oskar.wickstrom@gmail.com
