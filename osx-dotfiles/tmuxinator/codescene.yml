@@ -1,0 +1,19 @@
+name: codescene
+root: ~/Projects/empear/codescene
+
+windows:
+  - home:
+      root: ~/Projects/empear/codescene
+      panes:
+        - ls -l
+  - rabbit:
+      panes:
+        - rabbitmq-server
+  - docs:
+      root: ~/Projects/empear/codescene/codescene-docs
+      panes:
+        - vim
+  - github:
+      root: ~/Projects/empear/codescene/codescene-repository-provider-github
+      panes:
+        - vim
