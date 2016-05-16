@@ -40,7 +40,7 @@ Plug 'tpope/vim-fireplace'
 " HTML, CSS etc
 Plug 'groenewege/vim-less'
 Plug 'digitaltoad/vim-jade'
-Plug 'juvenn/mustache'
+Plug 'mustache/vim-mustache-handlebars'
 Plug 'mattn/emmet-vim'
 
 " Haskell
