@@ -61,6 +61,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'pbrisbin/vim-colors-off'
 Plug 'endel/vim-github-colorscheme'
+Plug 'owickstrom/vim-colors-paramount'
 
 for fpath in split(globpath('~/Projects/vim', '*'), '\n')
   Plug fpath
