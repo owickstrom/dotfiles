@@ -6,7 +6,7 @@ windows:
       root: ~/Projects/oden-lang/oden
       panes:
         - vim
-        - cabal exec ghci -- -isrc -itest Main
+        - stack exec ghci -- -isrc -itest Main
   - test-watch:
       root: ~/Projects/oden-lang/oden
       panes:

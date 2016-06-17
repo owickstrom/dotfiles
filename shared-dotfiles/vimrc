@@ -57,7 +57,6 @@ Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 " Colors
 Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'pbrisbin/vim-colors-off'
 Plug 'endel/vim-github-colorscheme'

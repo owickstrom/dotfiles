@@ -1,4 +1,0 @@
-colorscheme github
-hi Normal guibg=white ctermbg=white
-hi NonText guibg=white ctermbg=white
-set nonumber
