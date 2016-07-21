@@ -21,7 +21,3 @@ root: ~/
 windows:
   - home:
   - dotfiles: cd .dotfiles
-  - 1password-server:
-    root: ~/Dropbox/1Password/1Password.agilekeychain/
-    panes:
-        - python -m SimpleHTTPServer
