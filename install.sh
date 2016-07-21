@@ -4,6 +4,8 @@ set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+pushd $DIR
+
 if which brew; then
   brew install pkg-config haskell-stack
 else
@@ -14,3 +16,5 @@ stack setup
 stack install
 
 ~/.local/bin/dotfiles
+
+popd
