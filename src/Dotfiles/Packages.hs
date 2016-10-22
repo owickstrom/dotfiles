@@ -16,7 +16,7 @@ isNotInstalled os' pkg = do
   return $ not isInstalled
 
 packages :: OS -> [PackageID]
-packages (Linux APT) = ["git", "tmux", "tmuxinator", "curl", "wget", "vim", "ruby"]
+packages (Linux APT) = ["git", "tmux", "tmuxinator", "curl", "wget", "irssi"]
 packages (Linux Yum) = ["git", "tmux", "curl", "wget", "vim-enhanced", "irssi", "ctags", "pandoc"]
 packages (Linux Pacman) = ["git", "tmux", "curl", "wget", "vim", "irssi", "ctags", "base-devel", "pandoc"]
 packages OSX = ["bash", "bash-completion", "git", "tmux", "ctags-exuberant"]

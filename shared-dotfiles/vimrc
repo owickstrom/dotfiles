@@ -3,13 +3,11 @@
 call plug#begin('~/.vim/plugged')
 
 " General/Editing
-Plug 'scrooloose/syntastic'
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'Shougo/neocomplcache'
+Plug 'neomake/neomake'
+Plug 'Shougo/deoplete.nvim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'vim-scripts/paredit.vim'
-Plug 'kien/rainbow_parentheses.vim'
 Plug 'tpope/vim-endwise'
 Plug 'Raimondi/delimitMate'
 Plug 'editorconfig/editorconfig-vim'
@@ -17,10 +15,6 @@ Plug 'nelstrom/vim-qargs'
 Plug 'tpope/vim-unimpaired'
 Plug 'kien/ctrlp.vim'
 Plug 'godlygeek/tabular'
-
-if has("gui_macvim")
-  Plug 'zerowidth/vim-copy-as-rtf'
-endif
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -30,12 +24,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-ruby/vim-ruby'
 Plug 'fatih/vim-go'
 Plug 'wting/rust.vim'
-Plug 'raichoo/purescript-vim'
-Plug 'owickstrom/vim-dataflow'
-Plug 'lambdatoast/elm.vim'
-Plug 'ekalinin/Dockerfile.vim'
 Plug 'klen/python-mode'
-Plug 'tpope/vim-fireplace'
 
 " HTML, CSS etc
 Plug 'groenewege/vim-less'
@@ -59,7 +48,7 @@ Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'pbrisbin/vim-colors-off'
-Plug 'endel/vim-github-colorscheme'
+Plug 'vivkin/flatland.vim'
 Plug 'owickstrom/vim-colors-paramount'
 
 for fpath in split(globpath('~/Projects/vim', '*'), '\n')

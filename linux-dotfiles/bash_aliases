@@ -47,3 +47,6 @@ function gc {
 
 alias test-phantom="karma start --no-single-run --auto-watch --browsers PhantomJS --reporters dots"
 alias test-chrome="karma start --no-single-run --auto-watch --browsers Chrome --reporters dots"
+
+alias vim=nvim
+alias vi=nvim
