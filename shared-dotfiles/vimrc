@@ -48,10 +48,13 @@ Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'pbrisbin/vim-colors-off'
-Plug 'vivkin/flatland.vim'
 Plug 'owickstrom/vim-colors-paramount'
 
 for fpath in split(globpath('~/Projects/vim', '*'), '\n')
+  Plug fpath
+endfor
+
+for fpath in split(globpath('~/projects/vim', '*'), '\n')
   Plug fpath
 endfor
 
