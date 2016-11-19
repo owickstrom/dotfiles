@@ -2,7 +2,7 @@
 	ui = auto
 [core]
 	excludesfile = ~/.gitignore
-	editor = vim
+	editor = nvim
 	pager = less -+F
 [user]
 	name = Oskar Wickström
