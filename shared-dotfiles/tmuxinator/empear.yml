@@ -2,29 +2,28 @@ name: empear
 root: ~/Projects/empear
 
 windows:
-  - home:
-      root: ~/Projects/empear
-      panes:
-        - ls -l
-  - db:
-      panes:
-        - mongod --config /usr/local/etc/mongod.conf
-  - maat:
-      root: ~/Projects/empear/closedmaat
-      panes:
-        - vim
-  - web:
-      root: ~/Projects/empear/cacsremoteservice
+  - enterprise:
+      root: ~/Projects/empear/codescene-enterprise
       layout: even-vertical
       panes:
-        - vim
-        - lein repl
-  - licenser:
-      root: ~/Projects/empear/empearlicenser
+        - git status
+        - npm run watch
+
+  - cloud-web:
+      root: ~/Projects/empear/codescene-cloud/web
       layout: even-vertical
       panes:
-        - vim
-        - lein repl
+        - git status
+        - npm run watch
+
+  - cloud-worker:
+      root: ~/Projects/empear/codescene-cloud/worker
+      layout: even-vertical
+      panes:
+        - git status
+        - etc/sqsd.sh
+        - java -jar -Dconfig.file=etc/elasticmq.conf ~/opt/elasticmq-0.10.0.jar
+
   - site:
       root: ~/Projects/empear/empear.com
       layout: even-vertical
