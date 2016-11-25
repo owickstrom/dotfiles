@@ -23,8 +23,15 @@ Plug 'tpope/vim-fugitive'
 " Misc Languages/Syntax
 Plug 'vim-ruby/vim-ruby'
 Plug 'fatih/vim-go'
-Plug 'wting/rust.vim'
 Plug 'klen/python-mode'
+Plug 'rust-lang/rust.vim'
+Plug 'raichoo/purescript-vim'
+Plug 'owickstrom/vim-dataflow'
+Plug 'lambdatoast/elm.vim'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'klen/python-mode'
+Plug 'tpope/vim-fireplace'
+Plug 'idris-hackers/idris-vim'
 
 " HTML, CSS etc
 Plug 'groenewege/vim-less'
@@ -42,6 +49,7 @@ Plug 'elzr/vim-json'
 Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+Plug 'othree/yajs.vim'
 
 " Colors
 Plug 'morhetz/gruvbox'
