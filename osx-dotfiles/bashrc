@@ -60,3 +60,15 @@ function ios() {
 
 # added by travis gem
 [ -f /Users/owi/.travis/travis.sh ] && source /Users/owi/.travis/travis.sh
+
+alias vim=nvim
+
+alias lct="lein do clean, test"
+
+stack_path() {
+  export PATH=$(stack path --bin-path):$PATH
+}
+
+if [[ `uname` == "Darwin" ]]; then
+  alias new-emacs="open -n -a Emacs ."
+fi
