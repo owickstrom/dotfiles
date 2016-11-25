@@ -25,8 +25,9 @@ if has("gui_running")
     elseif has("gui_macvim")
 
         " MACVIM
-        set guifont=Fira\ Mono:h18
-        set linespace=1
+        set macligatures
+        set guifont=Fira\ Mono\ Medium:h14
+        set linespace=0
 
     elseif has("gui_win32")
 
