@@ -7,7 +7,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 pushd $DIR
 
 if which brew; then
-  brew install pkg-config haskell-stack
+  echo "whatever" || brew install pkg-config haskell-stack
 else
   sudo apt-get install pkg-config haskell-stack
 fi
