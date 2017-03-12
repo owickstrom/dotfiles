@@ -1,0 +1,16 @@
+name: hyper
+root: ~/Projects/personal/purescript/hyper
+
+windows:
+  - hyper:
+      root: ~/Projects/personal/purescript/hyper
+      layout: even-vertical
+      panes:
+        - git status
+        - pulp -w test
+
+  - hyper-talk:
+      root: ~/Projects/personal/purescript/hyper-talk
+      layout: even-vertical
+      panes:
+        - vim

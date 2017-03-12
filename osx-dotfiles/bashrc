@@ -62,6 +62,7 @@ function ios() {
 [ -f /Users/owi/.travis/travis.sh ] && source /Users/owi/.travis/travis.sh
 
 alias vim=nvim
+export EDITOR=nvim
 
 alias lct="lein do clean, test"
 
@@ -72,3 +73,6 @@ stack_path() {
 if [[ `uname` == "Darwin" ]]; then
   alias new-emacs="open -n -a Emacs ."
 fi
+
+alias docker-start='docker-machine start default'
+alias docker-env='eval $(docker-machine env default)'

@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 
 " General/Editing
 Plug 'neomake/neomake'
+Plug 'vim-syntastic/syntastic'
 Plug 'Shougo/deoplete.nvim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'bronson/vim-trailing-whitespace'
@@ -13,8 +14,10 @@ Plug 'Raimondi/delimitMate'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'nelstrom/vim-qargs'
 Plug 'tpope/vim-unimpaired'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'godlygeek/tabular'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'tpope/vim-surround'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -26,6 +29,7 @@ Plug 'fatih/vim-go'
 Plug 'klen/python-mode'
 Plug 'rust-lang/rust.vim'
 Plug 'raichoo/purescript-vim'
+Plug 'frigoeu/psc-ide-vim'
 Plug 'owickstrom/vim-dataflow'
 Plug 'lambdatoast/elm.vim'
 Plug 'ekalinin/Dockerfile.vim'
@@ -43,6 +47,9 @@ Plug 'mattn/emmet-vim'
 Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }
 Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }
+Plug 'nbouscal/vim-stylish-haskell'
+Plug 'itchyny/vim-haskell-indent'
+Plug 'octol/vim-hindent'
 
 " Javascript
 Plug 'elzr/vim-json'
