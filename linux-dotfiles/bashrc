@@ -27,3 +27,5 @@ PS1='\[\033[0;31m\]\w\[\033[0;32m\]$(__git_ps1)\[\e[0m\]$ '
 
 export NVM_DIR="/home/owi/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH=$PATH:$HOME/.local/bin
