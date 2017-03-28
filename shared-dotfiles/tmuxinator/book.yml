@@ -1,0 +1,15 @@
+name: book
+root: ~/projects/type-safe-web-book
+
+windows:
+  - book:
+      root: ~/projects/type-safe-web-book
+      layout: even-horizontal
+      panes:
+        - nvim
+        - make watch-pdf
+
+  - examples:
+      root: ~/projects/type-safe-web-book/examples
+      panes:
+        - ls
