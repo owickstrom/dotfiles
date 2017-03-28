@@ -21,6 +21,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source ~/.git-prompt.sh
 
 export TERM=screen-256color
+export EDITOR=nvim
 
 PS1='\[\033[0;31m\]\w\[\033[0;32m\]$(__git_ps1)\[\e[0m\]$ '
 
