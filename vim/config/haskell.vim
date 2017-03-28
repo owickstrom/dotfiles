@@ -1,7 +1,5 @@
 " HASKELL
 
-autocmd FileType haskell setlocal formatprg=hindent
-
 " Disable haskell-vim omnifunc
 let g:haskellmode_completion_ghc = 0
 
