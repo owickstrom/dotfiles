@@ -47,7 +47,6 @@ Plug 'mattn/emmet-vim'
 Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }
 Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }
-Plug 'nbouscal/vim-stylish-haskell'
 Plug 'itchyny/vim-haskell-indent'
 Plug 'octol/vim-hindent'
 

@@ -1,15 +1,10 @@
 name: book
-root: ~/projects/type-safe-web-book
+root: ~/projects/maintainable-web-applications
 
 windows:
   - book:
-      root: ~/projects/type-safe-web-book
+      root: ~/projects/maintainable-web-applications
       layout: even-horizontal
       panes:
-        - nvim
-        - make watch-pdf
-
-  - examples:
-      root: ~/projects/type-safe-web-book/examples
-      panes:
-        - ls
+        - source ENV/bin/activate; nvim
+        - source ENV/bin/activate; make livehtml
