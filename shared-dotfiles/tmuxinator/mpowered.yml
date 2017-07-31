@@ -1,0 +1,15 @@
+name: mpowered
+root: ~/projects/mpowered
+
+windows:
+  - rhino:
+      root: ~/projects/mpowered/rhino
+      layout: even-vertical
+      panes:
+        - stack exec nvim
+        - stack test --file-watch
+
+  - toolkit3:
+      root: ~/projects/mpowered/toolkit3
+      panes:
+        - git status
