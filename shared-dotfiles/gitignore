@@ -9,6 +9,8 @@ vim/.netrwhist
 .projections.json
 .env
 .ropeproject
+.dir-locals.el
+.ideaHaskellLib
 
 # Temporary files
 *~

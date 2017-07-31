@@ -14,7 +14,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'nelstrom/vim-qargs'
 Plug 'tpope/vim-unimpaired'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'cloudhead/neovim-fuzzy'
 Plug 'godlygeek/tabular'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-surround'
@@ -45,8 +45,8 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'mattn/emmet-vim'
 
 " Haskell
-Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 Plug 'lukerandall/haskellmode-vim', { 'for': 'haskell' }
+Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }
 Plug 'itchyny/vim-haskell-indent'
 Plug 'octol/vim-hindent'
