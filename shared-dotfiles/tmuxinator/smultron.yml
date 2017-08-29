@@ -4,7 +4,7 @@ root: ~/projects/smultron
 windows:
   - smultron:
       root: ~/projects/smultron
-      layout: even-vertical
+      layout: even-horizontal
       panes:
         - git status
         - source .env ; yesod devel
