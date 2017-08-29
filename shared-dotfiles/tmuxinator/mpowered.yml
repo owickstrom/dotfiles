@@ -6,7 +6,7 @@ windows:
       root: ~/projects/mpowered/rhino
       layout: even-vertical
       panes:
-        - stack exec nvim
+        - git status
         - stack test --file-watch
 
   - toolkit3:
