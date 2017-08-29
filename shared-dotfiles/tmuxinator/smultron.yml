@@ -1,0 +1,10 @@
+name: smultron
+root: ~/projects/smultron
+
+windows:
+  - smultron:
+      root: ~/projects/smultron
+      layout: even-vertical
+      panes:
+        - git status
+        - source .env ; yesod devel
