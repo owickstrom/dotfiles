@@ -18,6 +18,7 @@ Plug 'cloudhead/neovim-fuzzy'
 Plug 'godlygeek/tabular'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-surround'
+Plug 'sbdchd/neoformat'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -48,7 +49,6 @@ Plug 'mattn/emmet-vim'
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }
-Plug 'octol/vim-hindent', { 'for': 'haskell' }
 
 " Javascript
 Plug 'elzr/vim-json'
