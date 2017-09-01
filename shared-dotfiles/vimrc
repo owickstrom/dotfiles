@@ -19,6 +19,7 @@ Plug 'godlygeek/tabular'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-surround'
 Plug 'sbdchd/neoformat'
+Plug 'floobits/floobits-neovim'
 
 " Git
 Plug 'airblade/vim-gitgutter'
