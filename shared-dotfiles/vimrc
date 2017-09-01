@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 
 " General/Editing
 Plug 'neomake/neomake'
+Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'vim-syntastic/syntastic'
 Plug 'Shougo/deoplete.nvim'
 Plug 'scrooloose/nerdcommenter'
@@ -47,9 +48,9 @@ Plug 'mattn/emmet-vim'
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
-Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }
 Plug 'pbrisbin/vim-syntax-shakespeare'
+Plug 'parsonsmatt/intero-neovim'
 
 " Javascript
 Plug 'elzr/vim-json'
