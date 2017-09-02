@@ -1,7 +1,6 @@
 " HASKELL
 
-let g:neoformat_run_all_formatters = 1
-let g:neoformat_only_msg_on_error = 1
+au FileType haskell setlocal formatprg=hindent
 let g:neoformat_enabled_haskell = ['hindent', 'stylishhaskell']
 
 let g:neomake_haskell_enabled_makers = ['hlint']
@@ -13,14 +12,24 @@ vmap a= :Tabularize /=<CR>
 vmap a; :Tabularize /::<CR>
 vmap a- :Tabularize /-><CR>
 
-nmap <Leader>hf :Neoformat<CR>
-
 function! ChangeInteroDirectory()
   let curline = getline('.')
   call inputsave()
   let dir = input('Change Intero Directory: ', fnamemodify(getcwd(), ':p'))
   call inputrestore()
   call intero#repl#eval(':cd ' . dir)
+endfunction
+
+function! ReloadInteroIfStarted()
+  if exists("g:intero_started")
+    :InteroReload
+  endif
+endfunction
+
+function! InteroDevelUpdate()
+  echo "Updating DevelMain..."
+  call intero#repl#eval(':l DevelMain')
+  call intero#repl#eval('DevelMain.update')
 endfunction
 
 augroup interoMaps
@@ -37,21 +46,22 @@ augroup interoMaps
   au FileType haskell nnoremap <silent> <leader>iov :InteroOpen<CR><C-W>H
   au FileType haskell nnoremap <silent> <leader>ih :InteroHide<CR>
 
-  " Reloading (pick one)
   " Automatically reload on save
-  au BufWritePost *.hs InteroReload
-  " Manually save and reload
-  au FileType haskell nnoremap <silent> <leader>wr :w \| :InteroReload<CR>
+  au BufWritePost *.hs :call ReloadInteroIfStarted()
 
   " Load individual modules
   au FileType haskell nnoremap <silent> <leader>il :InteroLoadCurrentModule<CR>
   au FileType haskell nnoremap <silent> <leader>if :InteroLoadCurrentFile<CR>
+
+  " Update DevelMain for Yesod
+  au FileType haskell,hamlet,julius,lucius,cassius nnoremap <silent> <leader>iu :call InteroDevelUpdate()<CR>
 
   " Type-related information
   " Heads up! These next two differ from the rest.
   au FileType haskell map <silent> <leader>t <Plug>InteroGenericType
   au FileType haskell map <silent> <leader>T <Plug>InteroType
   au FileType haskell nnoremap <silent> <leader>it :InteroTypeInsert<CR>
+  au FileType haskell map <silent> <leader>iq <Plug>InteroInfo
 
   " Navigation
   au FileType haskell nnoremap <silent> <leader>jd :InteroGoToDef<CR>
