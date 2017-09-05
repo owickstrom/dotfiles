@@ -7,7 +7,6 @@ windows:
       layout: even-vertical
       panes:
         - git status
-        - stack test --file-watch
 
   - toolkit3:
       root: ~/projects/mpowered/toolkit3
