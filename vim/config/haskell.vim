@@ -7,6 +7,8 @@ let g:neomake_haskell_enabled_makers = ['hlint']
 
 " Disable haskell-vim omnifunc
 let g:haskellmode_completion_ghc = 0
+let g:necoghc_enable_detailed_browse = 1
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 vmap a= :Tabularize /=<CR>
 vmap a; :Tabularize /::<CR>
