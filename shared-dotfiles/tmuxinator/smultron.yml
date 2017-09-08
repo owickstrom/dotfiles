@@ -7,4 +7,4 @@ windows:
       layout: even-horizontal
       panes:
         - git status
-        - source .env ; yesod devel
+        - source .env ; nvim

@@ -6,7 +6,7 @@ windows:
       root: ~/projects/mpowered/rhino
       layout: even-vertical
       panes:
-        - git status
+        - git status && source .env && vim
 
   - toolkit3:
       root: ~/projects/mpowered/toolkit3
