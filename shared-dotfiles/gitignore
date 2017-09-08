@@ -5,6 +5,8 @@
 *.swo
 vim/.netrwhist
 .vim.custom
+.vimrc
+.nvimrc
 .DS_Store
 .projections.json
 .env
