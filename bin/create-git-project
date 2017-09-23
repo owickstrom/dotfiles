@@ -1,0 +1,29 @@
+#!/bin/bash
+
+PROJECT_NAME="$1"
+
+if [ -z $1 ]; then
+  echo -e 'Project name:'
+  read PROJECT_NAME
+fi
+
+GIT_DIR="/home/git/projects/${PROJECT_NAME}"
+CLONE_CMD="git clone git@wickstrom.tech:projects/${PROJECT_NAME}"
+
+ssh ubuntu@wickstrom.tech<<ENDSSH
+set -e
+
+if [ -d "$GIT_DIR" ]; then
+  echo "Project '${PROJECT_NAME}' already exists! Clone it with:"
+  echo ""
+  echo "    $CLONE_CMD"
+  echo ""
+else
+  sudo -u git git init --bare "$GIT_DIR"
+  echo "Project '${PROJECT_NAME}' created successfully. Clone it with:"
+  echo ""
+  echo "    $CLONE_CMD"
+  echo ""
+fi
+
+ENDSSH
