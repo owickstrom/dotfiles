@@ -42,3 +42,6 @@ let maplocalleader = ','
 " Make F1 work like Escape.
 map <F1> <Esc>
 imap <F1> <Esc>
+
+" Mouse issue (https://github.com/neovim/neovim/wiki/Following-HEAD#20170403)
+set mouse=a
