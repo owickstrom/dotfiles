@@ -38,7 +38,15 @@ function! GhciDevelUpdate()
   call ghci#repl#eval('DevelMain.update')
 endfunction
 
-augroup cabalReplMaps
+function! ChangeGhciDirectory()
+  let curline = getline('.')
+  call inputsave()
+  let dir = input('Change GHCi Directory: ', fnamemodify(getcwd(), ':p'))
+  call inputrestore()
+  call ghci#repl#eval(':cd ' . dir)
+endfunction
+
+augroup ghciMaps
   au!
   " Background process and window management
   au FileType haskell nnoremap <silent> <leader>gs :GhciStart<CR>
@@ -64,4 +72,8 @@ augroup cabalReplMaps
 
   " Update DevelMain for Yesod
   au FileType haskell,hamlet,julius,lucius,cassius nnoremap <silent> <leader>gu :call GhciDevelUpdate()<CR>
+
+  " Change GHCi directory
+  au FileType haskell nnoremap <silent> <leader>gcd :call ChangeGhciDirectory()<CR>
 augroup END
+
