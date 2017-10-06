@@ -13,6 +13,7 @@ vim/.netrwhist
 .ropeproject
 .dir-locals.el
 .ideaHaskellLib
+.ghci
 
 # Temporary files
 *~
