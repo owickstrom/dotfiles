@@ -25,3 +25,5 @@
 	default = simple
 [branch]
 	autosetuprebase = always
+[magit]
+	hideCampaign = true
