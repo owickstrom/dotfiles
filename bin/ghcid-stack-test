@@ -1,0 +1,13 @@
+#!/bin/bash
+
+TARGET=$1
+
+if [ -z $TARGET ]; then
+  echo -e "Usage: ghcid-stack-test TARGET\n"
+  echo -e "Where TARGET is one of:\n"
+  stack ide targets 2>&1 | egrep --color=never "[^:]+:test:[^:]+" | sed 's/^/  /'
+  echo ""
+  exit 1
+fi
+
+ghcid -c "stack repl $TARGET" --warnings --test=":main" --restart test
