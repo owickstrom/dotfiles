@@ -1,13 +1,50 @@
 #!/bin/bash
 
+# Program:     ghcid-stack-test
+# Description: Convenient wrapper for running Stack project test suites on file
+#              changes, using the `ghcid` program.
+# Author:      Oskar Wickström<oskar.wickstrom@gmail.com>
+
+echoerr() {
+  echo "$@" 1>&2;
+}
+
+usage() {
+  cat <<EOM
+  Usage:
+  $(basename $$0) [TARGET]
+
+  TARGET
+    A test suite target, e.g. \`my-project:test:my-tests\`. Only required when
+    there are multiple test targets in a project.
+
+EOM
+}
+
+# The user's chosen target, if specified.
 TARGET=$1
 
-if [ -z $TARGET ]; then
-  echo -e "Usage: ghcid-stack-test TARGET\n"
-  echo -e "Where TARGET is one of:\n"
-  stack ide targets 2>&1 | egrep --color=never "[^:]+:test:[^:]+" | sed 's/^/  /'
-  echo ""
+# First, ask Stack for which targets are available to choose.
+TEST_TARGETS=$(stack ide targets 2>&1 | egrep --color=never "[^:]+:test:[^:]+" | sed 's/^/  /')
+
+if [ "${#TEST_TARGETS[@]}" -eq 0 ]; then
+
+  # We can't run without ANY test target.
+  echoerr "There are no test targets in the project!"
   exit 1
+
+elif [ -z "$TARGET" ]; then
+
+  if [ "${#TEST_TARGETS[@]}" -eq 1 ]; then
+    # When we have only one target, and the user haven't specified any explicit
+    # target, we just use that.
+    TARGET="$TEST_TARGETS"
+  else
+    usage
+    exit 1
+  fi
+
 fi
 
+# Start `ghcid` and invoke main on each reload.
 ghcid -c "stack repl $TARGET" --warnings --test=":main" --restart test
