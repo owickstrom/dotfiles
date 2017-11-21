@@ -10,9 +10,12 @@ echoerr() {
 }
 
 usage() {
-  cat <<EOM
-  Usage:
-  $(basename $$0) [TARGET]
+  cat 1>&2 <<EOM
+Usage:
+
+  $(basename "$0") [TARGET]
+
+Arguments:
 
   TARGET
     A test suite target, e.g. \`my-project:test:my-tests\`. Only required when
@@ -25,21 +28,31 @@ EOM
 TARGET=$1
 
 # First, ask Stack for which targets are available to choose.
-TEST_TARGETS=$(stack ide targets 2>&1 | egrep --color=never "[^:]+:test:[^:]+" | sed 's/^/  /')
+TEST_TARGETS=($(stack ide targets 2>&1 | egrep --color=never "[^:]+:test:[^:]+" | sed 's/^/  /' | tr '\n' ' '))
 
 if [ "${#TEST_TARGETS[@]}" -eq 0 ]; then
 
   # We can't run without ANY test target.
   echoerr "There are no test targets in the project!"
   exit 1
+fi
 
-elif [ -z "$TARGET" ]; then
+if [ -z "$TARGET" ]; then
 
   if [ "${#TEST_TARGETS[@]}" -eq 1 ]; then
     # When we have only one target, and the user haven't specified any explicit
     # target, we just use that.
-    TARGET="$TEST_TARGETS"
+    TARGET="${TEST_TARGETS[0]}"
+    echo "we have one target"
   else
+    echoerr "Available targets:"
+    echoerr ""
+
+    for test_target in "${TEST_TARGETS[@]}"; do
+      echoerr "  $test_target"
+    done
+
+    echoerr
     usage
     exit 1
   fi
