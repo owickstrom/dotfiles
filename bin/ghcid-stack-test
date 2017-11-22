@@ -59,4 +59,11 @@ if [ -z "$TARGET" ]; then
 fi
 
 # Start `ghcid` and invoke main on each reload.
-ghcid -c "stack repl $TARGET" --warnings --test=":main" --restart test --restart src
+ghcid \
+  -c "stack repl $TARGET" \
+  --warnings \
+  --test=":main" \
+  --reload test \
+  --reload src \
+  --restart ./*.cabal \
+  --restart ./stack.yaml
