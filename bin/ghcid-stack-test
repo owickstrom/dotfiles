@@ -43,7 +43,6 @@ if [ -z "$TARGET" ]; then
     # When we have only one target, and the user haven't specified any explicit
     # target, we just use that.
     TARGET="${TEST_TARGETS[0]}"
-    echo "we have one target"
   else
     echoerr "Available targets:"
     echoerr ""
