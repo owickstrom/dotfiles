@@ -60,7 +60,7 @@ fi
 
 # Start `ghcid` and invoke main on each reload.
 ghcid \
-  -c "stack repl $TARGET" \
+  -c "stack ghci --test --main-is=$TARGET" \
   --warnings \
   --test=":main" \
   --reload test \
