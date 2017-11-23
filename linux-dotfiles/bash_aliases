@@ -51,3 +51,5 @@ alias test-chrome="karma start --no-single-run --auto-watch --browsers Chrome --
 
 alias vim=nvim
 alias vi=nvim
+
+alias tmate="tmate -f ~/.tmate.conf"
