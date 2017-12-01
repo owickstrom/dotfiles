@@ -5,7 +5,6 @@ let g:neoformat_enabled_haskell = ['hindent', 'stylishhaskell']
 
 let g:neomake_haskell_enabled_makers = ['hlint']
 
-
 au FileType haskell setlocal makeprg=cabal\ new-build
 set errorformat=
       \%W%f:%l:%c:\ Warning:%m,
@@ -15,16 +14,16 @@ set errorformat=
 
 " Disable haskell-vim omnifunc
 let g:haskellmode_completion_ghc = 0
-let g:necoghc_enable_detailed_browse = 1
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+" let g:necoghc_enable_detailed_browse = 1
+" autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 vmap a= :Tabularize /=<CR>
 vmap a; :Tabularize /::<CR>
 vmap a- :Tabularize /-><CR>
 
 let g:ghci_start_immediately = 0
-let g:ghci_command = 'cabal new-repl'
-let g:ghci_command_line_options = '-fobject-code'
+let g:ghci_command = 'ghci'
+let g:ghci_command_line_options = ''
 
 function! ReloadGhciIfStarted()
   if exists("g:ghci_started")
@@ -51,6 +50,7 @@ augroup ghciMaps
   " Background process and window management
   au FileType haskell nnoremap <silent> <leader>gs :GhciStart<CR>
   au FileType haskell nnoremap <silent> <leader>gk :GhciKill<CR>
+  au FileType haskell nnoremap <silent> <leader>gr :GhciRestart<CR>
 
   " Open cabalRepl/GHCi split horizontally
   au FileType haskell nnoremap <silent> <leader>go :GhciOpen<CR>
@@ -67,8 +67,9 @@ augroup ghciMaps
 
   " Type-related information
   " Heads up! These next two differ from the rest.
-  au FileType haskell map <silent> <leader>gt :GhciType<CR>
+  au FileType haskell map <silent> <leader>gt <Plug>GhciType
   au FileType haskell map <silent> <leader>gi :GhciInfo<CR>
+  au FileType haskell map <silent> <leader>gI :GhciTypeInsert<CR>
 
   " Update DevelMain for Yesod
   au FileType haskell,hamlet,julius,lucius,cassius nnoremap <silent> <leader>gu :call GhciDevelUpdate()<CR>
@@ -76,4 +77,3 @@ augroup ghciMaps
   " Change GHCi directory
   au FileType haskell nnoremap <silent> <leader>gcd :call ChangeGhciDirectory()<CR>
 augroup END
-
