@@ -45,3 +45,9 @@ imap <F1> <Esc>
 
 " Mouse issue (https://github.com/neovim/neovim/wiki/Following-HEAD#20170403)
 set mouse=a
+
+" Use system clipboard for yanks.
+set clipboard+=unnamedplus
+
+" Use ,t for 'jump to tag'.
+nnoremap <Leader>t <C-]>
