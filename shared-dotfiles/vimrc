@@ -18,6 +18,10 @@ Plug 'tpope/vim-surround'
 Plug 'sbdchd/neoformat'
 Plug 'kien/ctrlp.vim'
 
+" URLs
+Plug 'tyru/open-browser.vim'
+Plug 'tyru/open-browser-github.vim'
+
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
