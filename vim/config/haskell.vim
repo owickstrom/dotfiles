@@ -1,38 +1,44 @@
 " HASKELL
 
-au FileType haskell setlocal formatprg=hindent
 let g:neoformat_enabled_haskell = ['hindent', 'stylishhaskell']
 
 let g:neomake_haskell_enabled_makers = ['hlint']
 
-au FileType haskell setlocal makeprg=cabal\ new-build
 set errorformat=
       \%W%f:%l:%c:\ Warning:%m,
       \%W%f:%l:%c:\ Warning:,
       \%E%f:%l:%c:%m,
       \%E%f:%l:%c:,
 
-" Disable haskell-vim omnifunc
-let g:haskellmode_completion_ghc = 0
-" let g:necoghc_enable_detailed_browse = 1
-" autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-
 vmap a= :Tabularize /=<CR>
 vmap a; :Tabularize /::<CR>
 vmap a- :Tabularize /-><CR>
+
+function! RunHasktagsIfExists()
+  " Only regenerate existing tags.
+  if filereadable('tags')
+    call system('hasktags --ctags .')
+  endif
+endfunction
+
+augroup HaskellMaps
+  au FileType haskell setlocal formatprg=hindent
+  au FileType haskell setlocal makeprg=cabal\ new-build
+  au BufWritePost *.hs :call RunHasktagsIfExists()
+augroup END
 
 let g:ghci_start_immediately = 0
 let g:ghci_command = 'ghci'
 let g:ghci_command_line_options = ''
 
 function! ReloadGhciIfStarted()
-  if exists("g:ghci_started")
+  if exists('g:ghci_started')
     :GhciReload
   endif
 endfunction
 
 function! GhciDevelUpdate()
-  echo "Updating DevelMain..."
+  echo 'Updating DevelMain...'
   call ghci#repl#eval(':l app/DevelMain.hs')
   call ghci#repl#eval('DevelMain.update')
 endfunction
