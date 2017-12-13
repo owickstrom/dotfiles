@@ -2,8 +2,20 @@ name: mpowered
 root: ~/projects/mpowered
 
 windows:
-  - rhino:
-      root: ~/projects/mpowered/rhino
-      layout: even-vertical
+  - chameleon:
+      root: ~/projects/mpowered/chameleon
+      layout: even-horizontal
       panes:
-        - git status && source .env
+        - nvim
+        - ghcid-stack-test
+  - toolkit:
+      root: ~/projects/mpowered/toolkit
+      layout: even-horizontal
+      panes:
+        - nvim
+        - rvm use && bundle exec rails c
+  - empowerment:
+      root: ~/projects/mpowered/empowerment
+      layout: even-horizontal
+      panes:
+        - git status
