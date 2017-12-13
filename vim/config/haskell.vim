@@ -23,7 +23,7 @@ endfunction
 
 augroup HaskellMaps
   au FileType haskell setlocal formatprg=hindent
-  au FileType haskell setlocal makeprg=cabal\ new-build
+  au FileType haskell,lhaskell setlocal makeprg=cabal\ new-build
   au BufWritePost *.hs :call RunHasktagsIfExists()
 augroup END
 
@@ -54,32 +54,32 @@ endfunction
 augroup ghciMaps
   au!
   " Background process and window management
-  au FileType haskell nnoremap <silent> <leader>gs :GhciStart<CR>
-  au FileType haskell nnoremap <silent> <leader>gk :GhciKill<CR>
-  au FileType haskell nnoremap <silent> <leader>gr :GhciRestart<CR>
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gs :GhciStart<CR>
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gk :GhciKill<CR>
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gr :GhciRestart<CR>
 
   " Open cabalRepl/GHCi split horizontally
-  au FileType haskell nnoremap <silent> <leader>go :GhciOpen<CR>
+  au FileType haskell,lhaskell nnoremap <silent> <leader>go :GhciOpen<CR>
   " Open cabalRepl/GHCi split vertically
-  au FileType haskell nnoremap <silent> <leader>gov :GhciOpen<CR><C-W>H
-  au FileType haskell nnoremap <silent> <leader>gh :GhciHide<CR>
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gov :GhciOpen<CR><C-W>H
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gh :GhciHide<CR>
 
   " Automatically reload on save
   au BufWritePost *.hs :call ReloadGhciIfStarted()
 
   " Load individual modules
-  au FileType haskell nnoremap <silent> <leader>gl :GhciLoadCurrentModule<CR>
-  au FileType haskell nnoremap <silent> <leader>gf :GhciLoadCurrentFile<CR>
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gl :GhciLoadCurrentModule<CR>
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gf :GhciLoadCurrentFile<CR>
 
   " Type-related information
   " Heads up! These next two differ from the rest.
-  au FileType haskell map <silent> <leader>gt <Plug>GhciType
-  au FileType haskell map <silent> <leader>gi :GhciInfo<CR>
-  au FileType haskell map <silent> <leader>gI :GhciTypeInsert<CR>
+  au FileType haskell,lhaskell map <silent> <leader>gt <Plug>GhciType
+  au FileType haskell,lhaskell map <silent> <leader>gi :GhciInfo<CR>
+  au FileType haskell,lhaskell map <silent> <leader>gI :GhciTypeInsert<CR>
 
   " Update DevelMain for Yesod
-  au FileType haskell,hamlet,julius,lucius,cassius nnoremap <silent> <leader>gu :call GhciDevelUpdate()<CR>
+  au FileType haskell,lhaskell,hamlet,julius,lucius,cassius nnoremap <silent> <leader>gu :call GhciDevelUpdate()<CR>
 
   " Change GHCi directory
-  au FileType haskell nnoremap <silent> <leader>gcd :call ChangeGhciDirectory()<CR>
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gcd :call ChangeGhciDirectory()<CR>
 augroup END
