@@ -15,6 +15,7 @@ vim/.netrwhist
 .ideaHaskellLib
 .ghci
 ctags
+tags
 
 # Temporary files
 *~

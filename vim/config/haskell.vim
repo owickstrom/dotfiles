@@ -43,6 +43,11 @@ function! GhciDevelUpdate()
   call ghci#repl#eval('DevelMain.update')
 endfunction
 
+function! GhciRunMain()
+  call ghci#repl#send(':l Main')
+  call ghci#repl#send(':main')
+endfunction
+
 function! ChangeGhciDirectory()
   let curline = getline('.')
   call inputsave()
@@ -82,4 +87,7 @@ augroup ghciMaps
 
   " Change GHCi directory
   au FileType haskell,lhaskell nnoremap <silent> <leader>gcd :call ChangeGhciDirectory()<CR>
+
+  " Run :main
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gm :call GhciRunMain()<CR>
 augroup END
