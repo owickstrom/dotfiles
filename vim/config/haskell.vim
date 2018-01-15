@@ -27,25 +27,23 @@ augroup HaskellMaps
   au BufWritePost *.hs :call RunHasktagsIfExists()
 augroup END
 
-let g:ghci_start_immediately = 0
-let g:ghci_command = 'ghci'
-let g:ghci_command_line_options = ''
+let g:intero_start_immediately = 0
 
 function! ReloadGhciIfStarted()
-  if exists('g:ghci_started')
-    :GhciReload
+  if exists('g:intero_started')
+    :InteroReload
   endif
 endfunction
 
 function! GhciDevelUpdate()
   echo 'Updating DevelMain...'
-  call ghci#repl#eval(':l app/DevelMain.hs')
-  call ghci#repl#eval('DevelMain.update')
+  call intero#repl#eval(':l app/DevelMain.hs')
+  call intero#repl#eval('DevelMain.update')
 endfunction
 
 function! GhciRunMain()
-  call ghci#repl#send(':l Main')
-  call ghci#repl#send(':main')
+  call intero#repl#send(':l Main')
+  call intero#repl#send(':main')
 endfunction
 
 function! ChangeGhciDirectory()
@@ -53,34 +51,34 @@ function! ChangeGhciDirectory()
   call inputsave()
   let dir = input('Change GHCi Directory: ', fnamemodify(getcwd(), ':p'))
   call inputrestore()
-  call ghci#repl#eval(':cd ' . dir)
+  call intero#repl#eval(':cd ' . dir)
 endfunction
 
 augroup ghciMaps
   au!
   " Background process and window management
-  au FileType haskell,lhaskell nnoremap <silent> <leader>gs :GhciStart<CR>
-  au FileType haskell,lhaskell nnoremap <silent> <leader>gk :GhciKill<CR>
-  au FileType haskell,lhaskell nnoremap <silent> <leader>gr :GhciRestart<CR>
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gs :InteroStart<CR>
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gk :InteroKill<CR>
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gr :InteroRestart<CR>
 
-  " Open cabalRepl/GHCi split horizontally
-  au FileType haskell,lhaskell nnoremap <silent> <leader>go :GhciOpen<CR>
-  " Open cabalRepl/GHCi split vertically
-  au FileType haskell,lhaskell nnoremap <silent> <leader>gov :GhciOpen<CR><C-W>H
-  au FileType haskell,lhaskell nnoremap <silent> <leader>gh :GhciHide<CR>
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gos :InteroOpen<CR>
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gov :InteroOpen<CR><C-W>H
+
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gh :InteroHide<CR>
 
   " Automatically reload on save
   au BufWritePost *.hs :call ReloadGhciIfStarted()
 
   " Load individual modules
-  au FileType haskell,lhaskell nnoremap <silent> <leader>gl :GhciLoadCurrentModule<CR>
-  au FileType haskell,lhaskell nnoremap <silent> <leader>gf :GhciLoadCurrentFile<CR>
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gl :InteroLoadCurrentModule<CR>
+  au FileType haskell,lhaskell nnoremap <silent> <leader>gf :InteroLoadCurrentFile<CR>
 
   " Type-related information
   " Heads up! These next two differ from the rest.
-  au FileType haskell,lhaskell map <silent> <leader>gt <Plug>GhciType
-  au FileType haskell,lhaskell map <silent> <leader>gi :GhciInfo<CR>
-  au FileType haskell,lhaskell map <silent> <leader>gI :GhciTypeInsert<CR>
+  au FileType haskell,lhaskell map <silent> <leader>gt <Plug>InteroGenericType
+  au FileType haskell,lhaskell map <silent> <leader>gT <Plug>InteroType
+  au FileType haskell,lhaskell map <silent> <leader>gi :InteroInfo<CR>
+  au FileType haskell,lhaskell map <silent> <leader>gI :InteroTypeInsert<CR>
 
   " Update DevelMain for Yesod
   au FileType haskell,lhaskell,hamlet,julius,lucius,cassius nnoremap <silent> <leader>gu :call GhciDevelUpdate()<CR>
