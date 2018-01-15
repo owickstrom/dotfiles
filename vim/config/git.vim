@@ -9,3 +9,5 @@ nmap <Leader>gh :Glog -- %<CR>
 
 " git grep the word under cursor
 nmap <Leader>gg :Ggrep <cword> .<CR>
+
+let g:gitgutter_enabled = !exists('$CODA_SCREENCAST')

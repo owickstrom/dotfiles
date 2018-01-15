@@ -1,5 +1,5 @@
 " Use deoplete.
-let g:deoplete#enable_at_startup = exists('$CODA_SCREENCAST')
+let g:deoplete#enable_at_startup = !exists('$CODA_SCREENCAST')
 
 " Use smartcase.
 let g:deoplete#enable_smart_case = 1
