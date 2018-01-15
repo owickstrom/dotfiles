@@ -37,3 +37,4 @@ if [ -f ~/.ghc-pkg-functions.sh ]; then
     . ~/.ghc-pkg-functions.sh
 fi
 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
