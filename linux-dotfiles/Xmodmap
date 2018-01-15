@@ -1,9 +1,4 @@
-! Remap Caps Lock to Left CTRL
-!keycode 66 = Control_L
-!clear Lock
-!add Control = Control_L
-
-! Fix backtick/tilde
-! keycode 94 = grave asciitilde Cyrillic_io Cyrillic_IO
-! keycode 49 = less greater less greater
-
+clear lock
+clear control
+add control = Caps_Lock Control_L Control_R
+keycode  66 = Control_L Caps_Lock NoSymbol NoSymbol
