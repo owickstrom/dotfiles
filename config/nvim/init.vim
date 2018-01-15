@@ -1,6 +1,6 @@
 " PATHOGEN
 "
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " General/Editing
 Plug 'neomake/neomake'
@@ -76,6 +76,6 @@ endfor
 
 call plug#end()
 
-for fpath in split(globpath('~/.vim/config', '*.vim'), '\n')
+for fpath in split(globpath('~/.config/nvim/config', '*.vim'), '\n')
   exe 'source' fpath
 endfor

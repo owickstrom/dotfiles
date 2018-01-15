@@ -54,6 +54,7 @@ main = do
 
   header "Symlinks"
   symlinkDotfiles config
+  symlinkConfigFiles config
 
   header "Install Packages"
   installPackages config
