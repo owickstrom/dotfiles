@@ -18,9 +18,9 @@ function! DecreaseFontSize()
 endfunction
 
 if $CODA_SCREENCAST
-  call SetFontSize(11)
-else
   call SetFontSize(20)
+else
+  call SetFontSize(11)
 endif
 
 map <F11> :call rpcnotify(0, 'Gui', 'WindowFullScreen', !g:GuiWindowFullScreen)<CR>
