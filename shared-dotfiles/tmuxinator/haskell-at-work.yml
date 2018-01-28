@@ -1,0 +1,7 @@
+---
+name: "Haskell at Work"
+root: ~/haskell-at-work
+
+windows:
+  - cast:
+      panes: . ~/haskell-at-work/episodes/bashrc

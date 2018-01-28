@@ -1,6 +1,0 @@
-name: CODA
-root: ~/coda
-
-windows:
-  - cast:
-      panes: . ~/coda/bashrc

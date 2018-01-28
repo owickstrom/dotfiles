@@ -19,3 +19,7 @@ windows:
       layout: even-horizontal
       panes:
         - git status
+  - morberg:
+      root: ~/projects/mpowered
+      panes:
+        - ssh 172.104.246.11
