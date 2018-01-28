@@ -38,6 +38,7 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'klen/python-mode'
 Plug 'idris-hackers/idris-vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'LnL7/vim-nix'
 
 " HTML, CSS etc
 Plug 'groenewege/vim-less'
