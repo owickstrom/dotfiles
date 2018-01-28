@@ -1,8 +1,8 @@
 let g:neomake_warning_sign = {
-  \ 'text': '>>',
+  \ 'text': '⚠',
   \ 'texthl': 'WarningMsg',
   \ }
 let g:neomake_error_sign = {
-  \ 'text': '>>',
+  \ 'text': '✘',
   \ 'texthl': 'ErrorMsg',
   \ }
