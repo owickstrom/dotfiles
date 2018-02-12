@@ -21,21 +21,19 @@
     palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
     scrollbar_position = hidden
     show_titlebar = False
-  [[light]]
-    palette = "#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#950095:#3f953a:#bbbbbb:#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#a00095:#3f953a:#ffffff"
+  [[AtomOneLight]]
     background_color = "#f9f9f9"
     cursor_color = "#bbbbbb"
     foreground_color = "#2a2c33"
-    background_image = None
+    palette = "#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#950095:#3f953a:#bbbbbb:#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#a00095:#3f953a:#ffffff"
+  [[light]]
+    background_color = "#f9f9f9"
     cursor_blink = False
+    cursor_color = "#bbbbbb"
+    font = Ubuntu Mono 12
+    foreground_color = "#2a2c33"
     icon_bell = False
+    palette = "#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#950095:#3f953a:#bbbbbb:#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#a00095:#3f953a:#ffffff"
     scrollbar_position = hidden
     show_titlebar = False
-
-  # https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/terminator/AtomOneLight.config
-  [[AtomOneLight]]
-    palette = "#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#950095:#3f953a:#bbbbbb:#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#a00095:#3f953a:#ffffff"
-    background_color = "#f9f9f9"
-    cursor_color = "#bbbbbb"
-    foreground_color = "#2a2c33"
-    background_image = None
+    use_system_font = False
