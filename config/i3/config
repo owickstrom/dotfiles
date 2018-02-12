@@ -6,7 +6,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Ubuntu 8
+font pango:Iosevka Term Medium 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -166,7 +166,7 @@ bar {
 # class                 border  backgr. text    indicator child_border
 client.focused          #4078f2 #4078f2 #fafafa #4078f2   #4078f2
 client.focused_inactive #383a42 #383a42 #fafafa #383a42   #383a42
-client.unfocused        #383a42 #383a42 #888888 #292d2e   #383a42
+client.unfocused        #696c77 #696c77 #a0a1a7 #696c77   #696c77
 client.urgent           #e45649 #e45649 #fafafa #e45649   #e45649
 client.placeholder      #50a14f #fafafa #fafafa #50a14f   #50a14f
 client.background       #fafafa
