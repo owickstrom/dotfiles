@@ -1,5 +1,4 @@
 [global_config]
-  borderless = True
   tab_position = hidden
 [keybindings]
 [layouts]
@@ -13,24 +12,32 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#282828"
+    background_color = "#f9f9f9"
     cursor_blink = False
-    cursor_color = "#aaaaaa"
-    foreground_color = "#ebdbb2"
+    cursor_color = "#bbbbbb"
+    font = Iosevka Term Medium 12
+    foreground_color = "#2a2c33"
     icon_bell = False
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    palette = "#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#950095:#3f953a:#bbbbbb:#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#a00095:#3f953a:#ffffff"
     scrollbar_position = hidden
     show_titlebar = False
-  [[AtomOneLight]]
-    background_color = "#f9f9f9"
-    cursor_color = "#bbbbbb"
-    foreground_color = "#2a2c33"
-    palette = "#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#950095:#3f953a:#bbbbbb:#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#a00095:#3f953a:#ffffff"
-  [[light]]
+    use_system_font = False
+  [[dark]]
+    background_color = "#282c34"
+    cursor_blink = False
+    cursor_color = "#a3b3cc"
+    font = Iosevka Term Medium 12
+    foreground_color = "#dcdfe4"
+    icon_bell = False
+    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[haw]]
     background_color = "#f9f9f9"
     cursor_blink = False
     cursor_color = "#bbbbbb"
-    font = Ubuntu Mono 12
+    font = Iosevka Medium 20
     foreground_color = "#2a2c33"
     icon_bell = False
     palette = "#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#950095:#3f953a:#bbbbbb:#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#a00095:#3f953a:#ffffff"
