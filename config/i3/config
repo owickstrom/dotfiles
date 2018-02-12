@@ -60,10 +60,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+- split h
+# bindsym $mod+- split h
 
 # split in vertical orientation
-bindsym $mod+| split v
+# bindsym $mod+| split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -142,18 +142,31 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# tray_padding 10 px
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
   status_command i3status
 
-    colors {
-      background #282c34
-      statusline #de3e35
+  colors {
+    background #fafafa
+    statusline #383a42
+    separator #383a42
 
-      focused_workspace  #ffffff #282c34
-      active_workspace   #d2b67c #282c34
-      inactive_workspace #888888 #222222
-      urgent_workspace   #ffffff #900000
-    }
+    focused_separator  #4078f2
+    focused_workspace  #4078f2 #4078f2 #fafafa
+
+    active_workspace   #4078f2 #4078f2 #fafafa
+    inactive_workspace #383a42 #383a42 #fafafa
+    urgent_workspace   #e45649 #e45649 #fafafa
+  }
 }
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #4078f2 #4078f2 #fafafa #4078f2   #4078f2
+client.focused_inactive #383a42 #383a42 #fafafa #383a42   #383a42
+client.unfocused        #383a42 #383a42 #888888 #292d2e   #383a42
+client.urgent           #e45649 #e45649 #fafafa #e45649   #e45649
+client.placeholder      #50a14f #fafafa #fafafa #50a14f   #50a14f
+client.background       #fafafa
