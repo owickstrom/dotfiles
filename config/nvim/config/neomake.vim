@@ -1,3 +1,6 @@
+" When writing a buffer.
+call neomake#configure#automake('w')
+
 let g:neomake_warning_sign = {
   \ 'text': '⚠',
   \ 'texthl': 'WarningMsg',

@@ -4,11 +4,6 @@ let g:neoformat_enabled_haskell = ['hindent', 'stylishhaskell']
 
 let g:neomake_haskell_enabled_makers = ['hlint']
 
-set errorformat=
-      \%W%f:%l:%c:\ Warning:%m,
-      \%W%f:%l:%c:\ Warning:,
-      \%E%f:%l:%c:%m,
-      \%E%f:%l:%c:,
 
 vmap a= :Tabularize /=<CR>
 vmap a; :Tabularize /::<CR>
@@ -21,9 +16,21 @@ function! RunHasktagsIfExists()
   endif
 endfunction
 
+let g:haskell_project_errorformat = '%E%f:%l:%c:\ error:%#,' .
+      \ '%W%f:%l:%c:\ warning:%#,' .
+      \ '%W%f:%l:%c:\ warning:\ [-W%.%#]%#,' .
+      \ '%f:%l:%c:\ %trror: %m,' .
+      \ '%f:%l:%c:\ %tarning: %m,' .
+      \ '%E%f:%l:%c:%#,' .
+      \ '%E%f:%l:%c:%m,' .
+      \ '%W%f:%l:%c:\ Warning:%#,' .
+      \ '%C\ \ %m%#,' .
+      \ '%-G%.%#'
+
 augroup HaskellMaps
   au FileType haskell setlocal formatprg=hindent
-  au FileType haskell,lhaskell setlocal makeprg=cabal\ new-build
+  " au FileType haskell,lhaskell setlocal makeprg=cabal\ new-build
+  " au FileType haskell,lhaskell setlocal errorformat=g:haskell_project_errorformat
   au BufWritePost *.hs :call RunHasktagsIfExists()
 augroup END
 

@@ -4,7 +4,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 " General/Editing
 Plug 'neomake/neomake'
-Plug 'Shougo/deoplete.nvim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'tpope/vim-endwise'
