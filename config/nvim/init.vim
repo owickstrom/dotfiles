@@ -16,6 +16,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-surround'
 Plug 'sbdchd/neoformat'
 Plug 'kien/ctrlp.vim'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'honza/vim-snippets'
 
 " URLs
 Plug 'tyru/open-browser.vim'
