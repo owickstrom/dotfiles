@@ -1,6 +1,10 @@
 [global_config]
   tab_position = hidden
 [keybindings]
+  broadcast_all = None
+  broadcast_group = None
+  broadcast_off = None
+  layout_launcher = None
 [layouts]
   [[default]]
     [[[child1]]]
