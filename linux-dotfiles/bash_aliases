@@ -53,3 +53,9 @@ alias vim=nvim
 alias vi=nvim
 
 alias tmate="tmate -f ~/.tmate.conf"
+
+function rspec-watch {
+  FILES=$1
+  echo "$FILES" | entr -c bundle exec rspec "$FILES"
+}
+

@@ -41,6 +41,7 @@ Plug 'klen/python-mode'
 Plug 'idris-hackers/idris-vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'LnL7/vim-nix'
+Plug 'janko-m/vim-test'
 
 " HTML, CSS etc
 Plug 'groenewege/vim-less'

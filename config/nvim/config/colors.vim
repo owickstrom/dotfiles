@@ -1,7 +1,13 @@
 " COLORS
 
 set termguicolors
-set background=light
+
+if exists('$CODA_SCREENCAST')
+  set background=light
+else
+  set background=dark
+endif
+
 let g:one_allow_italics = 1
 colorscheme one
 
