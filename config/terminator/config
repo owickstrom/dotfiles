@@ -16,17 +16,6 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#f9f9f9"
-    cursor_blink = False
-    cursor_color = "#bbbbbb"
-    font = Iosevka Term Medium 12
-    foreground_color = "#2a2c33"
-    icon_bell = False
-    palette = "#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#950095:#3f953a:#bbbbbb:#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#a00095:#3f953a:#ffffff"
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
-  [[dark]]
     background_color = "#282c34"
     cursor_blink = False
     cursor_color = "#a3b3cc"
@@ -34,6 +23,17 @@
     foreground_color = "#dcdfe4"
     icon_bell = False
     palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[light]]
+    background_color = "#f9f9f9"
+    cursor_blink = False
+    cursor_color = "#bbbbbb"
+    font = Iosevka Term Medium 12
+    foreground_color = "#2a2c33"
+    icon_bell = False
+    palette = "#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#950095:#3f953a:#bbbbbb:#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#a00095:#3f953a:#ffffff"
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
