@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Program:     ghcid-new-test
+# Description: Convenient wrapper for running Cabal project test suites on file
+#              changes, using the `ghcid` program.
+# Author:      Oskar Wickström<oskar.wickstrom@gmail.com>
+
+echoerr() {
+  echo "$@" 1>&2;
+}
+
+usage() {
+  cat 1>&2 <<EOM
+Usage:
+
+  $(basename "$0") TARGET
+
+Arguments:
+
+  TARGET
+    A test suite target, e.g. \`test:my-tests\`.
+
+EOM
+}
+
+TARGET=$1
+
+if [ -z "$TARGET" ]; then
+  echoerr "No test target specified!"
+  usage
+  exit 1
+fi
+
+ghcid \
+  -c "cabal new-repl ${TARGET}" \
+  --warnings \
+  --test ':load Main' \
+  --test ':main' \
+  --reload src \
+  --reload test \
+  --restart $(find ./ -name '*.cabal')
