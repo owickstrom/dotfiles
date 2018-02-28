@@ -1,4 +1,4 @@
-let g:test#strategy = 'neovim'
+let g:test#strategy = 'basic'
 
 augroup test_commands
   nmap <silent> <Leader>rn :TestNearest<CR>
