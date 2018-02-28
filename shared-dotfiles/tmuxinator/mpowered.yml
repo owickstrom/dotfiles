@@ -2,12 +2,6 @@ name: mpowered
 root: ~/projects/mpowered
 
 windows:
-  - chameleon:
-      root: ~/projects/mpowered/chameleon
-      layout: even-horizontal
-      panes:
-        - nvim
-        - ghcid-stack-test
   - toolkit:
       root: ~/projects/mpowered/toolkit
       layout: even-horizontal
