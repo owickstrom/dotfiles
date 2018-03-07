@@ -42,6 +42,11 @@ Plug 'idris-hackers/idris-vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'LnL7/vim-nix'
 Plug 'janko-m/vim-test'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'junegunn/fzf' " Multi-entry selection UI.
 
 " HTML, CSS etc
 Plug 'groenewege/vim-less'
@@ -53,7 +58,6 @@ Plug 'mattn/emmet-vim'
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }
 Plug 'pbrisbin/vim-syntax-shakespeare'
-Plug 'parsonsmatt/intero-neovim', { 'for': 'haskell' }
 
 " Javascript
 Plug 'elzr/vim-json'
