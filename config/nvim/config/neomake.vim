@@ -9,3 +9,5 @@ let g:neomake_error_sign = {
   \ 'text': '✘',
   \ 'texthl': 'ErrorMsg',
   \ }
+
+map <F6> :NeomakeProject<CR>
