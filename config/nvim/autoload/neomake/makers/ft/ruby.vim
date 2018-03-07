@@ -16,6 +16,7 @@ function! neomake#makers#ft#ruby#rdl() abort
       \ '%-G%.%#from\ %.%#:in\ %.%#,'.
       \ '%-G%.%#~~~~%.%#,'.
       \ '%E%f:%l:%c:\ error:\ %m,'.
+      \ '%E%f:%l:%c-%.%#:\ error:\ %m,'.
       \ '%-G%f:%l:in\ %.%#,'.
       \ '%-G%f:%l:\ %.%#,'.
       \ '%-Z%.%#'

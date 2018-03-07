@@ -20,6 +20,7 @@ CompilerSet errorformat=
       \%-G%.%#from\ %.%#:in\ %.%#,
       \%-G%.%#~~~~%.%#,
       \%E%f:%l:%c:\ error:\ %m,
+      \%E%f:%l:%c-%.%#:\ error:\ %m,
       \%-G%f:%l:in\ %.%#,
       \%-G%f:%l:\ %.%#,
       \%-Z%.%#
