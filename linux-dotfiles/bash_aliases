@@ -56,7 +56,7 @@ alias tmate="tmate -f ~/.tmate.conf"
 
 function rspec-watch {
   FILES=$1
-  echo "$FILES" | entr -c bundle exec rspec "$FILES"
+  find . -name '*.rb' | entr -c bundle exec rspec "$FILES"
 }
 
 function jq-color {
