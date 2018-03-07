@@ -1,9 +1,9 @@
 ---
 name: "HAW"
-root: ~/haskell-at-work
+root: ~/haw
 
 windows:
   - code:
-      panes: . ~/haskell-at-work/episodes/bashrc
+      panes: . ~/haw/episodes/bashrc
   - ghci:
-      panes: . ~/haskell-at-work/episodes/bashrc
+      panes: . ~/haw/episodes/bashrc
