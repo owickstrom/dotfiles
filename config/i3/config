@@ -150,23 +150,24 @@ bar {
   status_command i3status
 
   colors {
-    background #fafafa
-    statusline #383a42
-    separator #383a42
+    background #282c34
+    foreground #dcdfe4
+    statusline #282c34
+    separator #282c34
 
-    focused_separator  #4078f2
-    focused_workspace  #4078f2 #4078f2 #fafafa
+    focused_separator  #656C7B
+    focused_workspace  #656C7B #656C7B #dcdfe4
 
-    active_workspace   #4078f2 #4078f2 #fafafa
-    inactive_workspace #383a42 #383a42 #fafafa
-    urgent_workspace   #e45649 #e45649 #fafafa
+    active_workspace   #656C7B #656C7B #dcdfe4
+    inactive_workspace #282c34 #282c34 #dcdfe4
+    urgent_workspace   #e45649 #e45649 #dcdfe4
   }
 }
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4078f2 #4078f2 #fafafa #4078f2   #4078f2
-client.focused_inactive #383a42 #383a42 #fafafa #383a42   #383a42
-client.unfocused        #696c77 #696c77 #a0a1a7 #696c77   #696c77
-client.urgent           #e45649 #e45649 #fafafa #e45649   #e45649
-client.placeholder      #50a14f #fafafa #fafafa #50a14f   #50a14f
-client.background       #fafafa
+client.focused          #828997 #828997 #dcdfe4 #828997   #828997
+client.focused_inactive #656C7B #656C7B #dcdfe4 #656C7B   #656C7B
+client.unfocused        #656C7B #656C7B #dcdfe4 #656C7B   #656C7B
+client.urgent           #e45649 #e45649 #dcdfe4 #e45649   #e45649
+client.placeholder      #98c379 #dcdfe4 #dcdfe4 #98c379   #98c379
+client.background       #dcdfe4
