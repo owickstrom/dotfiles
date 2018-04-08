@@ -2,9 +2,9 @@
 let g:deoplete#enable_at_startup = 1
 
 if exists('$CODA_SCREECAST')
-  let g:deoplete#disable_auto_complete = 0
-else
   let g:deoplete#disable_auto_complete = 1
+else
+  let g:deoplete#disable_auto_complete = 0
 endif
 
 " Use smartcase.

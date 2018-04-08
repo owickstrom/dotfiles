@@ -1,3 +1,4 @@
+import Prelude
 :def hoogle \s -> return $ ":! hoogle --count=15 \"" ++ s ++ "\""
 :def devel-reload \_ -> return (":l DevelMain\nDevelMain.update\n")
 :set +c
