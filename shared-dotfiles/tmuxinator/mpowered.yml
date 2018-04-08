@@ -3,17 +3,18 @@ root: ~/projects/mpowered
 
 windows:
   - toolkit:
-      root: ~/projects/mpowered/toolkit
+      root: ~/projects/mpowered/toolkit/chameleon
       layout: even-horizontal
       panes:
         - nvim
-        - rvm use && bundle exec rails c
+        - stack repl --ghc-options "-fobject-code" --flag chameleon:dev chameleon:lib chameleon:exe:chameleon-web
   - empowerment:
-      root: ~/projects/mpowered/empowerment
+      root: ~/projects/mpowered/toolkit
       layout: even-horizontal
       panes:
-        - git status
-  - morberg:
+        - rvm use && bundle exec rails s
+        - tail -f log/chameleon.log
+  - pairing:
       root: ~/projects/mpowered
       panes:
-        - ssh 172.104.246.11
+        - echo -ne "\nStart pairing by running:\n\n    ssh bldbox.mpowered.team\n\n"
