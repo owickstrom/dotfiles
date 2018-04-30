@@ -19,6 +19,7 @@ packages :: OS -> [PackageID]
 packages (Linux APT) = ["git", "terminator", "tmux", "tmuxinator", "tmate", "curl", "wget", "irssi", "htop", "net-tools"]
 packages (Linux Yum) = ["git", "tmux", "curl", "wget", "vim-enhanced", "irssi", "ctags", "pandoc"]
 packages (Linux Pacman) = ["git", "tmux", "curl", "wget", "vim", "irssi", "ctags", "base-devel", "pandoc"]
+packages (Linux Nix) = []
 packages OSX = ["bash", "bash-completion", "git", "tmux", "ctags-exuberant", "reattach-to-user-namespace"]
 
 toInstallFor :: OS -> IO [PackageID]
@@ -28,6 +29,7 @@ runInstaller :: OS -> [PackageID] -> IO ()
 runInstaller (Linux APT) pkgs = run_ "sudo" $ ["apt-get", "-y", "install"] ++ pkgs
 runInstaller (Linux Yum) pkgs = run_ "sudo" $ ["yum", "install"] ++ pkgs
 runInstaller (Linux Pacman) pkgs = run_ "sudo" $ ["pacman", "-S"] ++ pkgs
+runInstaller (Linux Nix) pkgs = run_ "nix-env" $ "-i" : pkgs
 runInstaller OSX pkgs = run_ "brew" $ "install" : pkgs
 
 installPackages :: Config -> IO ()

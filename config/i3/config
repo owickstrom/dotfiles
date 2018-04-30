@@ -6,11 +6,11 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Iosevka Term Medium 12
+font pango:Iosevka Medium 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+# font pango:DejaVu Sans Mono 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -151,8 +151,7 @@ bar {
 
   colors {
     background #282c34
-    foreground #dcdfe4
-    statusline #282c34
+    statusline #dcdfe4
     separator #282c34
 
     focused_separator  #656C7B
@@ -165,9 +164,9 @@ bar {
 }
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #828997 #828997 #dcdfe4 #828997   #828997
-client.focused_inactive #656C7B #656C7B #dcdfe4 #656C7B   #656C7B
-client.unfocused        #656C7B #656C7B #dcdfe4 #656C7B   #656C7B
+client.focused          #656C7B #656C7B #dcdfe4 #656C7B   #656C7B
+client.focused_inactive #282c34 #282c34 #dcdfe4 #282c34   #282c34
+client.unfocused        #282c34 #282c34 #dcdfe4 #282c34   #282c34
 client.urgent           #e45649 #e45649 #dcdfe4 #e45649   #e45649
 client.placeholder      #98c379 #dcdfe4 #dcdfe4 #98c379   #98c379
 client.background       #dcdfe4

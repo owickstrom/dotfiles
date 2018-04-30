@@ -46,7 +46,7 @@ symlinkConfigFile (Config _ _ br) source = do
   else
     do exists <- fileExist target
        when exists $ do info $ "Renaming " ++ target ++ " to " ++ backupTarget
-                        createDirectoryIfMissing True br
+                        createDirectoryIfMissing True (br </> "config")
                         rename target backupTarget
                         info $ printf "Created backup of %s in %s" target backupTarget
        createSymbolicLink source target
