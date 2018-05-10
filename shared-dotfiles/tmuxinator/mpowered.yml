@@ -8,7 +8,7 @@ windows:
       panes:
         - nvim
         - stack repl --ghc-options "-fobject-code" --flag chameleon:dev chameleon:lib chameleon:exe:chameleon-web
-  - empowerment:
+  - rails:
       root: ~/projects/mpowered/toolkit
       layout: even-horizontal
       panes:
@@ -17,4 +17,4 @@ windows:
   - pairing:
       root: ~/projects/mpowered
       panes:
-        - echo -ne "\nStart pairing by running:\n\n    ssh bldbox.mpowered.team\n\n"
+        - echo -ne "\nStart pairing by running:\n\n    ssh dev.mpowered.team\n\n"
