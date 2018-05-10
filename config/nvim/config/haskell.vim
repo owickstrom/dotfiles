@@ -1,5 +1,10 @@
 " HASKELL
 
+let g:haskell_indent_case_alternative = 1
+let g:haskell_indent_in = 0
+let g:haskell_indent_before_where = 2
+let g:haskell_indent_after_bare_where = 2
+
 let g:neoformat_enabled_haskell = ['brittany', 'stylishhaskell']
 
 let g:neomake_haskell_enabled_makers = ['hlint']
