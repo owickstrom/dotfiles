@@ -19,28 +19,7 @@ alias vim="vim -X"
 alias tmux="tmux -2"
 alias g="git"
 
-# Git stuff
-alias g="git"
-alias gs="git status"
-alias gd="git diff"
-alias gdc="git diff --cached"
-alias ga="git add"
-alias gaa="git add --all"
-alias gps="git push"
-alias gpl="git pull"
-alias gr="git rebase"
-alias gl="git log"
-alias gh="git hist"
-# Git Flow
-alias gfi="git flow init"
-alias gff="git flow feature"
-alias gfr="git flow release"
-alias gfh="git flow hotfix"
-
-if [ -f /etc/bash_completion.d/git ]; then
-  source /etc/bash_completion.d/git
-fi
-__git_complete g _git
+. ~/.git_aliases
 
 function gc {
   git commit -m "$(IFS=, ; echo "$@")"

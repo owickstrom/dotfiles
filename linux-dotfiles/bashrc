@@ -13,17 +13,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# Load in the git branch prompt script.
-source ~/.git-prompt.sh
+PS1='\[\033[0;31m\]\w\[\033[0;32m\]$(__git_ps1)\[\e[0m\]$ '
 export TERM=screen-256color
 export EDITOR=nvim
-
-PS1='\[\033[0;31m\]\w\[\033[0;32m\]$(__git_ps1)\[\e[0m\]$ '
-
-# export NVM_DIR="/home/owi/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.dotfiles/bin
@@ -34,5 +26,3 @@ export PATH=$PATH:$HOME/.dotfiles/bin
 if [ -f ~/.ghc-pkg-functions.sh ]; then
     . ~/.ghc-pkg-functions.sh
 fi
-
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

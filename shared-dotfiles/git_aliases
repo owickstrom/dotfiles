@@ -4,43 +4,18 @@ alias la="ls -a"
 alias ll="ls -l"
 alias lla="ls -la"
 
-if command -v __git_complete > /dev/null 2>&1; then
-  # Git stuff
-  alias g="git"
-  __git_complete g _git
-
-  alias gs="git status"
-
-  alias gd="git diff"
-  __git_complete gd _git_diff
-
-  alias gdc="git diff --cached"
-  __git_complete gdc _git_diff
-
-  alias ga="git add"
-  alias gaa="git add --all"
-
-  alias gps="git push"
-  __git_complete gps _git_push
-
-  alias gpl="git pull"
-  __git_complete gps _git_pull
-
-  alias gr="git rebase"
-  __git_complete gr _git_rebase
-
-  alias gl="git log"
-  __git_complete gl _git_log
-
-  alias gh="git hist"
-  __git_complete gh _git_log
-
-  # Git Flow
-  alias gfi="git flow init"
-  alias gff="git flow feature"
-  alias gfr="git flow release"
-  alias gfh="git flow hotfix"
-fi
+# Git stuff
+alias g="git"
+alias gs="git status"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias ga="git add"
+alias gaa="git add --all"
+alias gps="git push"
+alias gpl="git pull"
+alias gr="git rebase"
+alias gl="git log"
+alias gh="git hist"
 
 function gc {
   git commit -m "$(join ' ' $@)"
