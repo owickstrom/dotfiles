@@ -18,7 +18,7 @@ Usage:
 Arguments:
 
   TARGET
-    A test suite target, e.g. \`test:my-tests\`.
+    A test suite target, e.g. \`my-tests\`.
 
 EOM
 }
@@ -31,6 +31,8 @@ if [ -z "$TARGET" ]; then
   exit 1
 fi
 
+export TASTY_COLOR=always
+
 ghcid \
   -c "cabal new-repl ${TARGET}" \
   --warnings \
@@ -38,4 +40,4 @@ ghcid \
   --test ':main' \
   --reload src \
   --reload test \
-  --restart $(find ./ -name '*.cabal')
+  --restart $(find ./ -maxdepth 1 -name '*.cabal')
