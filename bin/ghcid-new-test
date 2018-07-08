@@ -38,6 +38,6 @@ ghcid \
   --warnings \
   --test ':load Main' \
   --test ':main' \
-  --reload src \
   --reload test \
-  --restart $(find ./ -maxdepth 1 -name '*.cabal')
+  --restart src \
+  --restart $(find ./ -maxdepth 1 -name '*.cabal' | head -n1)
