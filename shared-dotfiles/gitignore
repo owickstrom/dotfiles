@@ -16,6 +16,8 @@ vim/.netrwhist
 .ghci
 ctags
 tags
+.ghc.environment.*
+dist-newstyle
 
 # Temporary files
 *~
