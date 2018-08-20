@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Program:     ghcid-new-test
+# Program:     ghcid-test
 # Description: Convenient wrapper for running Cabal project test suites on file
 #              changes, using the `ghcid` program.
 # Author:      Oskar Wickström<oskar.wickstrom@gmail.com>
@@ -23,18 +23,22 @@ Arguments:
 EOM
 }
 
-TARGET=$1
-
-if [ -z "$TARGET" ]; then
-  echoerr "No test target specified!"
-  usage
-  exit 1
-fi
-
 export TASTY_COLOR=always
 
+if [ -z "$REPL_COMMAND" ]; then
+  TARGET=$1
+
+  if [ -z "$TARGET" ]; then
+    echoerr "No test target specified!"
+    usage
+    exit 1
+  fi
+
+  export REPL_COMMAND="cabal repl ${TARGET}"
+fi
+
 ghcid \
-  -c "cabal new-repl ${TARGET}" \
+  -c "${REPL_COMMAND}" \
   --warnings \
   --test ':load Main' \
   --test ':main' \
