@@ -18,6 +18,7 @@ ctags
 tags
 .ghc.environment.*
 dist-newstyle
+.vscode
 
 # Temporary files
 *~

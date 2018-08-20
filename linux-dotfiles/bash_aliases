@@ -41,3 +41,9 @@ function rspec-watch {
 function jq-color {
   jq --color-output $@ | less -R
 }
+
+function haddock-open {
+  for pkg in "$@"; do
+    firefox "$(ghc-pkg field "$pkg" haddock-html | tr -d ':' | cut -d ' ' -f 2 | sed -e 's/$/\/index.html/g')"
+  done
+}

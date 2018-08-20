@@ -1,6 +1,6 @@
 let g:LanguageClient_serverCommands = {
-    \ 'haskell': ['hie-wrapper.sh', '--lsp']
     \ }
+    " \ 'haskell': ['stack', 'exec', 'hie', '--', '--lsp', '--debug', '-l', '/tmp/hie.log']
 
 nnoremap <silent> K :call LanguageClient_hover_formatted()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>

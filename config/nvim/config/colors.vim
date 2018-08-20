@@ -7,8 +7,8 @@ if exists('$CODA_SCREENCAST')
   colorscheme one
   set background=light
 else
-  colorscheme paramount
   set background=dark
+  colorscheme Tomorrow-Night-Bright
   hi Normal guibg=#181818
 endif
 
