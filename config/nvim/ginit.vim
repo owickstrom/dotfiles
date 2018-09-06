@@ -1,6 +1,7 @@
-let s:font = 'GuiFont Iosevka Term Medium'
+let s:font = 'GuiFont! Iosevka Term Medium'
 
 function! SetFontSize(n)
+  let s:current_font_size = a:n
   exec (s:font . ':h' . a:n)
 endfunction
 
@@ -20,7 +21,9 @@ endfunction
 if $CODA_SCREENCAST
   call SetFontSize(20)
 else
-  call SetFontSize(11)
+  call SetFontSize(10)
 endif
 
+map <Leader>f+ :call IncreaseFontSize()<CR>
+map <Leader>f- :call DecreaseFontSize()<CR>
 map <F11> :call rpcnotify(0, 'Gui', 'WindowFullScreen', !g:GuiWindowFullScreen)<CR>

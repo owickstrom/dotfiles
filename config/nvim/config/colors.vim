@@ -7,9 +7,9 @@ if exists('$CODA_SCREENCAST')
   colorscheme one
   set background=light
 else
-  set background=dark
-  colorscheme Tomorrow-Night-Bright
-  hi Normal guibg=#181818
+  "colorscheme PaperColor
+  colorscheme monochromatic
+  set background=light
 endif
 
-hi WarningMsg ctermfg=180 guifg=#e5c07b
+"hi WarningMsg ctermfg=180 guifg=#e5c07b
