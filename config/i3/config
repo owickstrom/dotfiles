@@ -5,7 +5,9 @@
 set $mod Mod4
 
 # Adjust to HiDPI monitor
-exec xrandr --dpi 128
+exec xrandr --dpi 96
+
+exec xsetroot -solid "#282c34"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.

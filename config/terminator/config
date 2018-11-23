@@ -15,10 +15,21 @@
 [plugins]
 [profiles]
   [[default]]
+    background_color = "#282c34"
+    cursor_blink = False
+    cursor_color = "#a3b3cc"
+    font = Iosevka Medium 12
+    foreground_color = "#dcdfe4"
+    icon_bell = False
+    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[dark]]
     background_color = "#181818"
     cursor_blink = False
     cursor_color = "#bbbbbb"
-    font = Iosevka Term Medium 12
+    font = Iosevka Medium 12
     foreground_color = "#efefef"
     icon_bell = False
     palette = "#242424:#d71c15:#5aa513:#fdb40c:#063b8c:#e40038:#2595e1:#efefef:#4b4b4b:#fc1c18:#6bc219:#fec80e:#0955ff:#fb0050:#3ea8fc:#8c00ec"
@@ -40,7 +51,7 @@
     background_color = "#282c34"
     cursor_blink = False
     cursor_color = "#a3b3cc"
-    font = Iosevka Term Medium 12
+    font = Iosevka Medium 12
     foreground_color = "#dcdfe4"
     icon_bell = False
     palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
