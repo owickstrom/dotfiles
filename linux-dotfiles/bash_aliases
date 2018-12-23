@@ -47,3 +47,6 @@ function haddock-open {
     firefox "$(ghc-pkg field "$pkg" haddock-html | tr -d ':' | cut -d ' ' -f 2 | sed -e 's/$/\/index.html/g')"
   done
 }
+
+
+alias nix-shell-add-gc-root='nix-instantiate shell.nix --indirect --add-root ~/.nix-gc-roots/shell.drv'

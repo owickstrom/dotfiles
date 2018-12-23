@@ -58,6 +58,7 @@ Plug 'mattn/emmet-vim'
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }
 Plug 'pbrisbin/vim-syntax-shakespeare'
+Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 
 " Javascript
 Plug 'elzr/vim-json'

@@ -7,8 +7,10 @@ if exists('$CODA_SCREENCAST')
   colorscheme one
   set background=light
 else
-  colorscheme one
-  set background=dark
+  "colorscheme monochromatic
+  "set background=light
+  set bg=dark
+  color gruvbox
 endif
 
 "hi WarningMsg ctermfg=180 guifg=#e5c07b

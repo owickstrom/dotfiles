@@ -2,10 +2,10 @@ let g:LanguageClient_serverCommands = {
     \ }
     " \ 'haskell': ['stack', 'exec', 'hie', '--', '--lsp', '--debug', '-l', '/tmp/hie.log']
 
-nnoremap <silent> K :call LanguageClient_hover_formatted()<CR>
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
-nnoremap <silent> <Leader>f :call LanguageClient_textDocument_formatting()<CR>
+" nnoremap <silent> K :call LanguageClient_hover_formatted()<CR>
+" nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+" nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+" nnoremap <silent> <Leader>f :call LanguageClient_textDocument_formatting()<CR>
 
 augroup LangClient_signcolumn
   autocmd!

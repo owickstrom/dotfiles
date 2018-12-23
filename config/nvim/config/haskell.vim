@@ -20,7 +20,7 @@ hi! link haskellImportKeywords Keyword
 
 let g:neoformat_enabled_haskell = ['brittany', 'stylishhaskell']
 
-let g:neomake_haskell_enabled_makers = ['hlint']
+" let g:neomake_haskell_enabled_makers = ['hlint']
 
 vmap a= :Tabularize /=<CR>
 vmap a; :Tabularize /::<CR>
