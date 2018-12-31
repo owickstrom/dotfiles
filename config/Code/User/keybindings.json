@@ -1,0 +1,11 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "alt+n",
+        "command": "editor.action.marker.next"
+    },
+    {
+        "key": "alt+p",
+        "command": "editor.action.marker.prev"
+    }
+]
