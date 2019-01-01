@@ -38,12 +38,22 @@
 	},
 	"If-then-else expression": {
 		"prefix": "if",
-		"body": "if ${1:condition} then ${2:_} else ${3:_}" ,
+		"body": "if ${1:condition} then ${2:_} else ${3:_}",
 		"description": "Create if-then-else expression"
 	},
 	"Language pragma": {
 		"prefix": "lang",
 		"body": "{-# LANGUAGE $1 #-}",
 		"description": "Create GHC language pragma"
+	},
+	"Unqualified import": {
+		"prefix": "import",
+		"body": "import $1 ($2)",
+		"description": "Add unqualified import"
+	},
+	"Qualified import": {
+		"prefix": "importq",
+		"body": "import qualified $1 as $2",
+		"description": "Add qualified import"
 	}
 }
