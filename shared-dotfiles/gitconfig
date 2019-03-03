@@ -6,7 +6,7 @@
 	pager = less -+F
 [user]
 	name = Oskar Wickström
-	email = oskar.wickstrom@gmail.com
+	email = oskar@wickstrom.tech
 [alias]
   co = checkout
   ci = commit

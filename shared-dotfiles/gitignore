@@ -20,6 +20,7 @@ tags
 .ghc.environment.*
 dist-newstyle
 .vscode
+.envrc
 
 # Temporary files
 *~
