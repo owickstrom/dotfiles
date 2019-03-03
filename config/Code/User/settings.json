@@ -1,7 +1,7 @@
 {
     "window.titleBarStyle": "custom",
     "workbench.colorTheme": "Abyss",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "editor.fontLigatures": true,
     "editor.fontFamily": "'Iosevka Medium', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "terminal.integrated.fontFamily": "Iosevka Medium",
