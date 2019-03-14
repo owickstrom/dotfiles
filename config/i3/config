@@ -34,6 +34,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 exec emacs --daemon &
 bindsym $mod+Shift+Return exec emacsclient -n -c
 
+# toggle keyboard layout (us/se)
+bindsym $mod+Shift+t exec toggle-keyboard-layout.sh
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
