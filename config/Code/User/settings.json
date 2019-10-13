@@ -1,9 +1,13 @@
 {
     "window.titleBarStyle": "custom",
-    "workbench.colorTheme": "Solarized Dark",
-    "window.zoomLevel": 1,
-    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Material Theme Ocean",
+    "window.zoomLevel": 0,
     "editor.fontFamily": "'Iosevka Medium', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "terminal.integrated.fontFamily": "Iosevka Medium",
-    "editor.cursorBlinking": "solid"
+    "editor.cursorBlinking": "solid",
+    "dotnet-test-explorer.testProjectPath": "**/*.Tests.fsproj",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.minimap.enabled": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }

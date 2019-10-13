@@ -9,6 +9,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Git prompt support
+. $HOME/.dotfiles/lib/git-prompt.sh
+
 # Completion for aliases: https://github.com/cykerway/complete-alias
 . $HOME/.dotfiles/lib/complete-alias-bash-completion.sh
 

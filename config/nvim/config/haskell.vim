@@ -46,7 +46,7 @@ let g:haskell_project_errorformat = '%E%f:%l:%c:\ error:%#,' .
 
 augroup HaskellMaps
   au FileType haskell setlocal formatprg=hindent
-  au FileType haskell,lhaskell setlocal makeprg=cabal\ build
+  au FileType haskell,lhaskell setlocal makeprg=cabal\ v2-build
   au FileType haskell,lhaskell setlocal errorformat=g:haskell_project_errorformat
   " au BufWritePost *.hs :call RunHasktagsIfExists()
 augroup END

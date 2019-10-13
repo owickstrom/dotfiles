@@ -21,6 +21,8 @@ tags
 dist-newstyle
 .vscode
 .envrc
+stack.yaml.lock
+.nix-gc-roots
 
 # Temporary files
 *~

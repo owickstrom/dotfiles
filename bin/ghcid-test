@@ -43,5 +43,4 @@ ghcid \
   --test ':load Main' \
   --test ':main' \
   --reload test \
-  --restart src \
-  --restart $(find ./ -maxdepth 1 -name '*.cabal' | head -n1)
+  --restart src

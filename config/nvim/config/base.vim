@@ -51,3 +51,6 @@ set clipboard+=unnamedplus
 
 " Use ,t for 'jump to tag'.
 nnoremap <Leader>t <C-]>
+
+" Allow hidden windows
+set hidden

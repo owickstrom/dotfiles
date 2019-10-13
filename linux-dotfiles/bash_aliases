@@ -49,4 +49,4 @@ function haddock-open {
 }
 
 
-alias nix-shell-add-gc-root='nix-instantiate shell.nix --indirect --add-root ~/.nix-gc-roots/shell.drv'
+alias nix-shell-add-gc-root='file shell.nix && mkdir .nix-gc-roots && nix-instantiate shell.nix --indirect --add-root .nix-gc-roots/shell.drv'

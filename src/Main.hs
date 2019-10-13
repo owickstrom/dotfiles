@@ -16,7 +16,7 @@ import Dotfiles.Process
 
 getPackageManager :: IO PackageManager
 getPackageManager =
-  let byProgram = [("apt-get", APT), ("yum", Yum), ("pacman", Pacman), ("nix-env", Nix)]
+  let byProgram = [("apt-get", APT), ("dnf", DNF), ("yum", Yum), ("pacman", Pacman), ("nix-env", Nix)]
       tryFindProgram [] = fail "No package manager found!"
       tryFindProgram ((program, pm) : ps) = do
         exists <- catchAssert $ run_ "which" [program]
