@@ -9,7 +9,7 @@ vim/.netrwhist
 .nvimrc
 .DS_Store
 .projections.json
-.env
+.env.local
 .ropeproject
 .dir-locals.el
 .ideaHaskellLib
