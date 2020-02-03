@@ -1,0 +1,12 @@
+[Unit]
+Description=Lock the screen on resume from suspend
+
+[Service]
+User=owi
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/home/owi/.dotfiles/bin/lock.sh
+
+[Install]
+WantedBy=sleep.target suspend.target
+Before=sleep.traget suspend.target

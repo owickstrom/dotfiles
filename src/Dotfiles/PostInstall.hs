@@ -1,23 +1,29 @@
-{-# LANGUAGE QuasiQuotes, FlexibleContexts #-}
+{-# LANGUAGE FlexibleContexts #-}
+{-# LANGUAGE QuasiQuotes      #-}
 module Dotfiles.PostInstall (postInstall) where
 
-import System.FilePath
-import System.Process
-import System.Directory
+import           System.Directory
+import           System.FilePath
+import           System.Process
 
-import Data.Maybe
-import Control.Monad
-import Dotfiles.Core
-import Dotfiles.Process
-import Dotfiles.Print
+import           Control.Monad
+import           Data.Maybe
+import           Dotfiles.Core
+import           Dotfiles.Print
+import           Dotfiles.Process
 
 remapCapsLockToCtrl :: Config -> IO ()
 remapCapsLockToCtrl (Config _ root' _) = do
   run_ "osascript" [root' </> "lib" </> "remap-capslock-to-ctrl.scpt"]
   success "Caps Lock mapped to CTRL!"
 
+enableWakelock :: Config -> IO ()
+enableWakelock Config{} = do
+  run_ "systemctl" ["--user", "enable", "wakelock.service"]
+  success "Wakelock enabled!"
+
 postInstall :: Config -> IO ()
 postInstall c@(Config OSX _ _) = do
   remapCapsLockToCtrl c
-postInstall (Config (Linux _) _ _) =
-  warning "TODO: Implemented post install for Linux!"
+postInstall c@(Config (Linux _) _ _) =
+  enableWakelock c

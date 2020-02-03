@@ -1,14 +1,14 @@
 module Dotfiles.Packages (installPackages) where
 
-import Control.Monad
-import Dotfiles.Core
-import Dotfiles.Print
-import Dotfiles.Process
+import           Control.Monad
+import           Dotfiles.Core
+import           Dotfiles.Print
+import           Dotfiles.Process
 
 isAlreadyInstalled :: OS -> PackageID -> IO Bool
 isAlreadyInstalled OSX pkg = catchAssert $ run_ "brew" ["ls", pkg]
 -- TODO!
-isAlreadyInstalled _ _ = return False
+isAlreadyInstalled _ _     = return False
 
 isNotInstalled :: OS -> PackageID -> IO Bool
 isNotInstalled os' pkg = do
@@ -16,7 +16,7 @@ isNotInstalled os' pkg = do
   return $ not isInstalled
 
 packages :: OS -> [PackageID]
-packages (Linux APT) = ["git", "terminator", "tmux", "tmuxinator", "tmate", "curl", "wget", "irssi", "htop", "net-tools"]
+packages (Linux APT) = ["git", "terminator", "tmux", "tmuxinator", "tmate", "curl", "wget", "irssi", "htop", "net-tools", "arandr", "i3", "i3status"]
 packages (Linux Yum) = ["git", "tmux", "curl", "wget", "vim-enhanced", "irssi", "ctags", "pandoc"]
 packages (Linux DNF) = ["git", "tmux", "curl", "wget"]
 packages (Linux Pacman) = ["git", "tmux", "curl", "wget", "vim", "irssi", "ctags", "base-devel", "pandoc"]

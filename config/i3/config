@@ -7,9 +7,9 @@ set $mod Mod4
 # Adjust to HiDPI monitor
 exec xrandr --dpi 120
 
-bindsym $mod+Ctrl+Shift+1 exec xrandr --output DP-1 --dpi 96 --primary --auto --output eDP-1 --off
-bindsym $mod+Ctrl+Shift+2 exec xrandr --output DP-1 --off --output eDP-1 --primary --auto --dpi 120
-bindsym $mod+Ctrl+Shift+3 exec xrandr --output DP-1 --auto --output eDP-1 --primary --right-of DP-1 --dpi 120 --auto
+bindsym $mod+Ctrl+Shift+1 exec xrandr --output DP-1 --primary --auto --output eDP-1 --off
+bindsym $mod+Ctrl+Shift+2 exec xrandr --output DP-1 --off --output eDP-1 --primary --auto
+bindsym $mod+Ctrl+Shift+3 exec xrandr --output DP-1 --auto --output eDP-1 --primary --right-of DP-1 --auto
 
 exec xsetroot -solid "#282c34"
 
@@ -131,6 +131,10 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# lock and suspend
+bindsym $mod+Escape exec ~/.dotfiles/bin/lock.sh
+bindsym $mod+Shift+Escape exec ~/.dotfiles/bin/lock.sh && systemctl suspend
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
