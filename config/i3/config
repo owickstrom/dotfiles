@@ -5,13 +5,17 @@
 set $mod Mod4
 
 # Adjust to HiDPI monitor
-exec xrandr --dpi 96
+exec xrandr --dpi 120
+
+bindsym $mod+Ctrl+Shift+1 exec xrandr --output DP-1 --dpi 96 --primary --auto --output eDP-1 --off
+bindsym $mod+Ctrl+Shift+2 exec xrandr --output DP-1 --off --output eDP-1 --primary --auto --dpi 120
+bindsym $mod+Ctrl+Shift+3 exec xrandr --output DP-1 --auto --output eDP-1 --primary --right-of DP-1 --dpi 120 --auto
 
 exec xsetroot -solid "#282c34"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Iosevka Medium 12
+font pango:Iosevka SS09 Medium 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -153,6 +157,11 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+# Audio controls
+bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master 5%+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master 5%- unmute"
+bindsym XF86AudioMute exec "amixer -D pulse set Master 1+ toggle"
 
 # tray_padding 10 px
 

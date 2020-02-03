@@ -1,9 +1,72 @@
 [global_config]
 [keybindings]
-  broadcast_all = None
-  broadcast_group = None
   broadcast_off = None
+  broadcast_group = None
+  broadcast_all = None
   layout_launcher = None
+[profiles]
+  [[default]]
+    icon_bell = False
+    cursor_blink = False
+    cursor_color = "#a3b3cc"
+    font = Iosevka SS09 Medium 12
+    foreground_color = "#dcdfe4"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#555753:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#2e3436:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    use_system_font = False
+  [[dark]]
+    icon_bell = False
+    background_color = "#181818"
+    cursor_blink = False
+    cursor_color = "#bbbbbb"
+    font = Iosevka SS09 Medium 12
+    foreground_color = "#efefef"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#242424:#d71c15:#5aa513:#fdb40c:#063b8c:#e40038:#2595e1:#efefef:#4b4b4b:#fc1c18:#6bc219:#fec80e:#0955ff:#fb0050:#3ea8fc:#8c00ec"
+    use_system_font = False
+  [[haw]]
+    icon_bell = False
+    background_color = "#f9f9f9"
+    cursor_blink = False
+    cursor_color = "#bbbbbb"
+    font = Iosevka SS09 Medium 30
+    foreground_color = "#2a2c33"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#950095:#3f953a:#bbbbbb:#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#a00095:#3f953a:#ffffff"
+    use_system_font = False
+  [[onedark]]
+    icon_bell = False
+    background_color = "#282c34"
+    cursor_blink = False
+    cursor_color = "#a3b3cc"
+    font = Iosevka SS09 Medium 12
+    foreground_color = "#dcdfe4"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    use_system_font = False
+  [[onelight]]
+    icon_bell = False
+    background_color = "#f9f9f9"
+    cursor_blink = False
+    cursor_color = "#bbbbbb"
+    font = Iosevka SS09 Medium 12
+    foreground_color = "#2a2c33"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#950095:#3f953a:#bbbbbb:#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#a00095:#3f953a:#ffffff"
+    use_system_font = False
+  [[light]]
+    background_color = "#ffffff"
+    cursor_blink = False
+    cursor_color = "#aaaaaa"
+    font = Iosevka SS09 Medium 12
+    foreground_color = "#000000"
+    show_titlebar = False
+    use_system_font = False
 [layouts]
   [[default]]
     [[[child1]]]
@@ -13,58 +76,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    cursor_blink = False
-    cursor_color = "#a3b3cc"
-    font = Iosevka Medium 12
-    foreground_color = "#dcdfe4"
-    icon_bell = False
-    palette = "#555753:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#2e3436:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
-  [[dark]]
-    background_color = "#181818"
-    cursor_blink = False
-    cursor_color = "#bbbbbb"
-    font = Iosevka Medium 12
-    foreground_color = "#efefef"
-    icon_bell = False
-    palette = "#242424:#d71c15:#5aa513:#fdb40c:#063b8c:#e40038:#2595e1:#efefef:#4b4b4b:#fc1c18:#6bc219:#fec80e:#0955ff:#fb0050:#3ea8fc:#8c00ec"
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
-  [[haw]]
-    background_color = "#f9f9f9"
-    cursor_blink = False
-    cursor_color = "#bbbbbb"
-    font = Iosevka Medium 30
-    foreground_color = "#2a2c33"
-    icon_bell = False
-    palette = "#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#950095:#3f953a:#bbbbbb:#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#a00095:#3f953a:#ffffff"
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
-  [[onedark]]
-    background_color = "#282c34"
-    cursor_blink = False
-    cursor_color = "#a3b3cc"
-    font = Iosevka Medium 12
-    foreground_color = "#dcdfe4"
-    icon_bell = False
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
-  [[onelight]]
-    background_color = "#f9f9f9"
-    cursor_blink = False
-    cursor_color = "#bbbbbb"
-    font = Iosevka Medium 12
-    foreground_color = "#2a2c33"
-    icon_bell = False
-    palette = "#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#950095:#3f953a:#bbbbbb:#000000:#de3e35:#3f953a:#d2b67c:#2f5af3:#a00095:#3f953a:#ffffff"
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
